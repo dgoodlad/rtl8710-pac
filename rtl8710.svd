@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOTE: This is *not* an official Realtek-supplied SVD -->
+
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" >
+  <vendor>Realtek Semiconductor</vendor>
+  <vendorID>RTL</vendorID>
+  <name>RTL8710</name>
+  <series>Ameba</series>
+  <version>0.1</version>
+  <description>Realtek RTL8710 Cortex-M3-based WiFi Module</description>
+  <licenseText>
+    Copyright (c) 2019 David Goodlad
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  </licenseText>
+
+  <cpu>
+    <name>CM3</name>
+    <revision>r0p0</revision>
+    <endian>little</endian>
+    <mpuPresent>true</mpuPresent>
+    <fpuPresent>false</fpuPresent>
+    <nvicPrioBits>4</nvicPrioBits>
+    <vendorSystickConfig>true</vendorSystickConfig>
+  </cpu>
+
+  <!-- TODO -->
+  <addressUnitBits>8</addressUnitBits>     <!-- byte addressable memory -->
+  <width>32</width>                        <!-- bus width is 32 bits -->
+
+  <!-- default settings implicitly inherited by subsequent sections -->
+  <size>32</size>
+  <access>read-write</access>
+  <resetValue>0x00000000</resetValue>
+  <resetMask>0xFFFFFFFF</resetMask>
+
+  <peripherals>
+    <!--
+typedef struct{
+	volatile uint32_t SWPORTA_DR;
+	volatile uint32_t SWPORTA_DDR;
+	volatile uint32_t SWPORTA_CTRL;
+	volatile uint32_t SWPORTB_DR;
+	volatile uint32_t SWPORTB_DDR;
+	volatile uint32_t SWPORTB_CTRL;
+	volatile uint32_t SWPORTC_DR;
+	volatile uint32_t SWPORTC_DDR;
+	volatile uint32_t SWPORTC_CTRL;
+	uint32_t RESERVED1[3];
+	volatile uint32_t INTEN;
+	volatile uint32_t INTMASK;
+	volatile uint32_t INTTYPE_LEVEL;
+	volatile uint32_t INT_POLARITY;
+	volatile uint32_t INTSTATUS;
+	volatile uint32_t RAW_INTSTATUS;
+	volatile uint32_t DEBOUNCE;
+	volatile uint32_t PORTA_EOI;
+	volatile uint32_t EXT_PORTA;
+	volatile uint32_t EXT_PORTB;
+	volatile uint32_t EXT_PORTC;
+	uint32_t RESERVED2[1];
+	volatile uint32_t LS_SYNC;
+}__attribute__((packed)) GPIO_TypeDef; -->
+
+    <peripheral>
+      <name>GPIOA</name>
+      <description>General Purpose I/O</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40001000</baseAddress>
+      <size>32</size>
+      <access>read-write</access>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x60</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>DR</name>
+          <description>Data Register</description>
+          <addressOffset>0x0</addressOffset>
+          <fields>
+            <field>
+              <name>GPIOA_GC4_DR</name>
+              <description>GPIOA GC4 Data</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DDR</name>
+          <description>Data Direction Register</description>
+          <addressOffset>0x4</addressOffset>
+          <fields>
+            <field>
+              <name>GPIOA_GC4_DDR</name>
+              <description>GPIOA GC4 Direction</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>input</name>
+                  <description>Configure pin as an INPUT</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>output</name>
+                  <description>Configure pin as an OUTPUT</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CTRL</name>
+          <description>Control</description>
+          <addressOffset>0x8</addressOffset>
+        </register>
+      </registers>
+    </peripheral>
+
+    <peripheral derivedFrom="GPIOA">
+      <name>GPIOB</name>
+      <baseAddress>0x4000100c</baseAddress>
+    </peripheral>
+
+    <peripheral derivedFrom="GPIOA">
+      <name>GPIOC</name>
+      <baseAddress>0x40001018</baseAddress>
+    </peripheral>
+
+    <peripheral>
+      <name>GPIOA_INT</name>
+      <description>GPIOA Interrupt Control</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40001030</baseAddress>
+      <size>32</size>
+      <access>read-write</access>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x100</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>EN</name>
+          <description>Interrupt Enable</description>
+          <addressOffset>0x0</addressOffset>
+        </register>
+        <register>
+          <name>MASK</name>
+          <description>Interrupt Mask</description>
+          <addressOffset>0x4</addressOffset>
+        </register>
+        <register>
+          <name>TYPE</name>
+          <description>Interrupt Type (level/edge)</description>
+          <addressOffset>0x8</addressOffset>
+        </register>
+        <register>
+          <name>POLARITY</name>
+          <description>Interrupt Polarity (low/high)</description>
+          <addressOffset>0x0c</addressOffset>
+        </register>
+        <register>
+          <name>STATUS</name>
+          <description>Interrupt Status</description>
+          <addressOffset>0x10</addressOffset>
+        </register>
+        <register>
+          <name>RAW_STATUS</name>
+          <description>Interrupt Status Without Mask</description>
+          <addressOffset>0x14</addressOffset>
+        </register>
+        <register>
+          <name>DEBOUNCE</name>
+          <description>Interrupt Debounce</description>
+          <addressOffset>0x18</addressOffset>
+        </register>
+        <register>
+          <name>CLEAR</name>
+          <description>Interrupt Clear</description>
+          <addressOffset>0x2c</addressOffset>
+        </register>
+      </registers>
+    </peripheral>
+
+  </peripherals>
+</device>
