@@ -39,24 +39,24 @@ pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, ITM, MPU, NVIC, SCB, S
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
 #[doc = "General Purpose I/O"]
-pub struct GPIOA {
+pub struct GPIO {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for GPIOA {}
-impl GPIOA {
+unsafe impl Send for GPIO {}
+impl GPIO {
     #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const gpioa::RegisterBlock {
+    pub fn ptr() -> *const gpio::RegisterBlock {
         1073745920 as *const _
     }
 }
-impl Deref for GPIOA {
-    type Target = gpioa::RegisterBlock;
-    fn deref(&self) -> &gpioa::RegisterBlock {
-        unsafe { &*GPIOA::ptr() }
+impl Deref for GPIO {
+    type Target = gpio::RegisterBlock;
+    fn deref(&self) -> &gpio::RegisterBlock {
+        unsafe { &*GPIO::ptr() }
     }
 }
 #[doc = "General Purpose I/O"]
-pub mod gpioa;
+pub mod gpio;
 #[doc = "GPIOB"]
 pub struct GPIOB {
     _marker: PhantomData<*const ()>,
@@ -64,16 +64,18 @@ pub struct GPIOB {
 unsafe impl Send for GPIOB {}
 impl GPIOB {
     #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const gpioa::RegisterBlock {
-        1073745932 as *const _
+    pub fn ptr() -> *const gpiob::RegisterBlock {
+        1073745920 as *const _
     }
 }
 impl Deref for GPIOB {
-    type Target = gpioa::RegisterBlock;
-    fn deref(&self) -> &gpioa::RegisterBlock {
+    type Target = gpiob::RegisterBlock;
+    fn deref(&self) -> &gpiob::RegisterBlock {
         unsafe { &*GPIOB::ptr() }
     }
 }
+#[doc = "GPIOB"]
+pub mod gpiob;
 #[doc = "GPIOC"]
 pub struct GPIOC {
     _marker: PhantomData<*const ()>,
@@ -81,35 +83,18 @@ pub struct GPIOC {
 unsafe impl Send for GPIOC {}
 impl GPIOC {
     #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const gpioa::RegisterBlock {
-        1073745944 as *const _
+    pub fn ptr() -> *const gpioc::RegisterBlock {
+        1073745920 as *const _
     }
 }
 impl Deref for GPIOC {
-    type Target = gpioa::RegisterBlock;
-    fn deref(&self) -> &gpioa::RegisterBlock {
+    type Target = gpioc::RegisterBlock;
+    fn deref(&self) -> &gpioc::RegisterBlock {
         unsafe { &*GPIOC::ptr() }
     }
 }
-#[doc = "GPIOA Interrupt Control"]
-pub struct GPIOA_INT {
-    _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for GPIOA_INT {}
-impl GPIOA_INT {
-    #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const gpioa_int::RegisterBlock {
-        1073745968 as *const _
-    }
-}
-impl Deref for GPIOA_INT {
-    type Target = gpioa_int::RegisterBlock;
-    fn deref(&self) -> &gpioa_int::RegisterBlock {
-        unsafe { &*GPIOA_INT::ptr() }
-    }
-}
-#[doc = "GPIOA Interrupt Control"]
-pub mod gpioa_int;
+#[doc = "GPIOC"]
+pub mod gpioc;
 #[allow(renamed_and_removed_lints)]
 #[allow(private_no_mangle_statics)]
 #[no_mangle]
@@ -117,14 +102,12 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals"]
 #[allow(non_snake_case)]
 pub struct Peripherals {
-    #[doc = "GPIOA"]
-    pub GPIOA: GPIOA,
+    #[doc = "GPIO"]
+    pub GPIO: GPIO,
     #[doc = "GPIOB"]
     pub GPIOB: GPIOB,
     #[doc = "GPIOC"]
     pub GPIOC: GPIOC,
-    #[doc = "GPIOA_INT"]
-    pub GPIOA_INT: GPIOA_INT,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*"]
@@ -143,16 +126,13 @@ impl Peripherals {
         debug_assert!(!DEVICE_PERIPHERALS);
         DEVICE_PERIPHERALS = true;
         Peripherals {
-            GPIOA: GPIOA {
+            GPIO: GPIO {
                 _marker: PhantomData,
             },
             GPIOB: GPIOB {
                 _marker: PhantomData,
             },
             GPIOC: GPIOC {
-                _marker: PhantomData,
-            },
-            GPIOA_INT: GPIOA_INT {
                 _marker: PhantomData,
             },
         }
