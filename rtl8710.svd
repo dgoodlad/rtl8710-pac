@@ -54,62 +54,24 @@
   <peripherals>
     <peripheral>
       <name>GPIO</name>
-      <description>General Purpose I/O</description>
       <groupName>GPIO</groupName>
+      <description>General Purpose I/O</description>
       <baseAddress>0x40001000</baseAddress>
-      <access>read-write</access>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
       <registers>
         <register>
           <name>GPIOA_DR</name>
           <description>GPIOA Data Register</description>
-          <addressOffset>0x0</addressOffset>
+          <addressOffset>0x0000</addressOffset>
           <fields>
             <field>
-              <name>A0</name>
-              <description>GPIO pin A0 data</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A1</name>
-              <description>Pin A1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B3</name>
-              <description>Pin B3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
+              <name>E3</name>
+              <description>Pin E3</description>
+              <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
@@ -119,9 +81,51 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
+              <name>E1</name>
+              <description>Pin E1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C4</name>
+              <description>Pin C4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C3</name>
+              <description>Pin C3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C1</name>
+              <description>Pin C1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B4</name>
+              <description>Pin B4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3</name>
+              <description>Pin B3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>Pin A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A0</name>
+              <description>GPIO pin A0 data</description>
+              <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>
@@ -129,260 +133,146 @@
         <register>
           <name>GPIOA_DDR</name>
           <description>GPIOA Data Direction Register</description>
-          <addressOffset>0x4</addressOffset>
+          <addressOffset>0x0004</addressOffset>
           <fields>
             <field>
-              <name>A0</name>
-              <description>GPIO pin A0 data direction</description>
-              <bitOffset>0</bitOffset>
+              <name>E3</name>
+              <description>Pin E3</description>
+              <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>A1</name>
-              <description>Pin A1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>B3</name>
-              <description>Pin B3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
               <name>E2</name>
               <description>Pin E2</description>
               <bitOffset>22</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
+            <field>
+              <name>E1</name>
+              <description>Pin E1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C4</name>
+              <description>Pin C4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C3</name>
+              <description>Pin C3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C1</name>
+              <description>Pin C1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B4</name>
+              <description>Pin B4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3</name>
+              <description>Pin B3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>Pin A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A0</name>
+              <description>GPIO pin A0 data direction</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOB_DDR</name>
+          <description>GPIOB Data Direction Register</description>
+          <addressOffset>0x0010</addressOffset>
+          <fields>
             <field>
               <name>E3</name>
               <description>Pin E3</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
             </field>
             <field>
-              <name>GPIOA_GC4_DDR</name>
-              <description>GPIOA GC4 Direction</description>
+              <name>E2</name>
+              <description>Pin E2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>E1</name>
+              <description>Pin E1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C4</name>
+              <description>Pin C4</description>
               <bitOffset>8</bitOffset>
               <bitWidth>1</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>input</name>
-                  <description>Configure pin as an INPUT</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>output</name>
-                  <description>Configure pin as an OUTPUT</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
+            </field>
+            <field>
+              <name>C3</name>
+              <description>Pin C3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C1</name>
+              <description>Pin C1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B4</name>
+              <description>Pin B4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3</name>
+              <description>Pin B3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>Pin A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A0</name>
+              <description>GPIO pin A0 data direction</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
             </field>
           </fields>
         </register>
         <register>
           <name>GPIOA_CTRL</name>
           <description>GPIOA Control Register</description>
-          <addressOffset>0x8</addressOffset>
+          <addressOffset>0x0008</addressOffset>
           <fields>
             <field>
-              <name>A0</name>
-              <description>GPIO pin A0 control</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A1</name>
-              <description>Pin A1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B3</name>
-              <description>Pin B3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
+              <name>E3</name>
+              <description>Pin E3</description>
+              <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
@@ -392,126 +282,482 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
+              <name>E1</name>
+              <description>Pin E1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C4</name>
+              <description>Pin C4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C3</name>
+              <description>Pin C3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C1</name>
+              <description>Pin C1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B4</name>
+              <description>Pin B4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3</name>
+              <description>Pin B3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>Pin A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A0</name>
+              <description>GPIO pin A0 control</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIOB_CTRL</name>
+          <description>GPIOB Control Register</description>
+          <addressOffset>0x0014</addressOffset>
+          <fields>
+            <field>
               <name>E3</name>
               <description>Pin E3</description>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
+            <field>
+              <name>E2</name>
+              <description>Pin E2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>E1</name>
+              <description>Pin E1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C4</name>
+              <description>Pin C4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C3</name>
+              <description>Pin C3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C1</name>
+              <description>Pin C1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B4</name>
+              <description>Pin B4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3</name>
+              <description>Pin B3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>Pin A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A0</name>
+              <description>GPIO pin A0 control</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
           </fields>
         </register>
-
+        <register>
+          <name>GPIOB_DR</name>
+          <description>GPIOA Data Register</description>
+          <addressOffset>0x000C</addressOffset>
+          <fields>
+            <field>
+              <name>E3</name>
+              <description>Pin E3</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>E2</name>
+              <description>Pin E2</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>E1</name>
+              <description>Pin E1</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C4</name>
+              <description>Pin C4</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C3</name>
+              <description>Pin C3</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>C1</name>
+              <description>Pin C1</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B4</name>
+              <description>Pin B4</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>B3</name>
+              <description>Pin B3</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A1</name>
+              <description>Pin A1</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>A0</name>
+              <description>GPIO pin A0 data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
         <register>
           <name>INT_EN</name>
           <description>Interrupt Enable</description>
-          <addressOffset>0x30</addressOffset>
+          <addressOffset>0x0030</addressOffset>
         </register>
         <register>
           <name>INT_MASK</name>
           <description>Interrupt Mask</description>
-          <addressOffset>0x34</addressOffset>
+          <addressOffset>0x0034</addressOffset>
         </register>
         <register>
           <name>INT_TYPE</name>
           <description>Interrupt Type (level/edge)</description>
-          <addressOffset>0x38</addressOffset>
+          <addressOffset>0x0038</addressOffset>
         </register>
         <register>
           <name>INT_POLARITY</name>
           <description>Interrupt Polarity (low/high)</description>
-          <addressOffset>0x3c</addressOffset>
+          <addressOffset>0x003C</addressOffset>
         </register>
         <register>
           <name>INT_STATUS</name>
           <description>Interrupt Status</description>
-          <addressOffset>0x40</addressOffset>
+          <addressOffset>0x0040</addressOffset>
         </register>
         <register>
           <name>INT_RAW_STATUS</name>
           <description>Interrupt Status Without Mask</description>
-          <addressOffset>0x44</addressOffset>
+          <addressOffset>0x0044</addressOffset>
         </register>
         <register>
           <name>INT_DEBOUNCE</name>
           <description>Interrupt Debounce</description>
-          <addressOffset>0x48</addressOffset>
+          <addressOffset>0x0048</addressOffset>
         </register>
         <register>
           <name>INT_CLEAR</name>
           <description>Interrupt Clear</description>
-          <addressOffset>0x4c</addressOffset>
+          <addressOffset>0x004C</addressOffset>
+        </register>
+        <register>
+          <name>EXT</name>
+          <description>GPIO IN read or OUT read back</description>
+          <addressOffset>0x0050</addressOffset>
         </register>
         <register>
           <name>INT_SYNC</name>
-          <!-- TODO this is a mediocre description, copy/pasted from RTL header -->
           <description>Is level-sensitive interrupt being sync with PCLK</description>
-          <addressOffset>0x60</addressOffset>
-        </register>
-
-        <register>
-          <name>EXT</name>
-          <!-- TODO this is a mediocre description, copy/pasted from RTL header -->
-          <description>GPIO IN read or OUT read back</description>
-          <addressOffset>0x50</addressOffset>
+          <addressOffset>0x0060</addressOffset>
         </register>
       </registers>
     </peripheral>
 
     <peripheral>
-      <name>GPIOB</name>
-      <baseAddress>0x40001000</baseAddress>
-
-      <registers>
-        <register>
-          <name>DR</name>
-          <description>Data Register</description>
-          <addressOffset>0x0c</addressOffset>
-        </register>
-        <register>
-          <name>DDR</name>
-          <description>Data Direction Register</description>
-          <addressOffset>0x10</addressOffset>
-        </register>
-        <register>
-          <name>CTRL</name>
-          <description>Control</description>
-          <addressOffset>0x14</addressOffset>
-        </register>
-        <register>
-          <name>EXT</name>
-          <!-- TODO this is a mediocre description, copy/pasted from RTL header -->
-          <description>GPIO IN read or OUT read back</description>
-          <addressOffset>0x54</addressOffset>
-        </register>
-      </registers>
+      <name>Timer</name>
+      <groupName>Timers</groupName>
+      <description>Timer Control</description>
+      <baseAddress>0x40002000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x1000</size>
+        <usage>registers</usage>
+      </addressBlock>
     </peripheral>
 
     <peripheral>
-      <name>GPIOC</name>
-      <baseAddress>0x40001000</baseAddress>
+      <name>UART for Log</name>
+      <groupName>UART</groupName>
+      <description>UART for Log</description>
+      <baseAddress>0x40003000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
 
-      <registers>
-        <register>
-          <name>DR</name>
-          <description>Data Register</description>
-          <addressOffset>0x18</addressOffset>
-        </register>
-        <register>
-          <name>DDR</name>
-          <description>Data Direction Register</description>
-          <addressOffset>0x1c</addressOffset>
-        </register>
-        <register>
-          <name>CTRL</name>
-          <description>Control</description>
-          <addressOffset>0x20</addressOffset>
-        </register>
-        <register>
-          <name>EXT</name>
-          <!-- TODO this is a mediocre description, copy/pasted from RTL header -->
-          <description>GPIO IN read or OUT read back</description>
-          <addressOffset>0x58</addressOffset>
-        </register>
-      </registers>
+    <peripheral>
+      <name>I2C_2</name>
+      <groupName>I2C</groupName>
+      <description>I2C port 2</description>
+      <baseAddress>0x40003400</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>I2C_3</name>
+      <groupName>I2C</groupName>
+      <description>I2C port 3</description>
+      <baseAddress>0x40003800</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <!-- No SDRAM on 8710...
+    <peripheral>
+      <name>SDR</name>
+      <groupName>SDRAM</groupName>
+      <description>SDRAM Controller</description>
+      <baseAddress>0x40005000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x1000</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+    -->
+
+    <peripheral>
+      <name>SPI</name>
+      <groupName>SPI</groupName>
+      <description>SPI Flash Controller</description>
+      <baseAddress>0x40006000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x1000</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>ADC</name>
+      <groupName>ADC</groupName>
+      <description>ADC</description>
+      <baseAddress>0x40010000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x1000</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>UART_0</name>
+      <groupName>UART</groupName>
+      <description>UART 0</description>
+      <baseAddress>0x40040000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>UART_1</name>
+      <groupName>UART</groupName>
+      <description>UART 1</description>
+      <baseAddress>0x40040800</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>SPI_0</name>
+      <groupName>SPI</groupName>
+      <description>SPI 0</description>
+      <baseAddress>0x40040000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>SPI_1</name>
+      <groupName>SPI</groupName>
+      <description>SPI 1</description>
+      <baseAddress>0x40040800</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>I2C_1</name>
+      <groupName>I2C</groupName>
+      <description>I2C 1</description>
+      <baseAddress>0x40044400</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>SDIO</name>
+      <groupName>SDIO</groupName>
+      <description>SDIO Host</description>
+      <baseAddress>0x40058000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x4000</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>GDMA0</name>
+      <groupName>GDMA</groupName>
+      <description>GDMA0</description>
+      <baseAddress>0x40060000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0800</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>GDMA1</name>
+      <groupName>GDMA</groupName>
+      <description>GDMA1</description>
+      <baseAddress>0x40061000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0800</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>I2S_1</name>
+      <groupName>I2S</groupName>
+      <description>I2S_1</description>
+      <baseAddress>0x40063000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>PCM_0</name>
+      <groupName>PCM</groupName>
+      <description>PCM_0</description>
+      <baseAddress>0x40064000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>PCM_1</name>
+      <groupName>PCM</groupName>
+      <description>PCM_1</description>
+      <baseAddress>0x40065000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x0400</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>Security</name>
+      <groupName>Security</groupName>
+      <description>Security Engine</description>
+      <baseAddress>0x40070000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x4000</size>
+        <usage>registers</usage>
+      </addressBlock>
+    </peripheral>
+
+    <peripheral>
+      <name>WIFI</name>
+      <groupName>WIFI</groupName>
+      <description>WIFI REG &amp; TX/RX FIFO direct map</description>
+      <baseAddress>0x40080000</baseAddress>
+      <addressBlock>
+        <offset>0x00000000</offset>
+        <size>0x40000</size>
+        <usage>registers</usage>
+      </addressBlock>
     </peripheral>
   </peripherals>
 </device>
