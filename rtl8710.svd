@@ -60,6 +60,7 @@
       <registers>
         <register>
           <name>PWR_CTRL</name>
+          <description>PWR_CTRL</description>
           <addressOffset>0x00</addressOffset>
           <size>16</size>
           <fields>
@@ -82,6 +83,7 @@
         </register>
         <register>
           <name>ISO_CTRL</name>
+          <description>ISO_CTRL</description>
           <addressOffset>0x0002</addressOffset>
           <size>16</size>
           <fields>
@@ -109,6 +111,7 @@
         </register>
         <register>
           <name>FUNC_EN</name>
+          <description>FUNC_EN</description>
           <addressOffset>0x0008</addressOffset>
           <size>32</size>
           <fields>
@@ -147,6 +150,7 @@
         <!-- REG_RSVD @ 0x000c -->
         <register>
           <name>CLK_CTRL0</name>
+          <description>CLK_CTRL0</description>
           <addressOffset>0x0010</addressOffset>
           <size>32</size>
           <fields>
@@ -169,6 +173,7 @@
         </register>
         <register>
           <name>CLK_CTRL1</name>
+          <description>CLK_CTRL1</description>
           <addressOffset>0x0014</addressOffset>
           <size>32</size>
           <fields>
@@ -186,6 +191,7 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG0</name>
+          <description>EFUSE_SYSCFG0</description>
           <addressOffset>0x0020</addressOffset>
           <size>32</size>
           <fields>
@@ -223,6 +229,7 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG1</name>
+          <description>EFUSE_SYSCFG1</description>
           <addressOffset>0x0024</addressOffset>
           <size>32</size>
           <fields>
@@ -275,6 +282,7 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG2</name>
+          <description>EFUSE_SYSCFG2</description>
           <addressOffset>0x0028</addressOffset>
           <size>32</size>
           <fields>
@@ -302,6 +310,7 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG3</name>
+          <description>EFUSE_SYSCFG3</description>
           <addressOffset>0x002C</addressOffset>
           <size>32</size>
           <fields>
@@ -344,6 +353,7 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG4</name>
+          <description>EFUSE_SYSCFG4</description>
           <addressOffset>0x0030</addressOffset>
           <size>32</size>
           <fields>
@@ -361,11 +371,13 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG5</name>
+          <description>EFUSE_SYSCFG5</description>
           <addressOffset>0x0034</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>EFUSE_SYSCFG6</name>
+          <description>EFUSE_SYSCFG6</description>
           <addressOffset>0x0038</addressOffset>
           <size>32</size>
           <fields>
@@ -383,6 +395,7 @@
         </register>
         <register>
           <name>EFUSE_SYSCFG7</name>
+          <description>EFUSE_SYSCFG7</description>
           <addressOffset>0x003C</addressOffset>
           <size>32</size>
           <fields>
@@ -440,6 +453,7 @@
         </register>
         <register>
           <name>REGU_CTRL0</name>
+          <description>REGU_CTRL0</description>
           <addressOffset>0x0040</addressOffset>
           <size>32</size>
           <fields>
@@ -507,6 +521,7 @@
         </register>
         <register>
           <name>SWR_CTRL0</name>
+          <description>SWR_CTRL0</description>
           <addressOffset>0x0048</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -516,6 +531,7 @@
         </register>
         <register>
           <name>SWR_CTRL1</name>
+          <description>SWR_CTRL1</description>
           <addressOffset>0x004C</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -525,6 +541,7 @@
         </register>
         <register>
           <name>XTAL_CTRL0</name>
+          <description>XTAL_CTRL0</description>
           <addressOffset>0x0060</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -534,6 +551,7 @@
         </register>
         <register>
           <name>XTAL_CTRL1</name>
+          <description>XTAL_CTRL1</description>
           <addressOffset>0x0064</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -543,6 +561,7 @@
         </register>
         <register>
           <name>SYSPLL_CTRL0</name>
+          <description>SYSPLL_CTRL0</description>
           <addressOffset>0x0070</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -552,6 +571,7 @@
         </register>
         <register>
           <name>SYSPLL_CTRL1</name>
+          <description>SYSPLL_CTRL1</description>
           <addressOffset>0x0074</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -561,6 +581,7 @@
         </register>
         <register>
           <name>SYSPLL_CTRL2</name>
+          <description>SYSPLL_CTRL2</description>
           <addressOffset>0x0078</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -570,6 +591,7 @@
         </register>
         <register>
           <name>ANA_TIM_CTRL</name>
+          <description>ANA_TIM_CTRL</description>
           <addressOffset>0x0090</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -579,6 +601,7 @@
         </register>
         <register>
           <name>DSLP_TIM_CTRL</name>
+          <description>DSLP_TIM_CTRL</description>
           <addressOffset>0x0094</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -588,6 +611,7 @@
         </register>
         <register>
           <name>DSLP_TIM_CAL_CTRL</name>
+          <description>DSLP_TIM_CAL_CTRL</description>
           <addressOffset>0x0098</addressOffset>
           <size>32</size>
           <!-- TODO
@@ -597,6 +621,7 @@
         </register>
         <register>
           <name>DEBUG_CTRL</name>
+          <description>DEBUG_CTRL</description>
           <addressOffset>0x00A0</addressOffset>
           <size>32</size>
           <fields>
@@ -609,6 +634,7 @@
         </register>
         <register>
           <name>PINMUX_CTRL</name>
+          <description>PINMUX_CTRL</description>
           <addressOffset>0x00A4</addressOffset>
           <size>32</size>
           <fields>
@@ -626,6 +652,7 @@
         </register>
         <register>
           <name>GPIO_DSTBY_WAKE_CTRL0</name>
+          <description>GPIO_DSTBY_WAKE_CTRL0</description>
           <addressOffset>0x00A8</addressOffset>
           <size>32</size>
           <fields>
@@ -713,6 +740,7 @@
         </register>
         <register>
           <name>GPIO_DSTBY_WAKE_CTRL1</name>
+          <description>GPIO_DSTBY_WAKE_CTRL1</description>
           <addressOffset>0x00AC</addressOffset>
           <size>32</size>
           <fields>
@@ -765,11 +793,13 @@
         </register>
         <register>
           <name>DEBUG_REG</name>
+          <description>DEBUG_REG</description>
           <addressOffset>0x00BC</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>EEPROM_CTRL0</name>
+          <description>EEPROM_CTRL0</description>
           <addressOffset>0x00E0</addressOffset>
           <size>32</size>
           <fields>
@@ -827,6 +857,7 @@
         </register>
         <register>
           <name>EEPROM_CTRL1</name>
+          <description>EEPROM_CTRL1</description>
           <addressOffset>0x00E4</addressOffset>
           <size>32</size>
           <fields>
@@ -839,6 +870,7 @@
         </register>
         <register>
           <name>EFUSE_CTRL</name>
+          <description>EFUSE_CTRL</description>
           <addressOffset>0x00E8</addressOffset>
           <size>32</size>
           <fields>
@@ -886,6 +918,7 @@
         </register>
         <register>
           <name>EFUSE_TEST</name>
+          <description>EFUSE_TEST</description>
           <addressOffset>0x00EC</addressOffset>
           <size>32</size>
           <fields>
@@ -928,26 +961,31 @@
         </register>
         <register>
           <name>DSTBY_INFO0</name>
+          <description>DSTBY_INFO0</description>
           <addressOffset>0x00F0</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>DSTBY_INFO1</name>
+          <description>DSTBY_INFO1</description>
           <addressOffset>0x00F4</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>DSTBY_INFO2</name>
+          <description>DSTBY_INFO2</description>
           <addressOffset>0x00F8</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>DSTBY_INFO3</name>
+          <description>DSTBY_INFO3</description>
           <addressOffset>0x00FC</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>SLP_WAKE_EVENT_MSK0</name>
+          <description>SLP_WAKE_EVENT_MSK0</description>
           <addressOffset>0x0100</addressOffset>
           <size>32</size>
           <fields>
@@ -1030,11 +1068,13 @@
         </register>
         <register>
           <name>SLP_WAKE_EVENT_MSK1</name>
+          <description>SLP_WAKE_EVENT_MSK1</description>
           <addressOffset>0x0104</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>SLP_WAKE_EVENT_STATUS0</name>
+          <description>SLP_WAKE_EVENT_STATUS0</description>
           <addressOffset>0x0108</addressOffset>
           <size>32</size>
           <fields>
@@ -1117,11 +1157,13 @@
         </register>
         <register>
           <name>SLP_WAKE_EVENT_STATUS1</name>
+          <description>SLP_WAKE_EVENT_STATUS1</description>
           <addressOffset>0x010C</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>SNF_WAKE_EVENT_MSK0</name>
+          <description>SNF_WAKE_EVENT_MSK0</description>
           <addressOffset>0x0110</addressOffset>
           <size>32</size>
           <fields>
@@ -1139,6 +1181,7 @@
         </register>
         <register>
           <name>SNF_WAKE_EVENT_STATUS</name>
+          <description>SNF_WAKE_EVENT_STATUS</description>
           <addressOffset>0x0114</addressOffset>
           <size>32</size>
           <fields>
@@ -1156,6 +1199,7 @@
         </register>
         <register>
           <name>PWRMGT_CTRL</name>
+          <description>PWRMGT_CTRL</description>
           <addressOffset>0x0118</addressOffset>
           <size>32</size>
           <fields>
@@ -1183,6 +1227,7 @@
         </register>
         <register>
           <name>PWRMGT_OPTION</name>
+          <description>PWRMGT_OPTION</description>
           <addressOffset>0x0120</addressOffset>
           <size>32</size>
           <fields>
@@ -1330,6 +1375,7 @@
         </register>
         <register>
           <name>PWRMGT_OPTION_EXT</name>
+          <description>PWRMGT_OPTION_EXT</description>
           <addressOffset>0x0124</addressOffset>
           <size>32</size>
           <fields>
@@ -1352,6 +1398,7 @@
         </register>
         <register>
           <name>DSLP_WEVENT</name>
+          <description>DSLP_WEVENT</description>
           <addressOffset>0x0130</addressOffset>
           <size>32</size>
           <fields>
@@ -1374,6 +1421,7 @@
         </register>
         <register>
           <name>PERI_MONITOR</name>
+          <description>PERI_MONITOR</description>
           <addressOffset>0x0134</addressOffset>
           <size>32</size>
           <fields>
@@ -1386,6 +1434,7 @@
         </register>
         <register>
           <name>SYSTEM_CFG0</name>
+          <description>SYSTEM_CFG0</description>
           <addressOffset>0x01F0</addressOffset>
           <size>32</size>
           <fields>
@@ -1413,6 +1462,7 @@
         </register>
         <register>
           <name>SYSTEM_CFG1</name>
+          <description>SYSTEM_CFG1</description>
           <addressOffset>0x01F4</addressOffset>
           <size>32</size>
           <fields>
@@ -1455,6 +1505,7 @@
         </register>
         <register>
           <name>SYSTEM_CFG2</name>
+          <description>SYSTEM_CFG2</description>
           <addressOffset>0x01F8</addressOffset>
           <size>32</size>
         </register>
@@ -1462,6 +1513,7 @@
 
         <register>
           <name>PEON_PWR_CTRL</name>
+          <description>PEON_PWR_CTRL</description>
           <addressOffset>0x0200</addressOffset>
           <size>32</size>
           <fields>
@@ -1484,6 +1536,7 @@
         </register>
         <register>
           <name>PON_ISO_CTRL</name>
+          <description>PON_ISO_CTRL</description>
           <addressOffset>0x0204</addressOffset>
           <size>32</size>
           <fields>
@@ -1496,6 +1549,7 @@
         </register>
         <register>
           <name>SOC_FUNC_EN</name>
+          <description>SOC_FUNC_EN</description>
           <addressOffset>0x0210</addressOffset>
           <size>32</size>
           <fields>
@@ -1558,6 +1612,7 @@
         </register>
         <register>
           <name>SOC_HCI_COM_FUNC_EN</name>
+          <description>SOC_HCI_COM_FUNC_EN</description>
           <addressOffset>0x0214</addressOffset>
           <size>32</size>
           <fields>
@@ -1610,6 +1665,7 @@
         </register>
         <register>
           <name>SOC_PERI_FUNC0_EN</name>
+          <description>SOC_PERI_FUNC0_EN</description>
           <addressOffset>0x0218</addressOffset>
           <size>32</size>
           <fields>
@@ -1687,6 +1743,7 @@
         </register>
         <register>
           <name>SOC_PERI_FUNC1_EN</name>
+          <description>SOC_PERI_FUNC1_EN</description>
           <addressOffset>0x021C</addressOffset>
           <size>32</size>
           <fields>
@@ -1714,6 +1771,7 @@
         </register>
         <register>
           <name>SOC_PERI_BD_FUNC0_EN</name>
+          <description>SOC_PERI_BD_FUNC0_EN</description>
           <addressOffset>0x0220</addressOffset>
           <size>32</size>
           <fields>
@@ -1736,6 +1794,7 @@
         </register>
         <register>
           <name>PESOC_CLK_CTRL</name>
+          <description>PESOC_CLK_CTRL</description>
           <addressOffset>0x0230</addressOffset>
           <size>32</size>
           <fields>
@@ -1853,6 +1912,7 @@
         </register>
         <register>
           <name>PESOC_PERI_CLK_CTRL0</name>
+          <description>PESOC_PERI_CLK_CTRL0</description>
           <addressOffset>0x0234</addressOffset>
           <size>32</size>
           <fields>
@@ -1920,6 +1980,7 @@
         </register>
         <register>
           <name>PESOC_PERI_CLK_CTRL1</name>
+          <description>PESOC_PERI_CLK_CTRL1</description>
           <addressOffset>0x0238</addressOffset>
           <size>32</size>
           <fields>
@@ -2007,11 +2068,13 @@
         </register>
         <register>
           <name>PESOC_CLK_CTRL3</name>
+          <description>PESOC_CLK_CTRL3</description>
           <addressOffset>0x023C</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>PESOC_HCI_CLK_CTRL0</name>
+          <description>PESOC_HCI_CLK_CTRL0</description>
           <addressOffset>0x0240</addressOffset>
           <size>32</size>
           <fields>
@@ -2059,6 +2122,7 @@
         </register>
         <register>
           <name>PESOC_COM_CLK_CTRL1</name>
+          <description>PESOC_COM_CLK_CTRL1</description>
           <addressOffset>0x0244</addressOffset>
           <size>32</size>
           <fields>
@@ -2101,11 +2165,13 @@
         </register>
         <register>
           <name>PESOC_HW_ENG_CLK_CTRL</name>
+          <description>PESOC_HW_ENG_CLK_CTRL</description>
           <addressOffset>0x0248</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>PESOC_CLK_SEL</name>
+          <description>PESOC_CLK_SEL</description>
           <addressOffset>0x0250</addressOffset>
           <size>32</size>
           <fields>
@@ -2138,6 +2204,7 @@
         </register>
         <register>
           <name>SYS_ANACK_CAL_CTRL</name>
+          <description>SYS_ANACK_CAL_CTRL</description>
           <addressOffset>0x026C</addressOffset>
           <size>32</size>
           <fields>
@@ -2160,6 +2227,7 @@
         </register>
         <register>
           <name>OSC32K_CTRL</name>
+          <description>OSC32K_CTRL</description>
           <addressOffset>0x0270</addressOffset>
           <size>32</size>
           <fields>
@@ -2187,6 +2255,7 @@
         </register>
         <register>
           <name>OSC32K_REG_CTRL0</name>
+          <description>OSC32K_REG_CTRL0</description>
           <addressOffset>0x0274</addressOffset>
           <size>32</size>
           <fields>
@@ -2210,6 +2279,7 @@
         </register>
         <register>
           <name>OSC32K_REG_CTRL1</name>
+          <description>OSC32K_REG_CTRL1</description>
           <addressOffset>0x0278</addressOffset>
           <size>32</size>
           <fields>
@@ -2223,6 +2293,7 @@
         </register>
         <register>
           <name>THERMAL_METER_CTRL</name>
+          <description>THERMAL_METER_CTRL</description>
           <addressOffset>0x027C</addressOffset>
           <size>32</size>
           <fields>
@@ -2255,6 +2326,7 @@
         </register>
         <register>
           <name>UART_MUX_CTRL</name>
+          <description>UART_MUX_CTRL</description>
           <addressOffset>0x0280</addressOffset>
           <size>32</size>
           <fields>
@@ -2292,6 +2364,7 @@
         </register>
         <register>
           <name>SPI_MUX_CTRL</name>
+          <description>SPI_MUX_CTRL</description>
           <addressOffset>0x0284</addressOffset>
           <size>32</size>
           <fields>
@@ -2334,6 +2407,7 @@
         </register>
         <register>
           <name>I2C_MUX_CTRL</name>
+          <description>I2C_MUX_CTRL</description>
           <addressOffset>0x0288</addressOffset>
           <size>32</size>
           <fields>
@@ -2381,6 +2455,7 @@
         </register>
         <register>
           <name>I2S_MUX_CTRL</name><!-- Doubles as PCM_MUX_CTRL -->
+          <description>I2S_MUX_CTRL</description>
           <addressOffset>0x028C</addressOffset>
           <size>32</size>
           <fields>
@@ -2438,6 +2513,7 @@
         </register>
         <register>
           <name>HCI_PINMUX_CTRL</name>
+          <description>HCI_PINMUX_CTRL</description>
           <addressOffset>0x02A0</addressOffset>
           <size>32</size>
           <fields>
@@ -2460,6 +2536,7 @@
         </register>
         <register>
           <name>WL_PINMUX_CTRL</name>
+          <description>WL_PINMUX_CTRL</description>
           <addressOffset>0x02A4</addressOffset>
           <size>32</size>
           <fields>
@@ -2502,11 +2579,13 @@
         </register>
         <register>
           <name>BT_PINMUX_CTRL</name>
+          <description>BT_PINMUX_CTRL</description>
           <addressOffset>0x02A8</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>PWM_PINMUX_CTRL</name>
+          <description>PWM_PINMUX_CTRL</description>
           <addressOffset>0x02AC</addressOffset>
           <size>32</size>
           <fields>
@@ -2594,6 +2673,7 @@
         </register>
         <register>
           <name>CPU_PERIPHERAL_CTRL</name>
+          <description>CPU_PERIPHERAL_CTRL</description>
           <addressOffset>0x02C0</addressOffset>
           <size>32</size>
           <fields>
@@ -2636,16 +2716,19 @@
         </register>
         <register>
           <name>HCI_CTRL_STATUS_0</name>
+          <description>HCI_CTRL_STATUS_0</description>
           <addressOffset>0x02E0</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>HCI_CTRL_STATUS_1</name>
+          <description>HCI_CTRL_STATUS_1</description>
           <addressOffset>0x02E4</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>PESOC_MEM_CTRL</name>
+          <description>PESOC_MEM_CTRL</description>
           <addressOffset>0x0300</addressOffset>
           <size>32</size>
           <fields>
@@ -2663,6 +2746,7 @@
         </register>
         <register>
           <name>PESOC_SOC_CTRL</name>
+          <description>PESOC_SOC_CTRL</description>
           <addressOffset>0x0304</addressOffset>
           <size>32</size>
           <fields>
@@ -2710,6 +2794,7 @@
         </register>
         <register>
           <name>PESOC_PERI_CTRL</name>
+          <description>PESOC_PERI_CTRL</description>
           <addressOffset>0x0308</addressOffset>
           <size>32</size>
           <fields>
@@ -2727,6 +2812,7 @@
         </register>
         <register>
           <name>GPIO_SHTDN_CTRL</name>
+          <description>GPIO_SHTDN_CTRL</description>
           <addressOffset>0x0320</addressOffset>
           <size>32</size>
           <fields>
@@ -2789,6 +2875,7 @@
         </register>
         <register>
           <name>GPIO_DRIVING_CTRL</name>
+          <description>GPIO_DRIVING_CTRL</description>
           <addressOffset>0x0324</addressOffset>
           <size>32</size>
           <fields>
@@ -2851,6 +2938,7 @@
         </register>
         <register>
           <name>GPIO_PULL_CTRL0</name>
+          <description>GPIO_PULL_CTRL0</description>
           <addressOffset>0x0330</addressOffset>
           <size>32</size>
           <fields>
@@ -2938,6 +3026,7 @@
         </register>
         <register>
           <name>GPIO_PULL_CTRL1</name>
+          <description>GPIO_PULL_CTRL1</description>
           <addressOffset>0x0334</addressOffset>
           <size>32</size>
           <fields>
@@ -3026,6 +3115,7 @@
 
         <register>
           <name>GPIO_PULL_CTRL2</name>
+          <description>GPIO_PULL_CTRL2</description>
           <addressOffset>0x0338</addressOffset>
           <size>32</size>
           <fields>
@@ -3114,6 +3204,7 @@
 
         <register>
           <name>GPIO_PULL_CTRL3</name>
+          <description>GPIO_PULL_CTRL3</description>
           <addressOffset>0x033C</addressOffset>
           <size>32</size>
           <fields>
@@ -3202,6 +3293,7 @@
 
         <register>
           <name>GPIO_PULL_CTRL4</name>
+          <description>GPIO_PULL_CTRL4</description>
           <addressOffset>0x0340</addressOffset>
           <size>32</size>
           <fields>
@@ -3290,6 +3382,7 @@
 
         <register>
           <name>GPIO_PULL_CTRL5</name>
+          <description>GPIO_PULL_CTRL5</description>
           <addressOffset>0x0344</addressOffset>
           <size>32</size>
           <fields>
@@ -3348,6 +3441,7 @@
 
         <register>
           <name>GPIO_PULL_CTRL6</name>
+          <description>GPIO_PULL_CTRL6</description>
           <addressOffset>0x0348</addressOffset>
           <size>32</size>
           <fields>
@@ -3376,6 +3470,7 @@
 
         <register>
           <name>PERI_PWM0_CTRL</name>
+          <description>PERI_PWM0_CTRL</description>
           <addressOffset>0x0360</addressOffset>
           <size>32</size>
           <fields>
@@ -3403,6 +3498,7 @@
         </register>
         <register>
           <name>PERI_PWM1_CTRL</name>
+          <description>PERI_PWM1_CTRL</description>
           <addressOffset>0x0364</addressOffset>
           <size>32</size>
           <fields>
@@ -3430,6 +3526,7 @@
         </register>
         <register>
           <name>PERI_PWM2_CTRL</name>
+          <description>PERI_PWM2_CTRL</description>
           <addressOffset>0x0368</addressOffset>
           <size>32</size>
           <fields>
@@ -3457,6 +3554,7 @@
         </register>
         <register>
           <name>PERI_PWM3_CTRL</name>
+          <description>PERI_PWM3_CTRL</description>
           <addressOffset>0x036C</addressOffset>
           <size>32</size>
           <fields>
@@ -3484,6 +3582,7 @@
         </register>
         <register>
           <name>PERI_TIM_EVT_CTRL</name>
+          <description>PERI_TIM_EVT_CTRL</description>
           <addressOffset>0x0370</addressOffset>
           <size>32</size>
           <fields>
@@ -3552,6 +3651,7 @@
 
         <register>
           <name>PERI_EGTIM_CTRL</name>
+          <description>PERI_EGTIM_CTRL</description>
           <addressOffset>0x0374</addressOffset>
           <size>32</size>
           <fields>
@@ -3585,11 +3685,13 @@
 
         <register>
           <name>PEON_CFG</name>
+          <description>PEON_CFG</description>
           <addressOffset>0x03F0</addressOffset>
           <size>32</size>
         </register>
         <register>
           <name>PEON_STATUS</name>
+          <description>PEON_STATUS</description>
           <addressOffset>0x03F4</addressOffset>
           <size>32</size>
           <fields>
