@@ -610,7 +610,7 @@
         <register>
           <name>PINMUX_CTRL</name>
           <addressOffset>0x00A4</addressOffset>
-          <size></size>
+          <size>32</size>
           <fields>
             <field>
               <name>EEPROM_PIN_EN</name>
@@ -2164,22 +2164,22 @@
           <size>32</size>
           <fields>
             <field>
-              <name>32K_BIAS_CURRENT</name>
+              <name>BIAS_CURRENT</name>
               <bitOffset>16</bitOffset>
               <bitWidth>16</bitWidth>
             </field>
             <field>
-              <name>32K_RESISTOR_COM</name>
+              <name>RESISTOR_COM</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
             </field>
             <field>
-              <name>32K_DBG_SEL</name>
+              <name>DBG_SEL</name>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>32K_POW_CKGEN_EN</name>
+              <name>POW_CKGEN_EN</name>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -2191,17 +2191,17 @@
           <size>32</size>
           <fields>
             <field>
-              <name>32K_REG_INDIRT_CMD</name>
+              <name>REG_INDIRT_CMD</name>
               <bitOffset>23</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>32K_REG_INDIRT_ADDR</name>
+              <name>REG_INDIRT_ADDR</name>
               <bitOffset>16</bitOffset>
               <bitWidth>6</bitWidth>
             </field>
             <field>
-              <name>32K_REG_INDIRT_WDATA</name>
+              <name>REG_INDIRT_WDATA</name>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>write-only</access>
@@ -2214,7 +2214,7 @@
           <size>32</size>
           <fields>
             <field>
-              <name>32K_REG_INDIRT_RDATA</name>
+              <name>REG_INDIRT_RDATA</name>
               <bitOffset>0</bitOffset>
               <bitWidth>16</bitWidth>
               <access>read-only</access>
@@ -4081,7 +4081,7 @@
     </peripheral>
 
     <peripheral>
-      <name>UART for Log</name>
+      <name>LOG_UART</name>
       <description>UART for Log</description>
       <baseAddress>0x40003000</baseAddress>
       <addressBlock>
