@@ -54,7 +54,6 @@
   <peripherals>
     <peripheral>
       <name>GPIO</name>
-      <groupName>GPIO</groupName>
       <description>General Purpose I/O</description>
       <baseAddress>0x40001000</baseAddress>
       <addressBlock>
@@ -520,7 +519,6 @@
 
     <peripheral>
       <name>Timer</name>
-      <groupName>Timers</groupName>
       <description>Timer Control</description>
       <baseAddress>0x40002000</baseAddress>
       <addressBlock>
@@ -532,7 +530,6 @@
 
     <peripheral>
       <name>UART for Log</name>
-      <groupName>UART</groupName>
       <description>UART for Log</description>
       <baseAddress>0x40003000</baseAddress>
       <addressBlock>
@@ -544,7 +541,6 @@
 
     <peripheral>
       <name>I2C_2</name>
-      <groupName>I2C</groupName>
       <description>I2C port 2</description>
       <baseAddress>0x40003400</baseAddress>
       <addressBlock>
@@ -556,7 +552,6 @@
 
     <peripheral>
       <name>I2C_3</name>
-      <groupName>I2C</groupName>
       <description>I2C port 3</description>
       <baseAddress>0x40003800</baseAddress>
       <addressBlock>
@@ -569,7 +564,6 @@
     <!-- No SDRAM on 8710...
     <peripheral>
       <name>SDR</name>
-      <groupName>SDRAM</groupName>
       <description>SDRAM Controller</description>
       <baseAddress>0x40005000</baseAddress>
       <addressBlock>
@@ -582,7 +576,6 @@
 
     <peripheral>
       <name>SPI</name>
-      <groupName>SPI</groupName>
       <description>SPI Flash Controller</description>
       <baseAddress>0x40006000</baseAddress>
       <addressBlock>
@@ -594,7 +587,6 @@
 
     <peripheral>
       <name>ADC</name>
-      <groupName>ADC</groupName>
       <description>ADC</description>
       <baseAddress>0x40010000</baseAddress>
       <addressBlock>
@@ -606,7 +598,6 @@
 
     <peripheral>
       <name>UART_0</name>
-      <groupName>UART</groupName>
       <description>UART 0</description>
       <baseAddress>0x40040000</baseAddress>
       <addressBlock>
@@ -618,7 +609,6 @@
 
     <peripheral>
       <name>UART_1</name>
-      <groupName>UART</groupName>
       <description>UART 1</description>
       <baseAddress>0x40040800</baseAddress>
       <addressBlock>
@@ -630,7 +620,6 @@
 
     <peripheral>
       <name>SPI_0</name>
-      <groupName>SPI</groupName>
       <description>SPI 0</description>
       <baseAddress>0x40040000</baseAddress>
       <addressBlock>
@@ -642,7 +631,6 @@
 
     <peripheral>
       <name>SPI_1</name>
-      <groupName>SPI</groupName>
       <description>SPI 1</description>
       <baseAddress>0x40040800</baseAddress>
       <addressBlock>
@@ -654,7 +642,6 @@
 
     <peripheral>
       <name>I2C_1</name>
-      <groupName>I2C</groupName>
       <description>I2C 1</description>
       <baseAddress>0x40044400</baseAddress>
       <addressBlock>
@@ -666,7 +653,6 @@
 
     <peripheral>
       <name>SDIO</name>
-      <groupName>SDIO</groupName>
       <description>SDIO Host</description>
       <baseAddress>0x40058000</baseAddress>
       <addressBlock>
@@ -678,7 +664,6 @@
 
     <peripheral>
       <name>GDMA0</name>
-      <groupName>GDMA</groupName>
       <description>GDMA0</description>
       <baseAddress>0x40060000</baseAddress>
       <addressBlock>
@@ -690,7 +675,6 @@
 
     <peripheral>
       <name>GDMA1</name>
-      <groupName>GDMA</groupName>
       <description>GDMA1</description>
       <baseAddress>0x40061000</baseAddress>
       <addressBlock>
@@ -702,7 +686,6 @@
 
     <peripheral>
       <name>I2S_1</name>
-      <groupName>I2S</groupName>
       <description>I2S_1</description>
       <baseAddress>0x40063000</baseAddress>
       <addressBlock>
@@ -714,7 +697,6 @@
 
     <peripheral>
       <name>PCM_0</name>
-      <groupName>PCM</groupName>
       <description>PCM_0</description>
       <baseAddress>0x40064000</baseAddress>
       <addressBlock>
@@ -726,7 +708,6 @@
 
     <peripheral>
       <name>PCM_1</name>
-      <groupName>PCM</groupName>
       <description>PCM_1</description>
       <baseAddress>0x40065000</baseAddress>
       <addressBlock>
@@ -738,7 +719,6 @@
 
     <peripheral>
       <name>Security</name>
-      <groupName>Security</groupName>
       <description>Security Engine</description>
       <baseAddress>0x40070000</baseAddress>
       <addressBlock>
@@ -750,7 +730,6 @@
 
     <peripheral>
       <name>WIFI</name>
-      <groupName>WIFI</groupName>
       <description>WIFI REG &amp; TX/RX FIFO direct map</description>
       <baseAddress>0x40080000</baseAddress>
       <addressBlock>
