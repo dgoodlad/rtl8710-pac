@@ -53,6 +53,13 @@
 
   <peripherals>
     <peripheral>
+      <name>SYSCON</name>
+      <description>System Control Registers</description>
+      <baseAddress>0x40000000</baseAddress>
+      <size>0x1000</size>
+    </peripheral>
+
+    <peripheral>
       <name>GPIO</name>
       <description>General Purpose I/O</description>
       <baseAddress>0x40001000</baseAddress>
