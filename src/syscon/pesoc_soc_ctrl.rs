@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::GPIOA_DR {
+impl super::PESOC_SOC_CTRL {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,21 @@ impl super::GPIOA_DR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E3R {
+pub struct PESOC_GDMA_CFGR {
+    bits: u16,
+}
+impl PESOC_GDMA_CFGR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u16 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PESOC_MII_LX_SLV_SWAP_SELR {
     bits: bool,
 }
-impl E3R {
+impl PESOC_MII_LX_SLV_SWAP_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +75,10 @@ impl E3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E2R {
+pub struct PESOC_MII_LX_MST_SWAP_SELR {
     bits: bool,
 }
-impl E2R {
+impl PESOC_MII_LX_MST_SWAP_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +96,10 @@ impl E2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E1R {
+pub struct PESOC_MII_LX_WRAPPER_ENR {
     bits: bool,
 }
-impl E1R {
+impl PESOC_MII_LX_WRAPPER_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +117,10 @@ impl E1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C4R {
+pub struct PESOC_LX_SLV_SWAP_SELR {
     bits: bool,
 }
-impl C4R {
+impl PESOC_LX_SLV_SWAP_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +138,10 @@ impl C4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C3R {
+pub struct PESOC_LX_MST_SWAP_SELR {
     bits: bool,
 }
-impl C3R {
+impl PESOC_LX_MST_SWAP_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,10 +159,10 @@ impl C3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C1R {
+pub struct PESOC_LX_WL_SWAP_SELR {
     bits: bool,
 }
-impl C1R {
+impl PESOC_LX_WL_SWAP_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -169,94 +180,36 @@ impl C1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct B4R {
-    bits: bool,
+pub struct PESOC_SRAM_MUX_CFGR {
+    bits: u8,
 }
-impl B4R {
+impl PESOC_SRAM_MUX_CFGR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct B3R {
-    bits: bool,
-}
-impl B3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A1R {
-    bits: bool,
-}
-impl A1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A0R {
-    bits: bool,
-}
-impl A0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Proxy"]
-pub struct _E3W<'a> {
+pub struct _PESOC_GDMA_CFGW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E3W<'a> {
+impl<'a> _PESOC_GDMA_CFGW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+        const MASK: u16 = 8191;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PESOC_MII_LX_SLV_SWAP_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PESOC_MII_LX_SLV_SWAP_SELW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -269,17 +222,17 @@ impl<'a> _E3W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 23;
+        const OFFSET: u8 = 13;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E2W<'a> {
+pub struct _PESOC_MII_LX_MST_SWAP_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E2W<'a> {
+impl<'a> _PESOC_MII_LX_MST_SWAP_SELW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -292,17 +245,17 @@ impl<'a> _E2W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 22;
+        const OFFSET: u8 = 12;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E1W<'a> {
+pub struct _PESOC_MII_LX_WRAPPER_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E1W<'a> {
+impl<'a> _PESOC_MII_LX_WRAPPER_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -315,17 +268,63 @@ impl<'a> _E1W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 21;
+        const OFFSET: u8 = 11;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _C4W<'a> {
+pub struct _PESOC_LX_SLV_SWAP_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C4W<'a> {
+impl<'a> _PESOC_LX_SLV_SWAP_SELW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 10;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PESOC_LX_MST_SWAP_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PESOC_LX_MST_SWAP_SELW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PESOC_LX_WL_SWAP_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PESOC_LX_WL_SWAP_SELW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -345,137 +344,14 @@ impl<'a> _C4W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C3W<'a> {
+pub struct _PESOC_SRAM_MUX_CFGW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PESOC_SRAM_MUX_CFGW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _C1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _C1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _B4W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _B4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _B3W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _B3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A0W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A0W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -488,105 +364,85 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bits 16:28"]
     #[inline]
-    pub fn e3(&self) -> E3R {
+    pub fn pesoc_gdma_cfg(&self) -> PESOC_GDMA_CFGR {
+        let bits = {
+            const MASK: u16 = 8191;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) as u16
+        };
+        PESOC_GDMA_CFGR { bits }
+    }
+    #[doc = "Bit 13"]
+    #[inline]
+    pub fn pesoc_mii_lx_slv_swap_sel(&self) -> PESOC_MII_LX_SLV_SWAP_SELR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 23;
+            const OFFSET: u8 = 13;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E3R { bits }
+        PESOC_MII_LX_SLV_SWAP_SELR { bits }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bit 12"]
     #[inline]
-    pub fn e2(&self) -> E2R {
+    pub fn pesoc_mii_lx_mst_swap_sel(&self) -> PESOC_MII_LX_MST_SWAP_SELR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 22;
+            const OFFSET: u8 = 12;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E2R { bits }
+        PESOC_MII_LX_MST_SWAP_SELR { bits }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bit 11"]
     #[inline]
-    pub fn e1(&self) -> E1R {
+    pub fn pesoc_mii_lx_wrapper_en(&self) -> PESOC_MII_LX_WRAPPER_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 21;
+            const OFFSET: u8 = 11;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E1R { bits }
+        PESOC_MII_LX_WRAPPER_ENR { bits }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 10"]
     #[inline]
-    pub fn c4(&self) -> C4R {
+    pub fn pesoc_lx_slv_swap_sel(&self) -> PESOC_LX_SLV_SWAP_SELR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 10;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PESOC_LX_SLV_SWAP_SELR { bits }
+    }
+    #[doc = "Bit 9"]
+    #[inline]
+    pub fn pesoc_lx_mst_swap_sel(&self) -> PESOC_LX_MST_SWAP_SELR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PESOC_LX_MST_SWAP_SELR { bits }
+    }
+    #[doc = "Bit 8"]
+    #[inline]
+    pub fn pesoc_lx_wl_swap_sel(&self) -> PESOC_LX_WL_SWAP_SELR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C4R { bits }
+        PESOC_LX_WL_SWAP_SELR { bits }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bits 0:2"]
     #[inline]
-    pub fn c3(&self) -> C3R {
+    pub fn pesoc_sram_mux_cfg(&self) -> PESOC_SRAM_MUX_CFGR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        C3R { bits }
-    }
-    #[doc = "Bit 6 - Pin C1"]
-    #[inline]
-    pub fn c1(&self) -> C1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        C1R { bits }
-    }
-    #[doc = "Bit 3 - Pin B4"]
-    #[inline]
-    pub fn b4(&self) -> B4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B4R { bits }
-    }
-    #[doc = "Bit 2 - Pin B3"]
-    #[inline]
-    pub fn b3(&self) -> B3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B3R { bits }
-    }
-    #[doc = "Bit 1 - Pin A1"]
-    #[inline]
-    pub fn a1(&self) -> A1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        A1R { bits }
-    }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
-    #[inline]
-    pub fn a0(&self) -> A0R {
-        let bits = {
-            const MASK: bool = true;
+            const MASK: u8 = 7;
             const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        A0R { bits }
+        PESOC_SRAM_MUX_CFGR { bits }
     }
 }
 impl W {
@@ -601,54 +457,44 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bits 16:28"]
     #[inline]
-    pub fn e3(&mut self) -> _E3W {
-        _E3W { w: self }
+    pub fn pesoc_gdma_cfg(&mut self) -> _PESOC_GDMA_CFGW {
+        _PESOC_GDMA_CFGW { w: self }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bit 13"]
     #[inline]
-    pub fn e2(&mut self) -> _E2W {
-        _E2W { w: self }
+    pub fn pesoc_mii_lx_slv_swap_sel(&mut self) -> _PESOC_MII_LX_SLV_SWAP_SELW {
+        _PESOC_MII_LX_SLV_SWAP_SELW { w: self }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bit 12"]
     #[inline]
-    pub fn e1(&mut self) -> _E1W {
-        _E1W { w: self }
+    pub fn pesoc_mii_lx_mst_swap_sel(&mut self) -> _PESOC_MII_LX_MST_SWAP_SELW {
+        _PESOC_MII_LX_MST_SWAP_SELW { w: self }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 11"]
     #[inline]
-    pub fn c4(&mut self) -> _C4W {
-        _C4W { w: self }
+    pub fn pesoc_mii_lx_wrapper_en(&mut self) -> _PESOC_MII_LX_WRAPPER_ENW {
+        _PESOC_MII_LX_WRAPPER_ENW { w: self }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bit 10"]
     #[inline]
-    pub fn c3(&mut self) -> _C3W {
-        _C3W { w: self }
+    pub fn pesoc_lx_slv_swap_sel(&mut self) -> _PESOC_LX_SLV_SWAP_SELW {
+        _PESOC_LX_SLV_SWAP_SELW { w: self }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bit 9"]
     #[inline]
-    pub fn c1(&mut self) -> _C1W {
-        _C1W { w: self }
+    pub fn pesoc_lx_mst_swap_sel(&mut self) -> _PESOC_LX_MST_SWAP_SELW {
+        _PESOC_LX_MST_SWAP_SELW { w: self }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bit 8"]
     #[inline]
-    pub fn b4(&mut self) -> _B4W {
-        _B4W { w: self }
+    pub fn pesoc_lx_wl_swap_sel(&mut self) -> _PESOC_LX_WL_SWAP_SELW {
+        _PESOC_LX_WL_SWAP_SELW { w: self }
     }
-    #[doc = "Bit 2 - Pin B3"]
+    #[doc = "Bits 0:2"]
     #[inline]
-    pub fn b3(&mut self) -> _B3W {
-        _B3W { w: self }
-    }
-    #[doc = "Bit 1 - Pin A1"]
-    #[inline]
-    pub fn a1(&mut self) -> _A1W {
-        _A1W { w: self }
-    }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
-    #[inline]
-    pub fn a0(&mut self) -> _A0W {
-        _A0W { w: self }
+    pub fn pesoc_sram_mux_cfg(&mut self) -> _PESOC_SRAM_MUX_CFGW {
+        _PESOC_SRAM_MUX_CFGW { w: self }
     }
 }

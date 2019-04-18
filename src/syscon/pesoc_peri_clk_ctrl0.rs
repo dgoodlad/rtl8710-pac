@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::GPIOA_DR {
+impl super::PESOC_PERI_CLK_CTRL0 {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::GPIOA_DR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E3R {
+pub struct SOC_SLPCK_SPI2_ENR {
     bits: bool,
 }
-impl E3R {
+impl SOC_SLPCK_SPI2_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl E3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E2R {
+pub struct SOC_ACTCK_SPI2_ENR {
     bits: bool,
 }
-impl E2R {
+impl SOC_ACTCK_SPI2_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl E2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E1R {
+pub struct SOC_SLPCK_SPI1_ENR {
     bits: bool,
 }
-impl E1R {
+impl SOC_SLPCK_SPI1_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl E1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C4R {
+pub struct SOC_ACTCK_SPI1_ENR {
     bits: bool,
 }
-impl C4R {
+impl SOC_ACTCK_SPI1_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +127,10 @@ impl C4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C3R {
+pub struct SOC_SLPCK_SPI0_ENR {
     bits: bool,
 }
-impl C3R {
+impl SOC_SLPCK_SPI0_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,10 +148,10 @@ impl C3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C1R {
+pub struct SOC_ACTCK_SPI0_ENR {
     bits: bool,
 }
-impl C1R {
+impl SOC_ACTCK_SPI0_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -169,10 +169,10 @@ impl C1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct B4R {
+pub struct SOC_SLPCK_UART2_ENR {
     bits: bool,
 }
-impl B4R {
+impl SOC_SLPCK_UART2_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -190,10 +190,10 @@ impl B4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct B3R {
+pub struct SOC_ACTCK_UART2_ENR {
     bits: bool,
 }
-impl B3R {
+impl SOC_ACTCK_UART2_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -211,10 +211,10 @@ impl B3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct A1R {
+pub struct SOC_SLPCK_UART1_ENR {
     bits: bool,
 }
-impl A1R {
+impl SOC_SLPCK_UART1_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -232,10 +232,52 @@ impl A1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct A0R {
+pub struct SOC_ACTCK_UART1_ENR {
     bits: bool,
 }
-impl A0R {
+impl SOC_ACTCK_UART1_ENR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct SOC_SLPCK_UART0_ENR {
+    bits: bool,
+}
+impl SOC_SLPCK_UART0_ENR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct SOC_ACTCK_UART0_ENR {
+    bits: bool,
+}
+impl SOC_ACTCK_UART0_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -253,56 +295,10 @@ impl A0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _E3W<'a> {
+pub struct _SOC_SLPCK_SPI2_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 23;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _E2W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _E2W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 22;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _E1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _E1W<'a> {
+impl<'a> _SOC_SLPCK_SPI2_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -322,10 +318,10 @@ impl<'a> _E1W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C4W<'a> {
+pub struct _SOC_ACTCK_SPI2_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C4W<'a> {
+impl<'a> _SOC_ACTCK_SPI2_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -338,17 +334,17 @@ impl<'a> _C4W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 8;
+        const OFFSET: u8 = 20;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _C3W<'a> {
+pub struct _SOC_SLPCK_SPI1_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C3W<'a> {
+impl<'a> _SOC_SLPCK_SPI1_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -361,17 +357,17 @@ impl<'a> _C3W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 7;
+        const OFFSET: u8 = 19;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _C1W<'a> {
+pub struct _SOC_ACTCK_SPI1_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C1W<'a> {
+impl<'a> _SOC_ACTCK_SPI1_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -384,17 +380,109 @@ impl<'a> _C1W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 6;
+        const OFFSET: u8 = 18;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _B4W<'a> {
+pub struct _SOC_SLPCK_SPI0_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _B4W<'a> {
+impl<'a> _SOC_SLPCK_SPI0_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 17;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SOC_ACTCK_SPI0_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SOC_ACTCK_SPI0_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SOC_SLPCK_UART2_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SOC_SLPCK_UART2_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 5;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SOC_ACTCK_UART2_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SOC_ACTCK_UART2_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 4;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SOC_SLPCK_UART1_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SOC_SLPCK_UART1_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -414,10 +502,10 @@ impl<'a> _B4W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _B3W<'a> {
+pub struct _SOC_ACTCK_UART1_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _B3W<'a> {
+impl<'a> _SOC_ACTCK_UART1_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -437,10 +525,10 @@ impl<'a> _B3W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _A1W<'a> {
+pub struct _SOC_SLPCK_UART0_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _A1W<'a> {
+impl<'a> _SOC_SLPCK_UART0_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -460,10 +548,10 @@ impl<'a> _A1W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _A0W<'a> {
+pub struct _SOC_ACTCK_UART0_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _A0W<'a> {
+impl<'a> _SOC_ACTCK_UART0_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -488,105 +576,125 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bit 21"]
     #[inline]
-    pub fn e3(&self) -> E3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 23;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        E3R { bits }
-    }
-    #[doc = "Bit 22 - Pin E2"]
-    #[inline]
-    pub fn e2(&self) -> E2R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 22;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        E2R { bits }
-    }
-    #[doc = "Bit 21 - Pin E1"]
-    #[inline]
-    pub fn e1(&self) -> E1R {
+    pub fn soc_slpck_spi2_en(&self) -> SOC_SLPCK_SPI2_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 21;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E1R { bits }
+        SOC_SLPCK_SPI2_ENR { bits }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 20"]
     #[inline]
-    pub fn c4(&self) -> C4R {
+    pub fn soc_actck_spi2_en(&self) -> SOC_ACTCK_SPI2_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 8;
+            const OFFSET: u8 = 20;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C4R { bits }
+        SOC_ACTCK_SPI2_ENR { bits }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bit 19"]
     #[inline]
-    pub fn c3(&self) -> C3R {
+    pub fn soc_slpck_spi1_en(&self) -> SOC_SLPCK_SPI1_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 7;
+            const OFFSET: u8 = 19;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C3R { bits }
+        SOC_SLPCK_SPI1_ENR { bits }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bit 18"]
     #[inline]
-    pub fn c1(&self) -> C1R {
+    pub fn soc_actck_spi1_en(&self) -> SOC_ACTCK_SPI1_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 6;
+            const OFFSET: u8 = 18;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C1R { bits }
+        SOC_ACTCK_SPI1_ENR { bits }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bit 17"]
     #[inline]
-    pub fn b4(&self) -> B4R {
+    pub fn soc_slpck_spi0_en(&self) -> SOC_SLPCK_SPI0_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        SOC_SLPCK_SPI0_ENR { bits }
+    }
+    #[doc = "Bit 16"]
+    #[inline]
+    pub fn soc_actck_spi0_en(&self) -> SOC_ACTCK_SPI0_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        SOC_ACTCK_SPI0_ENR { bits }
+    }
+    #[doc = "Bit 5"]
+    #[inline]
+    pub fn soc_slpck_uart2_en(&self) -> SOC_SLPCK_UART2_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        SOC_SLPCK_UART2_ENR { bits }
+    }
+    #[doc = "Bit 4"]
+    #[inline]
+    pub fn soc_actck_uart2_en(&self) -> SOC_ACTCK_UART2_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        SOC_ACTCK_UART2_ENR { bits }
+    }
+    #[doc = "Bit 3"]
+    #[inline]
+    pub fn soc_slpck_uart1_en(&self) -> SOC_SLPCK_UART1_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        B4R { bits }
+        SOC_SLPCK_UART1_ENR { bits }
     }
-    #[doc = "Bit 2 - Pin B3"]
+    #[doc = "Bit 2"]
     #[inline]
-    pub fn b3(&self) -> B3R {
+    pub fn soc_actck_uart1_en(&self) -> SOC_ACTCK_UART1_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        B3R { bits }
+        SOC_ACTCK_UART1_ENR { bits }
     }
-    #[doc = "Bit 1 - Pin A1"]
+    #[doc = "Bit 1"]
     #[inline]
-    pub fn a1(&self) -> A1R {
+    pub fn soc_slpck_uart0_en(&self) -> SOC_SLPCK_UART0_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        A1R { bits }
+        SOC_SLPCK_UART0_ENR { bits }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 0"]
     #[inline]
-    pub fn a0(&self) -> A0R {
+    pub fn soc_actck_uart0_en(&self) -> SOC_ACTCK_UART0_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        A0R { bits }
+        SOC_ACTCK_UART0_ENR { bits }
     }
 }
 impl W {
@@ -601,54 +709,64 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bit 21"]
     #[inline]
-    pub fn e3(&mut self) -> _E3W {
-        _E3W { w: self }
+    pub fn soc_slpck_spi2_en(&mut self) -> _SOC_SLPCK_SPI2_ENW {
+        _SOC_SLPCK_SPI2_ENW { w: self }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bit 20"]
     #[inline]
-    pub fn e2(&mut self) -> _E2W {
-        _E2W { w: self }
+    pub fn soc_actck_spi2_en(&mut self) -> _SOC_ACTCK_SPI2_ENW {
+        _SOC_ACTCK_SPI2_ENW { w: self }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bit 19"]
     #[inline]
-    pub fn e1(&mut self) -> _E1W {
-        _E1W { w: self }
+    pub fn soc_slpck_spi1_en(&mut self) -> _SOC_SLPCK_SPI1_ENW {
+        _SOC_SLPCK_SPI1_ENW { w: self }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 18"]
     #[inline]
-    pub fn c4(&mut self) -> _C4W {
-        _C4W { w: self }
+    pub fn soc_actck_spi1_en(&mut self) -> _SOC_ACTCK_SPI1_ENW {
+        _SOC_ACTCK_SPI1_ENW { w: self }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bit 17"]
     #[inline]
-    pub fn c3(&mut self) -> _C3W {
-        _C3W { w: self }
+    pub fn soc_slpck_spi0_en(&mut self) -> _SOC_SLPCK_SPI0_ENW {
+        _SOC_SLPCK_SPI0_ENW { w: self }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bit 16"]
     #[inline]
-    pub fn c1(&mut self) -> _C1W {
-        _C1W { w: self }
+    pub fn soc_actck_spi0_en(&mut self) -> _SOC_ACTCK_SPI0_ENW {
+        _SOC_ACTCK_SPI0_ENW { w: self }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bit 5"]
     #[inline]
-    pub fn b4(&mut self) -> _B4W {
-        _B4W { w: self }
+    pub fn soc_slpck_uart2_en(&mut self) -> _SOC_SLPCK_UART2_ENW {
+        _SOC_SLPCK_UART2_ENW { w: self }
     }
-    #[doc = "Bit 2 - Pin B3"]
+    #[doc = "Bit 4"]
     #[inline]
-    pub fn b3(&mut self) -> _B3W {
-        _B3W { w: self }
+    pub fn soc_actck_uart2_en(&mut self) -> _SOC_ACTCK_UART2_ENW {
+        _SOC_ACTCK_UART2_ENW { w: self }
     }
-    #[doc = "Bit 1 - Pin A1"]
+    #[doc = "Bit 3"]
     #[inline]
-    pub fn a1(&mut self) -> _A1W {
-        _A1W { w: self }
+    pub fn soc_slpck_uart1_en(&mut self) -> _SOC_SLPCK_UART1_ENW {
+        _SOC_SLPCK_UART1_ENW { w: self }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 2"]
     #[inline]
-    pub fn a0(&mut self) -> _A0W {
-        _A0W { w: self }
+    pub fn soc_actck_uart1_en(&mut self) -> _SOC_ACTCK_UART1_ENW {
+        _SOC_ACTCK_UART1_ENW { w: self }
+    }
+    #[doc = "Bit 1"]
+    #[inline]
+    pub fn soc_slpck_uart0_en(&mut self) -> _SOC_SLPCK_UART0_ENW {
+        _SOC_SLPCK_UART0_ENW { w: self }
+    }
+    #[doc = "Bit 0"]
+    #[inline]
+    pub fn soc_actck_uart0_en(&mut self) -> _SOC_ACTCK_UART0_ENW {
+        _SOC_ACTCK_UART0_ENW { w: self }
     }
 }

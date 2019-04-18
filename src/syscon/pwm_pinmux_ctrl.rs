@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::GPIOA_DR {
+impl super::PWM_PINMUX_CTRL {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,21 @@ impl super::GPIOA_DR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E3R {
+pub struct ETE3_PIN_SELR {
+    bits: u8,
+}
+impl ETE3_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct ETE3_PIN_ENR {
     bits: bool,
 }
-impl E3R {
+impl ETE3_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +75,21 @@ impl E3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E2R {
+pub struct ETE2_PIN_SELR {
+    bits: u8,
+}
+impl ETE2_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct ETE2_PIN_ENR {
     bits: bool,
 }
-impl E2R {
+impl ETE2_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +107,21 @@ impl E2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E1R {
+pub struct ETE1_PIN_SELR {
+    bits: u8,
+}
+impl ETE1_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct ETE1_PIN_ENR {
     bits: bool,
 }
-impl E1R {
+impl ETE1_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +139,21 @@ impl E1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C4R {
+pub struct ETE0_PIN_SELR {
+    bits: u8,
+}
+impl ETE0_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct ETE0_PIN_ENR {
     bits: bool,
 }
-impl C4R {
+impl ETE0_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +171,21 @@ impl C4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C3R {
+pub struct PWM3_PIN_SELR {
+    bits: u8,
+}
+impl PWM3_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PWM3_PIN_ENR {
     bits: bool,
 }
-impl C3R {
+impl PWM3_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,10 +203,21 @@ impl C3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C1R {
+pub struct PWM2_PIN_SELR {
+    bits: u8,
+}
+impl PWM2_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PWM2_PIN_ENR {
     bits: bool,
 }
-impl C1R {
+impl PWM2_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -169,10 +235,21 @@ impl C1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct B4R {
+pub struct PWM1_PIN_SELR {
+    bits: u8,
+}
+impl PWM1_PIN_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PWM1_PIN_ENR {
     bits: bool,
 }
-impl B4R {
+impl PWM1_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -190,52 +267,21 @@ impl B4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct B3R {
-    bits: bool,
+pub struct PWM0_PIN_SELR {
+    bits: u8,
 }
-impl B3R {
+impl PWM0_PIN_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct A1R {
+pub struct PWM0_PIN_ENR {
     bits: bool,
 }
-impl A1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A0R {
-    bits: bool,
-}
-impl A0R {
+impl PWM0_PIN_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -253,33 +299,25 @@ impl A0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _E3W<'a> {
+pub struct _ETE3_PIN_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _ETE3_PIN_SELW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 23;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 29;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E2W<'a> {
+pub struct _ETE3_PIN_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E2W<'a> {
+impl<'a> _ETE3_PIN_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -292,17 +330,32 @@ impl<'a> _E2W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 22;
+        const OFFSET: u8 = 28;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E1W<'a> {
+pub struct _ETE2_PIN_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E1W<'a> {
+impl<'a> _ETE2_PIN_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 25;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ETE2_PIN_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ETE2_PIN_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -315,6 +368,21 @@ impl<'a> _E1W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ETE1_PIN_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ETE1_PIN_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
         const OFFSET: u8 = 21;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -322,10 +390,124 @@ impl<'a> _E1W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C4W<'a> {
+pub struct _ETE1_PIN_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C4W<'a> {
+impl<'a> _ETE1_PIN_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 20;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ETE0_PIN_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ETE0_PIN_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 17;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _ETE0_PIN_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _ETE0_PIN_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 16;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PWM3_PIN_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PWM3_PIN_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 13;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PWM3_PIN_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PWM3_PIN_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 12;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PWM2_PIN_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PWM2_PIN_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PWM2_PIN_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PWM2_PIN_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -345,33 +527,25 @@ impl<'a> _C4W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C3W<'a> {
+pub struct _PWM1_PIN_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PWM1_PIN_SELW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
+        const OFFSET: u8 = 5;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _C1W<'a> {
+pub struct _PWM1_PIN_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C1W<'a> {
+impl<'a> _PWM1_PIN_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -384,75 +558,21 @@ impl<'a> _C1W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 6;
+        const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _B4W<'a> {
+pub struct _PWM0_PIN_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _B4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PWM0_PIN_SELW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _B3W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _B3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 3;
         const OFFSET: u8 = 1;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -460,10 +580,10 @@ impl<'a> _A1W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _A0W<'a> {
+pub struct _PWM0_PIN_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _A0W<'a> {
+impl<'a> _PWM0_PIN_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -488,105 +608,165 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bits 29:30"]
     #[inline]
-    pub fn e3(&self) -> E3R {
+    pub fn ete3_pin_sel(&self) -> ETE3_PIN_SELR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 29;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        ETE3_PIN_SELR { bits }
+    }
+    #[doc = "Bit 28"]
+    #[inline]
+    pub fn ete3_pin_en(&self) -> ETE3_PIN_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 23;
+            const OFFSET: u8 = 28;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E3R { bits }
+        ETE3_PIN_ENR { bits }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bits 25:26"]
     #[inline]
-    pub fn e2(&self) -> E2R {
+    pub fn ete2_pin_sel(&self) -> ETE2_PIN_SELR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 25;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        ETE2_PIN_SELR { bits }
+    }
+    #[doc = "Bit 24"]
+    #[inline]
+    pub fn ete2_pin_en(&self) -> ETE2_PIN_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 22;
+            const OFFSET: u8 = 24;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E2R { bits }
+        ETE2_PIN_ENR { bits }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bits 21:22"]
     #[inline]
-    pub fn e1(&self) -> E1R {
+    pub fn ete1_pin_sel(&self) -> ETE1_PIN_SELR {
         let bits = {
-            const MASK: bool = true;
+            const MASK: u8 = 3;
             const OFFSET: u8 = 21;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        ETE1_PIN_SELR { bits }
+    }
+    #[doc = "Bit 20"]
+    #[inline]
+    pub fn ete1_pin_en(&self) -> ETE1_PIN_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 20;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E1R { bits }
+        ETE1_PIN_ENR { bits }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bits 17:18"]
     #[inline]
-    pub fn c4(&self) -> C4R {
+    pub fn ete0_pin_sel(&self) -> ETE0_PIN_SELR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 17;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        ETE0_PIN_SELR { bits }
+    }
+    #[doc = "Bit 16"]
+    #[inline]
+    pub fn ete0_pin_en(&self) -> ETE0_PIN_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        ETE0_PIN_ENR { bits }
+    }
+    #[doc = "Bits 13:14"]
+    #[inline]
+    pub fn pwm3_pin_sel(&self) -> PWM3_PIN_SELR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 13;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PWM3_PIN_SELR { bits }
+    }
+    #[doc = "Bit 12"]
+    #[inline]
+    pub fn pwm3_pin_en(&self) -> PWM3_PIN_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 12;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PWM3_PIN_ENR { bits }
+    }
+    #[doc = "Bits 9:10"]
+    #[inline]
+    pub fn pwm2_pin_sel(&self) -> PWM2_PIN_SELR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PWM2_PIN_SELR { bits }
+    }
+    #[doc = "Bit 8"]
+    #[inline]
+    pub fn pwm2_pin_en(&self) -> PWM2_PIN_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C4R { bits }
+        PWM2_PIN_ENR { bits }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bits 5:6"]
     #[inline]
-    pub fn c3(&self) -> C3R {
+    pub fn pwm1_pin_sel(&self) -> PWM1_PIN_SELR {
+        let bits = {
+            const MASK: u8 = 3;
+            const OFFSET: u8 = 5;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PWM1_PIN_SELR { bits }
+    }
+    #[doc = "Bit 4"]
+    #[inline]
+    pub fn pwm1_pin_en(&self) -> PWM1_PIN_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 7;
+            const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C3R { bits }
+        PWM1_PIN_ENR { bits }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bits 1:2"]
     #[inline]
-    pub fn c1(&self) -> C1R {
+    pub fn pwm0_pin_sel(&self) -> PWM0_PIN_SELR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        C1R { bits }
-    }
-    #[doc = "Bit 3 - Pin B4"]
-    #[inline]
-    pub fn b4(&self) -> B4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B4R { bits }
-    }
-    #[doc = "Bit 2 - Pin B3"]
-    #[inline]
-    pub fn b3(&self) -> B3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B3R { bits }
-    }
-    #[doc = "Bit 1 - Pin A1"]
-    #[inline]
-    pub fn a1(&self) -> A1R {
-        let bits = {
-            const MASK: bool = true;
+            const MASK: u8 = 3;
             const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        A1R { bits }
+        PWM0_PIN_SELR { bits }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 0"]
     #[inline]
-    pub fn a0(&self) -> A0R {
+    pub fn pwm0_pin_en(&self) -> PWM0_PIN_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        A0R { bits }
+        PWM0_PIN_ENR { bits }
     }
 }
 impl W {
@@ -601,54 +781,84 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bits 29:30"]
     #[inline]
-    pub fn e3(&mut self) -> _E3W {
-        _E3W { w: self }
+    pub fn ete3_pin_sel(&mut self) -> _ETE3_PIN_SELW {
+        _ETE3_PIN_SELW { w: self }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bit 28"]
     #[inline]
-    pub fn e2(&mut self) -> _E2W {
-        _E2W { w: self }
+    pub fn ete3_pin_en(&mut self) -> _ETE3_PIN_ENW {
+        _ETE3_PIN_ENW { w: self }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bits 25:26"]
     #[inline]
-    pub fn e1(&mut self) -> _E1W {
-        _E1W { w: self }
+    pub fn ete2_pin_sel(&mut self) -> _ETE2_PIN_SELW {
+        _ETE2_PIN_SELW { w: self }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 24"]
     #[inline]
-    pub fn c4(&mut self) -> _C4W {
-        _C4W { w: self }
+    pub fn ete2_pin_en(&mut self) -> _ETE2_PIN_ENW {
+        _ETE2_PIN_ENW { w: self }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bits 21:22"]
     #[inline]
-    pub fn c3(&mut self) -> _C3W {
-        _C3W { w: self }
+    pub fn ete1_pin_sel(&mut self) -> _ETE1_PIN_SELW {
+        _ETE1_PIN_SELW { w: self }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bit 20"]
     #[inline]
-    pub fn c1(&mut self) -> _C1W {
-        _C1W { w: self }
+    pub fn ete1_pin_en(&mut self) -> _ETE1_PIN_ENW {
+        _ETE1_PIN_ENW { w: self }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bits 17:18"]
     #[inline]
-    pub fn b4(&mut self) -> _B4W {
-        _B4W { w: self }
+    pub fn ete0_pin_sel(&mut self) -> _ETE0_PIN_SELW {
+        _ETE0_PIN_SELW { w: self }
     }
-    #[doc = "Bit 2 - Pin B3"]
+    #[doc = "Bit 16"]
     #[inline]
-    pub fn b3(&mut self) -> _B3W {
-        _B3W { w: self }
+    pub fn ete0_pin_en(&mut self) -> _ETE0_PIN_ENW {
+        _ETE0_PIN_ENW { w: self }
     }
-    #[doc = "Bit 1 - Pin A1"]
+    #[doc = "Bits 13:14"]
     #[inline]
-    pub fn a1(&mut self) -> _A1W {
-        _A1W { w: self }
+    pub fn pwm3_pin_sel(&mut self) -> _PWM3_PIN_SELW {
+        _PWM3_PIN_SELW { w: self }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 12"]
     #[inline]
-    pub fn a0(&mut self) -> _A0W {
-        _A0W { w: self }
+    pub fn pwm3_pin_en(&mut self) -> _PWM3_PIN_ENW {
+        _PWM3_PIN_ENW { w: self }
+    }
+    #[doc = "Bits 9:10"]
+    #[inline]
+    pub fn pwm2_pin_sel(&mut self) -> _PWM2_PIN_SELW {
+        _PWM2_PIN_SELW { w: self }
+    }
+    #[doc = "Bit 8"]
+    #[inline]
+    pub fn pwm2_pin_en(&mut self) -> _PWM2_PIN_ENW {
+        _PWM2_PIN_ENW { w: self }
+    }
+    #[doc = "Bits 5:6"]
+    #[inline]
+    pub fn pwm1_pin_sel(&mut self) -> _PWM1_PIN_SELW {
+        _PWM1_PIN_SELW { w: self }
+    }
+    #[doc = "Bit 4"]
+    #[inline]
+    pub fn pwm1_pin_en(&mut self) -> _PWM1_PIN_ENW {
+        _PWM1_PIN_ENW { w: self }
+    }
+    #[doc = "Bits 1:2"]
+    #[inline]
+    pub fn pwm0_pin_sel(&mut self) -> _PWM0_PIN_SELW {
+        _PWM0_PIN_SELW { w: self }
+    }
+    #[doc = "Bit 0"]
+    #[inline]
+    pub fn pwm0_pin_en(&mut self) -> _PWM0_PIN_ENW {
+        _PWM0_PIN_ENW { w: self }
     }
 }

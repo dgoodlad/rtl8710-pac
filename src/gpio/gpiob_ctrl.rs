@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::GPIOA_DR {
+impl super::GPIOB_CTRL {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -578,7 +578,7 @@ impl R {
         };
         A1R { bits }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 0 - GPIO pin A0 control"]
     #[inline]
     pub fn a0(&self) -> A0R {
         let bits = {
@@ -646,7 +646,7 @@ impl W {
     pub fn a1(&mut self) -> _A1W {
         _A1W { w: self }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 0 - GPIO pin A0 control"]
     #[inline]
     pub fn a0(&mut self) -> _A0W {
         _A0W { w: self }

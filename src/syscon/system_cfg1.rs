@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::GPIOA_DR {
+impl super::SYSTEM_CFG1 {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,21 @@ impl super::GPIOA_DR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E3R {
+pub struct SYSCFG_TRP_ICFGR {
+    bits: u8,
+}
+impl SYSCFG_TRP_ICFGR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct SYSCFG_TRP_BOOT_SEL_R {
     bits: bool,
 }
-impl E3R {
+impl SYSCFG_TRP_BOOT_SEL_R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +75,10 @@ impl E3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E2R {
+pub struct SYSCFG_TRP_SPSLDO_SELR {
     bits: bool,
 }
-impl E2R {
+impl SYSCFG_TRP_SPSLDO_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +96,10 @@ impl E2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E1R {
+pub struct V15_VLDR {
     bits: bool,
 }
-impl E1R {
+impl V15_VLDR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +117,10 @@ impl E1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C4R {
+pub struct SYS_SYSPLL_CLK_RDYR {
     bits: bool,
 }
-impl C4R {
+impl SYS_SYSPLL_CLK_RDYR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,10 +138,10 @@ impl C4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C3R {
+pub struct SYS_XCLK_VLDR {
     bits: bool,
 }
-impl C3R {
+impl SYS_XCLK_VLDR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -148,94 +159,10 @@ impl C3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C1R {
+pub struct SYSCFG_ALDN_STSR {
     bits: bool,
 }
-impl C1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct B4R {
-    bits: bool,
-}
-impl B4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct B3R {
-    bits: bool,
-}
-impl B3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A1R {
-    bits: bool,
-}
-impl A1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A0R {
-    bits: bool,
-}
-impl A0R {
+impl SYSCFG_ALDN_STSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -253,10 +180,25 @@ impl A0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _E3W<'a> {
+pub struct _SYSCFG_TRP_ICFGW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E3W<'a> {
+impl<'a> _SYSCFG_TRP_ICFGW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 28;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SYSCFG_TRP_BOOT_SEL_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SYSCFG_TRP_BOOT_SEL_W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -269,17 +211,17 @@ impl<'a> _E3W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 23;
+        const OFFSET: u8 = 27;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E2W<'a> {
+pub struct _SYSCFG_TRP_SPSLDO_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E2W<'a> {
+impl<'a> _SYSCFG_TRP_SPSLDO_SELW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -292,17 +234,17 @@ impl<'a> _E2W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 22;
+        const OFFSET: u8 = 26;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E1W<'a> {
+pub struct _V15_VLDW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E1W<'a> {
+impl<'a> _V15_VLDW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -315,17 +257,40 @@ impl<'a> _E1W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 21;
+        const OFFSET: u8 = 16;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _C4W<'a> {
+pub struct _SYS_SYSPLL_CLK_RDYW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C4W<'a> {
+impl<'a> _SYS_SYSPLL_CLK_RDYW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 9;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _SYS_XCLK_VLDW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _SYS_XCLK_VLDW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -345,125 +310,10 @@ impl<'a> _C4W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C3W<'a> {
+pub struct _SYSCFG_ALDN_STSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 7;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _C1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _C1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _B4W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _B4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _B3W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _B3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A0W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A0W<'a> {
+impl<'a> _SYSCFG_ALDN_STSW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -488,105 +338,75 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bits 28:31"]
     #[inline]
-    pub fn e3(&self) -> E3R {
+    pub fn syscfg_trp_icfg(&self) -> SYSCFG_TRP_ICFGR {
+        let bits = {
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        SYSCFG_TRP_ICFGR { bits }
+    }
+    #[doc = "Bit 27"]
+    #[inline]
+    pub fn syscfg_trp_boot_sel_(&self) -> SYSCFG_TRP_BOOT_SEL_R {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 23;
+            const OFFSET: u8 = 27;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E3R { bits }
+        SYSCFG_TRP_BOOT_SEL_R { bits }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bit 26"]
     #[inline]
-    pub fn e2(&self) -> E2R {
+    pub fn syscfg_trp_spsldo_sel(&self) -> SYSCFG_TRP_SPSLDO_SELR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 22;
+            const OFFSET: u8 = 26;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E2R { bits }
+        SYSCFG_TRP_SPSLDO_SELR { bits }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bit 16"]
     #[inline]
-    pub fn e1(&self) -> E1R {
+    pub fn v15_vld(&self) -> V15_VLDR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 21;
+            const OFFSET: u8 = 16;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E1R { bits }
+        V15_VLDR { bits }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 9"]
     #[inline]
-    pub fn c4(&self) -> C4R {
+    pub fn sys_syspll_clk_rdy(&self) -> SYS_SYSPLL_CLK_RDYR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 9;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        SYS_SYSPLL_CLK_RDYR { bits }
+    }
+    #[doc = "Bit 8"]
+    #[inline]
+    pub fn sys_xclk_vld(&self) -> SYS_XCLK_VLDR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C4R { bits }
+        SYS_XCLK_VLDR { bits }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bit 0"]
     #[inline]
-    pub fn c3(&self) -> C3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 7;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        C3R { bits }
-    }
-    #[doc = "Bit 6 - Pin C1"]
-    #[inline]
-    pub fn c1(&self) -> C1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        C1R { bits }
-    }
-    #[doc = "Bit 3 - Pin B4"]
-    #[inline]
-    pub fn b4(&self) -> B4R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B4R { bits }
-    }
-    #[doc = "Bit 2 - Pin B3"]
-    #[inline]
-    pub fn b3(&self) -> B3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B3R { bits }
-    }
-    #[doc = "Bit 1 - Pin A1"]
-    #[inline]
-    pub fn a1(&self) -> A1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        A1R { bits }
-    }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
-    #[inline]
-    pub fn a0(&self) -> A0R {
+    pub fn syscfg_aldn_sts(&self) -> SYSCFG_ALDN_STSR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        A0R { bits }
+        SYSCFG_ALDN_STSR { bits }
     }
 }
 impl W {
@@ -601,54 +421,39 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bits 28:31"]
     #[inline]
-    pub fn e3(&mut self) -> _E3W {
-        _E3W { w: self }
+    pub fn syscfg_trp_icfg(&mut self) -> _SYSCFG_TRP_ICFGW {
+        _SYSCFG_TRP_ICFGW { w: self }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bit 27"]
     #[inline]
-    pub fn e2(&mut self) -> _E2W {
-        _E2W { w: self }
+    pub fn syscfg_trp_boot_sel_(&mut self) -> _SYSCFG_TRP_BOOT_SEL_W {
+        _SYSCFG_TRP_BOOT_SEL_W { w: self }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bit 26"]
     #[inline]
-    pub fn e1(&mut self) -> _E1W {
-        _E1W { w: self }
+    pub fn syscfg_trp_spsldo_sel(&mut self) -> _SYSCFG_TRP_SPSLDO_SELW {
+        _SYSCFG_TRP_SPSLDO_SELW { w: self }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 16"]
     #[inline]
-    pub fn c4(&mut self) -> _C4W {
-        _C4W { w: self }
+    pub fn v15_vld(&mut self) -> _V15_VLDW {
+        _V15_VLDW { w: self }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bit 9"]
     #[inline]
-    pub fn c3(&mut self) -> _C3W {
-        _C3W { w: self }
+    pub fn sys_syspll_clk_rdy(&mut self) -> _SYS_SYSPLL_CLK_RDYW {
+        _SYS_SYSPLL_CLK_RDYW { w: self }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bit 8"]
     #[inline]
-    pub fn c1(&mut self) -> _C1W {
-        _C1W { w: self }
+    pub fn sys_xclk_vld(&mut self) -> _SYS_XCLK_VLDW {
+        _SYS_XCLK_VLDW { w: self }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bit 0"]
     #[inline]
-    pub fn b4(&mut self) -> _B4W {
-        _B4W { w: self }
-    }
-    #[doc = "Bit 2 - Pin B3"]
-    #[inline]
-    pub fn b3(&mut self) -> _B3W {
-        _B3W { w: self }
-    }
-    #[doc = "Bit 1 - Pin A1"]
-    #[inline]
-    pub fn a1(&mut self) -> _A1W {
-        _A1W { w: self }
-    }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
-    #[inline]
-    pub fn a0(&mut self) -> _A0W {
-        _A0W { w: self }
+    pub fn syscfg_aldn_sts(&mut self) -> _SYSCFG_ALDN_STSW {
+        _SYSCFG_ALDN_STSW { w: self }
     }
 }

@@ -1,4 +1,4 @@
-#![doc = "Peripheral access API for RTL8710 microcontrollers (generated using svd2rust v0.14.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.14.0/svd2rust/#peripheral-api"]
+#![doc = "Peripheral access API for RTL8710AF microcontrollers (generated using svd2rust v0.14.0)\n\nYou can find an overview of the API [here].\n\n[here]: https://docs.rs/svd2rust/0.14.0/svd2rust/#peripheral-api"]
 #![deny(missing_docs)]
 #![deny(warnings)]
 #![allow(non_camel_case_types)]
@@ -38,6 +38,25 @@ pub use cortex_m::peripheral::Peripherals as CorePeripherals;
 pub use cortex_m::peripheral::{CBP, CPUID, DCB, DWT, FPB, ITM, MPU, NVIC, SCB, SYST, TPIU};
 #[cfg(feature = "rt")]
 pub use cortex_m_rt::interrupt;
+#[doc = "System Control Registers"]
+pub struct SYSCON {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for SYSCON {}
+impl SYSCON {
+    #[doc = r" Returns a pointer to the register block"]
+    pub fn ptr() -> *const syscon::RegisterBlock {
+        1073741824 as *const _
+    }
+}
+impl Deref for SYSCON {
+    type Target = syscon::RegisterBlock;
+    fn deref(&self) -> &syscon::RegisterBlock {
+        unsafe { &*SYSCON::ptr() }
+    }
+}
+#[doc = "System Control Registers"]
+pub mod syscon;
 #[doc = "General Purpose I/O"]
 pub struct GPIO {
     _marker: PhantomData<*const ()>,
@@ -57,44 +76,6 @@ impl Deref for GPIO {
 }
 #[doc = "General Purpose I/O"]
 pub mod gpio;
-#[doc = "GPIOB"]
-pub struct GPIOB {
-    _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for GPIOB {}
-impl GPIOB {
-    #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const gpiob::RegisterBlock {
-        1073745920 as *const _
-    }
-}
-impl Deref for GPIOB {
-    type Target = gpiob::RegisterBlock;
-    fn deref(&self) -> &gpiob::RegisterBlock {
-        unsafe { &*GPIOB::ptr() }
-    }
-}
-#[doc = "GPIOB"]
-pub mod gpiob;
-#[doc = "GPIOC"]
-pub struct GPIOC {
-    _marker: PhantomData<*const ()>,
-}
-unsafe impl Send for GPIOC {}
-impl GPIOC {
-    #[doc = r" Returns a pointer to the register block"]
-    pub fn ptr() -> *const gpioc::RegisterBlock {
-        1073745920 as *const _
-    }
-}
-impl Deref for GPIOC {
-    type Target = gpioc::RegisterBlock;
-    fn deref(&self) -> &gpioc::RegisterBlock {
-        unsafe { &*GPIOC::ptr() }
-    }
-}
-#[doc = "GPIOC"]
-pub mod gpioc;
 #[allow(renamed_and_removed_lints)]
 #[allow(private_no_mangle_statics)]
 #[no_mangle]
@@ -102,12 +83,10 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals"]
 #[allow(non_snake_case)]
 pub struct Peripherals {
+    #[doc = "SYSCON"]
+    pub SYSCON: SYSCON,
     #[doc = "GPIO"]
     pub GPIO: GPIO,
-    #[doc = "GPIOB"]
-    pub GPIOB: GPIOB,
-    #[doc = "GPIOC"]
-    pub GPIOC: GPIOC,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*"]
@@ -126,13 +105,10 @@ impl Peripherals {
         debug_assert!(!DEVICE_PERIPHERALS);
         DEVICE_PERIPHERALS = true;
         Peripherals {
+            SYSCON: SYSCON {
+                _marker: PhantomData,
+            },
             GPIO: GPIO {
-                _marker: PhantomData,
-            },
-            GPIOB: GPIOB {
-                _marker: PhantomData,
-            },
-            GPIOC: GPIOC {
                 _marker: PhantomData,
             },
         }

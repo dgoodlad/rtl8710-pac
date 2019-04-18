@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::GPIOA_DR {
+impl super::PERI_TIM_EVT_CTRL {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::GPIOA_DR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E3R {
+pub struct PERI_GT_EVT3_ENR {
     bits: bool,
 }
-impl E3R {
+impl PERI_GT_EVT3_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,32 @@ impl E3R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E2R {
+pub struct PERI_GT_EVT3_SRC_SELR {
+    bits: u8,
+}
+impl PERI_GT_EVT3_SRC_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PERI_GT_EVT3_PULSE_DURR {
+    bits: u8,
+}
+impl PERI_GT_EVT3_PULSE_DURR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PERI_GT_EVT2_ENR {
     bits: bool,
 }
-impl E2R {
+impl PERI_GT_EVT2_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +107,32 @@ impl E2R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct E1R {
+pub struct PERI_GT_EVT2_SRC_SELR {
+    bits: u8,
+}
+impl PERI_GT_EVT2_SRC_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PERI_GT_EVT2_PULSE_DURR {
+    bits: u8,
+}
+impl PERI_GT_EVT2_PULSE_DURR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PERI_GT_EVT1_ENR {
     bits: bool,
 }
-impl E1R {
+impl PERI_GT_EVT1_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +150,32 @@ impl E1R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C4R {
+pub struct PERI_GT_EVT1_SRC_SELR {
+    bits: u8,
+}
+impl PERI_GT_EVT1_SRC_SELR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PERI_GT_EVT1_PULSE_DURR {
+    bits: u8,
+}
+impl PERI_GT_EVT1_PULSE_DURR {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PERI_GT_EVT0_ENR {
     bits: bool,
 }
-impl C4R {
+impl PERI_GT_EVT0_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -127,136 +193,85 @@ impl C4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct C3R {
-    bits: bool,
+pub struct PERI_GT_EVT0_SRC_SELR {
+    bits: u8,
 }
-impl C3R {
+impl PERI_GT_EVT0_SRC_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct C1R {
-    bits: bool,
+pub struct PERI_GT_EVT0_PULSE_DURR {
+    bits: u8,
 }
-impl C1R {
+impl PERI_GT_EVT0_PULSE_DURR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct B4R {
-    bits: bool,
-}
-impl B4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct B3R {
-    bits: bool,
-}
-impl B3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A1R {
-    bits: bool,
-}
-impl A1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct A0R {
-    bits: bool,
-}
-impl A0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Proxy"]
-pub struct _E3W<'a> {
+pub struct _PERI_GT_EVT3_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E3W<'a> {
+impl<'a> _PERI_GT_EVT3_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 31;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PERI_GT_EVT3_SRC_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PERI_GT_EVT3_SRC_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 28;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PERI_GT_EVT3_PULSE_DURW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PERI_GT_EVT3_PULSE_DURW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 24;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PERI_GT_EVT2_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PERI_GT_EVT2_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -276,56 +291,40 @@ impl<'a> _E3W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _E2W<'a> {
+pub struct _PERI_GT_EVT2_SRC_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E2W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PERI_GT_EVT2_SRC_SELW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 22;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 20;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _E1W<'a> {
+pub struct _PERI_GT_EVT2_PULSE_DURW<'a> {
     w: &'a mut W,
 }
-impl<'a> _E1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PERI_GT_EVT2_PULSE_DURW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 21;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 16;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _C4W<'a> {
+pub struct _PERI_GT_EVT1_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C4W<'a> {
+impl<'a> _PERI_GT_EVT1_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -338,6 +337,36 @@ impl<'a> _C4W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
+        const OFFSET: u8 = 15;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PERI_GT_EVT1_SRC_SELW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PERI_GT_EVT1_SRC_SELW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 12;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PERI_GT_EVT1_PULSE_DURW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PERI_GT_EVT1_PULSE_DURW<'a> {
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
         const OFFSET: u8 = 8;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -345,10 +374,10 @@ impl<'a> _C4W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C3W<'a> {
+pub struct _PERI_GT_EVT0_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C3W<'a> {
+impl<'a> _PERI_GT_EVT0_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -368,114 +397,29 @@ impl<'a> _C3W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _C1W<'a> {
+pub struct _PERI_GT_EVT0_SRC_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _C1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PERI_GT_EVT0_SRC_SELW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 6;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 7;
+        const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _B4W<'a> {
+pub struct _PERI_GT_EVT0_PULSE_DURW<'a> {
     w: &'a mut W,
 }
-impl<'a> _B4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _PERI_GT_EVT0_PULSE_DURW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 3;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _B3W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _B3W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 2;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A1W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A1W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 1;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _A0W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _A0W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
         const OFFSET: u8 = 0;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -488,105 +432,125 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bit 31"]
     #[inline]
-    pub fn e3(&self) -> E3R {
+    pub fn peri_gt_evt3_en(&self) -> PERI_GT_EVT3_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 31;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PERI_GT_EVT3_ENR { bits }
+    }
+    #[doc = "Bits 28:30"]
+    #[inline]
+    pub fn peri_gt_evt3_src_sel(&self) -> PERI_GT_EVT3_SRC_SELR {
+        let bits = {
+            const MASK: u8 = 7;
+            const OFFSET: u8 = 28;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PERI_GT_EVT3_SRC_SELR { bits }
+    }
+    #[doc = "Bits 24:27"]
+    #[inline]
+    pub fn peri_gt_evt3_pulse_dur(&self) -> PERI_GT_EVT3_PULSE_DURR {
+        let bits = {
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 24;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PERI_GT_EVT3_PULSE_DURR { bits }
+    }
+    #[doc = "Bit 23"]
+    #[inline]
+    pub fn peri_gt_evt2_en(&self) -> PERI_GT_EVT2_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 23;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E3R { bits }
+        PERI_GT_EVT2_ENR { bits }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bits 20:22"]
     #[inline]
-    pub fn e2(&self) -> E2R {
+    pub fn peri_gt_evt2_src_sel(&self) -> PERI_GT_EVT2_SRC_SELR {
+        let bits = {
+            const MASK: u8 = 7;
+            const OFFSET: u8 = 20;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PERI_GT_EVT2_SRC_SELR { bits }
+    }
+    #[doc = "Bits 16:19"]
+    #[inline]
+    pub fn peri_gt_evt2_pulse_dur(&self) -> PERI_GT_EVT2_PULSE_DURR {
+        let bits = {
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
+        };
+        PERI_GT_EVT2_PULSE_DURR { bits }
+    }
+    #[doc = "Bit 15"]
+    #[inline]
+    pub fn peri_gt_evt1_en(&self) -> PERI_GT_EVT1_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 22;
+            const OFFSET: u8 = 15;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        E2R { bits }
+        PERI_GT_EVT1_ENR { bits }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bits 12:14"]
     #[inline]
-    pub fn e1(&self) -> E1R {
+    pub fn peri_gt_evt1_src_sel(&self) -> PERI_GT_EVT1_SRC_SELR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 21;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u8 = 7;
+            const OFFSET: u8 = 12;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        E1R { bits }
+        PERI_GT_EVT1_SRC_SELR { bits }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bits 8:11"]
     #[inline]
-    pub fn c4(&self) -> C4R {
+    pub fn peri_gt_evt1_pulse_dur(&self) -> PERI_GT_EVT1_PULSE_DURR {
         let bits = {
-            const MASK: bool = true;
+            const MASK: u8 = 15;
             const OFFSET: u8 = 8;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        C4R { bits }
+        PERI_GT_EVT1_PULSE_DURR { bits }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bit 7"]
     #[inline]
-    pub fn c3(&self) -> C3R {
+    pub fn peri_gt_evt0_en(&self) -> PERI_GT_EVT0_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 7;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        C3R { bits }
+        PERI_GT_EVT0_ENR { bits }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bits 4:6"]
     #[inline]
-    pub fn c1(&self) -> C1R {
+    pub fn peri_gt_evt0_src_sel(&self) -> PERI_GT_EVT0_SRC_SELR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 6;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u8 = 7;
+            const OFFSET: u8 = 4;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        C1R { bits }
+        PERI_GT_EVT0_SRC_SELR { bits }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bits 0:3"]
     #[inline]
-    pub fn b4(&self) -> B4R {
+    pub fn peri_gt_evt0_pulse_dur(&self) -> PERI_GT_EVT0_PULSE_DURR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 3;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B4R { bits }
-    }
-    #[doc = "Bit 2 - Pin B3"]
-    #[inline]
-    pub fn b3(&self) -> B3R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 2;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        B3R { bits }
-    }
-    #[doc = "Bit 1 - Pin A1"]
-    #[inline]
-    pub fn a1(&self) -> A1R {
-        let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 1;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        A1R { bits }
-    }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
-    #[inline]
-    pub fn a0(&self) -> A0R {
-        let bits = {
-            const MASK: bool = true;
+            const MASK: u8 = 15;
             const OFFSET: u8 = 0;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        A0R { bits }
+        PERI_GT_EVT0_PULSE_DURR { bits }
     }
 }
 impl W {
@@ -601,54 +565,64 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 23 - Pin E3"]
+    #[doc = "Bit 31"]
     #[inline]
-    pub fn e3(&mut self) -> _E3W {
-        _E3W { w: self }
+    pub fn peri_gt_evt3_en(&mut self) -> _PERI_GT_EVT3_ENW {
+        _PERI_GT_EVT3_ENW { w: self }
     }
-    #[doc = "Bit 22 - Pin E2"]
+    #[doc = "Bits 28:30"]
     #[inline]
-    pub fn e2(&mut self) -> _E2W {
-        _E2W { w: self }
+    pub fn peri_gt_evt3_src_sel(&mut self) -> _PERI_GT_EVT3_SRC_SELW {
+        _PERI_GT_EVT3_SRC_SELW { w: self }
     }
-    #[doc = "Bit 21 - Pin E1"]
+    #[doc = "Bits 24:27"]
     #[inline]
-    pub fn e1(&mut self) -> _E1W {
-        _E1W { w: self }
+    pub fn peri_gt_evt3_pulse_dur(&mut self) -> _PERI_GT_EVT3_PULSE_DURW {
+        _PERI_GT_EVT3_PULSE_DURW { w: self }
     }
-    #[doc = "Bit 8 - Pin C4"]
+    #[doc = "Bit 23"]
     #[inline]
-    pub fn c4(&mut self) -> _C4W {
-        _C4W { w: self }
+    pub fn peri_gt_evt2_en(&mut self) -> _PERI_GT_EVT2_ENW {
+        _PERI_GT_EVT2_ENW { w: self }
     }
-    #[doc = "Bit 7 - Pin C3"]
+    #[doc = "Bits 20:22"]
     #[inline]
-    pub fn c3(&mut self) -> _C3W {
-        _C3W { w: self }
+    pub fn peri_gt_evt2_src_sel(&mut self) -> _PERI_GT_EVT2_SRC_SELW {
+        _PERI_GT_EVT2_SRC_SELW { w: self }
     }
-    #[doc = "Bit 6 - Pin C1"]
+    #[doc = "Bits 16:19"]
     #[inline]
-    pub fn c1(&mut self) -> _C1W {
-        _C1W { w: self }
+    pub fn peri_gt_evt2_pulse_dur(&mut self) -> _PERI_GT_EVT2_PULSE_DURW {
+        _PERI_GT_EVT2_PULSE_DURW { w: self }
     }
-    #[doc = "Bit 3 - Pin B4"]
+    #[doc = "Bit 15"]
     #[inline]
-    pub fn b4(&mut self) -> _B4W {
-        _B4W { w: self }
+    pub fn peri_gt_evt1_en(&mut self) -> _PERI_GT_EVT1_ENW {
+        _PERI_GT_EVT1_ENW { w: self }
     }
-    #[doc = "Bit 2 - Pin B3"]
+    #[doc = "Bits 12:14"]
     #[inline]
-    pub fn b3(&mut self) -> _B3W {
-        _B3W { w: self }
+    pub fn peri_gt_evt1_src_sel(&mut self) -> _PERI_GT_EVT1_SRC_SELW {
+        _PERI_GT_EVT1_SRC_SELW { w: self }
     }
-    #[doc = "Bit 1 - Pin A1"]
+    #[doc = "Bits 8:11"]
     #[inline]
-    pub fn a1(&mut self) -> _A1W {
-        _A1W { w: self }
+    pub fn peri_gt_evt1_pulse_dur(&mut self) -> _PERI_GT_EVT1_PULSE_DURW {
+        _PERI_GT_EVT1_PULSE_DURW { w: self }
     }
-    #[doc = "Bit 0 - GPIO pin A0 data"]
+    #[doc = "Bit 7"]
     #[inline]
-    pub fn a0(&mut self) -> _A0W {
-        _A0W { w: self }
+    pub fn peri_gt_evt0_en(&mut self) -> _PERI_GT_EVT0_ENW {
+        _PERI_GT_EVT0_ENW { w: self }
+    }
+    #[doc = "Bits 4:6"]
+    #[inline]
+    pub fn peri_gt_evt0_src_sel(&mut self) -> _PERI_GT_EVT0_SRC_SELW {
+        _PERI_GT_EVT0_SRC_SELW { w: self }
+    }
+    #[doc = "Bits 0:3"]
+    #[inline]
+    pub fn peri_gt_evt0_pulse_dur(&mut self) -> _PERI_GT_EVT0_PULSE_DURW {
+        _PERI_GT_EVT0_PULSE_DURW { w: self }
     }
 }

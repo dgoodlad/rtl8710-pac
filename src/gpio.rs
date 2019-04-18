@@ -7,7 +7,13 @@ pub struct RegisterBlock {
     pub gpioa_ddr: GPIOA_DDR,
     #[doc = "0x08 - GPIOA Control Register"]
     pub gpioa_ctrl: GPIOA_CTRL,
-    _reserved0: [u8; 36usize],
+    #[doc = "0x0c - GPIOA Data Register"]
+    pub gpiob_dr: GPIOB_DR,
+    #[doc = "0x10 - GPIOB Data Direction Register"]
+    pub gpiob_ddr: GPIOB_DDR,
+    #[doc = "0x14 - GPIOB Control Register"]
+    pub gpiob_ctrl: GPIOB_CTRL,
+    _reserved0: [u8; 24usize],
     #[doc = "0x30 - Interrupt Enable"]
     pub int_en: INT_EN,
     #[doc = "0x34 - Interrupt Mask"]
@@ -42,12 +48,30 @@ pub struct GPIOA_DDR {
 }
 #[doc = "GPIOA Data Direction Register"]
 pub mod gpioa_ddr;
+#[doc = "GPIOB Data Direction Register"]
+pub struct GPIOB_DDR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIOB Data Direction Register"]
+pub mod gpiob_ddr;
 #[doc = "GPIOA Control Register"]
 pub struct GPIOA_CTRL {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "GPIOA Control Register"]
 pub mod gpioa_ctrl;
+#[doc = "GPIOB Control Register"]
+pub struct GPIOB_CTRL {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIOB Control Register"]
+pub mod gpiob_ctrl;
+#[doc = "GPIOA Data Register"]
+pub struct GPIOB_DR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIOA Data Register"]
+pub mod gpiob_dr;
 #[doc = "Interrupt Enable"]
 pub struct INT_EN {
     register: ::vcell::VolatileCell<u32>,
@@ -96,15 +120,15 @@ pub struct INT_CLEAR {
 }
 #[doc = "Interrupt Clear"]
 pub mod int_clear;
-#[doc = "Is level-sensitive interrupt being sync with PCLK"]
-pub struct INT_SYNC {
-    register: ::vcell::VolatileCell<u32>,
-}
-#[doc = "Is level-sensitive interrupt being sync with PCLK"]
-pub mod int_sync;
 #[doc = "GPIO IN read or OUT read back"]
 pub struct EXT {
     register: ::vcell::VolatileCell<u32>,
 }
 #[doc = "GPIO IN read or OUT read back"]
 pub mod ext;
+#[doc = "Is level-sensitive interrupt being sync with PCLK"]
+pub struct INT_SYNC {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "Is level-sensitive interrupt being sync with PCLK"]
+pub mod int_sync;
