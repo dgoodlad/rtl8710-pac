@@ -35,7 +35,7 @@
     <name>CM3</name>
     <revision>r0p0</revision>
     <endian>little</endian>
-    <mpuPresent>true</mpuPresent>
+    <mpuPresent>false</mpuPresent>
     <fpuPresent>false</fpuPresent>
     <nvicPrioBits>4</nvicPrioBits>
     <vendorSystickConfig>true</vendorSystickConfig>
