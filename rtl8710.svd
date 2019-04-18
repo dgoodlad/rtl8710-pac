@@ -5,7 +5,7 @@
 <device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" >
   <vendor>Realtek Semiconductor</vendor>
   <vendorID>RTL</vendorID>
-  <name>RTL8710</name>
+  <name>RTL8710AF</name>
   <series>Ameba</series>
   <version>0.1</version>
   <description>Realtek RTL8710 Cortex-M3-based WiFi Module</description>
