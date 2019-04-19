@@ -4365,6 +4365,240 @@
         <size>0x0400</size>
         <usage>registers</usage>
       </addressBlock>
+      <registers>
+        <register>
+          <name>DLL</name>
+          <addressOffset>0x00</addressOffset>
+        </register>
+        <register>
+          <name>IER_DLH</name>
+          <addressOffset>0x04</addressOffset>
+          <fields>
+            <field>
+              <name>IER_DLH</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>IIR_FCR</name>
+          <addressOffset>0x08</addressOffset>
+          <fields>
+            <field>
+              <name>IIR_FCR</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LCR</name>
+          <addressOffset>0x0c</addressOffset>
+          <fields>
+            <field>
+              <name>DLAB</name>
+              <description>Divisor Latch Access Bit</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BC</name>
+              <description>Break Control Bit</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STICK_PAR</name>
+              <description>Stick Parity</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>EPS</name>
+              <description>Even Parity Select: 0: Odd parity, 1: Even parity</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PEN</name>
+              <description>Parity Enable</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>STOP</name>
+              <description>Number of stop bits: 0: No stop bit, 1: 1 stop bit</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DLS</name>
+              <description>Data Length Select: 0 = 7bits, 1: 8bits</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MCR</name>
+          <description>Modem Control Register</description>
+          <addressOffset>0x10</addressOffset>
+          <fields>
+            <field>
+              <name>AFCE</name>
+              <description>Auto Flow Control Enable</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RTS</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DTR</name>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LSR</name>
+          <description>Line Status Register</description>
+          <addressOffset>0x14</addressOffset>
+          <fields>
+            <field>
+              <name>RFE</name>
+              <description>RX FIFO Error</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TEMT</name>
+              <description>Transmitter Empty</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>THRE</name>
+              <description>Transmitter Holding Register Empty</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>BI</name>
+              <description>Break Interrupt error</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>FE</name>
+              <description>Framing Error</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PE</name>
+              <description>Parity Error</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>OE</name>
+              <description>Overrun Error</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>DR</name>
+              <description>Data Ready</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MSR</name>
+          <description>Modem Status Register</description>
+          <addressOffset>0x18</addressOffset>
+        </register>
+        <register>
+          <name>SCR</name>
+          <description>Scratch Pad</description>
+          <addressOffset>0x1c</addressOffset>
+          <fields>
+            <field>
+              <name>XFACTOR_ADJ</name>
+              <bitOffset>16</bitOffset>
+              <bitWidth>11</bitWidth>
+            </field>
+            <field>
+              <name>DBG_SEL</name>
+              <description>Debug port selection</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>RXBREAK_INT_STATUS</name>
+              <description>Write 1 to clear</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>STS</name>
+          <addressOffset>0x20</addressOffset>
+          <fields>
+            <field>
+              <name>XFACTOR</name>
+              <bitOffset>4</bitOffset>
+              <bitWidth>4</bitWidth>
+            </field>
+            <field>
+              <name>RESET_RCV</name>
+              <description>Reset Uart Receiver</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RECV_BUF_TRAN_HOLD</name>
+          <addressOffset>0x24</addressOffset>
+        </register>
+        <register>
+          <name>MISC_CTL</name>
+          <addressOffset>0x28</addressOffset>
+          <fields>
+            <field>
+              <name>RXDMA_BURSTSIZE</name>
+              <bitOffset>8</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>TXDMA_BURSTSIZE</name>
+              <bitOffset>3</bitOffset>
+              <bitWidth>5</bitWidth>
+            </field>
+            <field>
+              <name>RXDMA_EN</name>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>RXDMA_EN</name>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEBUG</name>
+          <addressOffset>0x28</addressOffset>
+        </register>
+      </registers>
     </peripheral>
 
     <peripheral>
