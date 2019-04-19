@@ -3721,452 +3721,521 @@
       </interrupt>
       <registers>
         <register>
-          <name>GPIOA_DR</name>
-          <description>GPIOA Data Register</description>
+          <name>GPIO_PORTA_DR</name>
+          <description>GPIO Port A Data Register</description>
           <addressOffset>0x0000</addressOffset>
           <fields>
             <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
+              <name>PA5</name>
+              <description>GPIOA_5 Data</description>
+              <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E2</name>
-              <description>Pin E2</description>
-              <bitOffset>22</bitOffset>
+              <name>PA4</name>
+              <description>GPIOA_4 Data</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B3</name>
-              <description>Pin B3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A1</name>
-              <description>Pin A1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A0</name>
-              <description>GPIO pin A0 data</description>
+              <name>PA0</name>
+              <description>GPIOA_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>
         </register>
         <register>
-          <name>GPIOA_DDR</name>
-          <description>GPIOA Data Direction Register</description>
+          <name>GPIO_PORTA_DDR</name>
+          <description>GPIO Port A Data Direction Register</description>
           <addressOffset>0x0004</addressOffset>
           <fields>
             <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
+              <name>PA5</name>
+              <description>GPIOA_5 Data Direction</description>
+              <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E2</name>
-              <description>Pin E2</description>
-              <bitOffset>22</bitOffset>
+              <name>PA4</name>
+              <description>GPIOA_4 Data Direction</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B3</name>
-              <description>Pin B3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A1</name>
-              <description>Pin A1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A0</name>
-              <description>GPIO pin A0 data direction</description>
+              <name>PA0</name>
+              <description>GPIOA_0 Data Direction</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>
         </register>
         <register>
-          <name>GPIOB_DDR</name>
-          <description>GPIOB Data Direction Register</description>
+          <name>GPIO_PORTA_CTRL</name>
+          <description>GPIO Port A Data Source Control</description>
+          <addressOffset>0x0008</addressOffset>
+        </register>
+        <register>
+          <name>GPIO_PORTB_DR</name>
+          <description>GPIO Port B Data Register</description>
+          <addressOffset>0x000c</addressOffset>
+          <fields>
+            <field>
+              <name>PB3</name>
+              <description>GPIOB_3 Data</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PB2</name>
+              <description>GPIOB_2 Data</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PB1</name>
+              <description>GPIOB_1 Data</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PB0</name>
+              <description>GPIOB_0 Data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO_PORTB_DDR</name>
+          <description>GPIO Port B Data Direction Register</description>
           <addressOffset>0x0010</addressOffset>
           <fields>
             <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>E2</name>
-              <description>Pin E2</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
+              <name>PB3</name>
+              <description>GPIOB_3 Data Direction</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>B3</name>
-              <description>Pin B3</description>
+              <name>PB2</name>
+              <description>GPIOB_2 Data Direction</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>A1</name>
-              <description>Pin A1</description>
+              <name>PB1</name>
+              <description>GPIOB_1 Data Direction</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>A0</name>
-              <description>GPIO pin A0 data direction</description>
+              <name>PB0</name>
+              <description>GPIOB_0 Data Direction</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>
         </register>
         <register>
-          <name>GPIOA_CTRL</name>
-          <description>GPIOA Control Register</description>
-          <addressOffset>0x0008</addressOffset>
-          <fields>
-            <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>E2</name>
-              <description>Pin E2</description>
-              <bitOffset>22</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B3</name>
-              <description>Pin B3</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A1</name>
-              <description>Pin A1</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>A0</name>
-              <description>GPIO pin A0 control</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>GPIOB_CTRL</name>
-          <description>GPIOB Control Register</description>
+          <name>GPIO_PORTB_CTRL</name>
+          <description>GPIO Port B Data Source Control</description>
           <addressOffset>0x0014</addressOffset>
+        </register>
+        <register>
+          <name>GPIO_PORTC_DR</name>
+          <description>GPIO Port C Data Register</description>
+          <addressOffset>0x0018</addressOffset>
           <fields>
             <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
+              <name>PC5</name>
+              <description>GPIOC_5 Data</description>
+              <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E2</name>
-              <description>Pin E2</description>
-              <bitOffset>22</bitOffset>
+              <name>PC4</name>
+              <description>GPIOC_4 Data</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
+              <name>PC3</name>
+              <description>GPIOC_3 Data</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>B3</name>
-              <description>Pin B3</description>
+              <name>PC2</name>
+              <description>GPIOC_2 Data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>A1</name>
-              <description>Pin A1</description>
+              <name>PC1</name>
+              <description>GPIOC_1 Data</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>A0</name>
-              <description>GPIO pin A0 control</description>
+              <name>PC0</name>
+              <description>GPIOC_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>
         </register>
         <register>
-          <name>GPIOB_DR</name>
-          <description>GPIOA Data Register</description>
-          <addressOffset>0x000C</addressOffset>
+          <name>GPIO_PORTC_DDR</name>
+          <description>GPIO Port C Data Direction Register</description>
+          <addressOffset>0x001c</addressOffset>
           <fields>
             <field>
-              <name>E3</name>
-              <description>Pin E3</description>
-              <bitOffset>23</bitOffset>
+              <name>PC5</name>
+              <description>GPIOC_5 Data Direction</description>
+              <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E2</name>
-              <description>Pin E2</description>
-              <bitOffset>22</bitOffset>
+              <name>PC4</name>
+              <description>GPIOC_4 Data Direction</description>
+              <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>E1</name>
-              <description>Pin E1</description>
-              <bitOffset>21</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C4</name>
-              <description>Pin C4</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C3</name>
-              <description>Pin C3</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>C1</name>
-              <description>Pin C1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-            </field>
-            <field>
-              <name>B4</name>
-              <description>Pin B4</description>
+              <name>PC3</name>
+              <description>GPIOC_3 Data Direction</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>B3</name>
-              <description>Pin B3</description>
+              <name>PC2</name>
+              <description>GPIOC_2 Data Direction</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>A1</name>
-              <description>Pin A1</description>
+              <name>PC1</name>
+              <description>GPIOC_1 Data Direction</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>A0</name>
-              <description>GPIO pin A0 data</description>
+              <name>PC0</name>
+              <description>GPIOC_0 Data Direction</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
           </fields>
+        </register>
+        <register>
+          <name>GPIO_PORTC_CTRL</name>
+          <description>GPIO Port C Data Source Control</description>
+          <addressOffset>0x0020</addressOffset>
         </register>
         <register>
           <name>INT_EN</name>
           <description>Interrupt Enable</description>
           <addressOffset>0x0030</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_MASK</name>
           <description>Interrupt Mask</description>
           <addressOffset>0x0034</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_TYPE</name>
           <description>Interrupt Type (level/edge)</description>
           <addressOffset>0x0038</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_POLARITY</name>
           <description>Interrupt Polarity (low/high)</description>
           <addressOffset>0x003C</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_STATUS</name>
           <description>Interrupt Status</description>
           <addressOffset>0x0040</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_RAW_STATUS</name>
           <description>Interrupt Status Without Mask</description>
           <addressOffset>0x0044</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_DEBOUNCE</name>
           <description>Interrupt Debounce</description>
           <addressOffset>0x0048</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
           <name>INT_CLEAR</name>
           <description>Interrupt Clear</description>
           <addressOffset>0x004C</addressOffset>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>EXT</name>
-          <description>GPIO IN read or OUT read back</description>
+          <name>GPIO_PORTA_EXT</name>
+          <description>GPIO Port A External Data</description>
           <addressOffset>0x0050</addressOffset>
+          <access>read-only</access>
+          <fields>
+            <field>
+              <name>PA5</name>
+              <description>GPIOA_5 Data</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA4</name>
+              <description>GPIOA_4 Data</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PA0</name>
+              <description>GPIOA_0 Data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
         </register>
+        <register>
+          <name>GPIO_PORTB_EXT</name>
+          <description>GPIO Port B External Data</description>
+          <addressOffset>0x0054</addressOffset>
+          <access>read-only</access>
+          <fields>
+            <field>
+              <name>PB3</name>
+              <description>GPIOB_3 Data</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PB2</name>
+              <description>GPIOB_2 Data</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PB1</name>
+              <description>GPIOB_1 Data</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PB0</name>
+              <description>GPIOB_0 Data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO_PORTC_EXT</name>
+          <description>GPIO Port C External Data</description>
+          <addressOffset>0x0058</addressOffset>
+          <access>read-only</access>
+          <fields>
+            <field>
+              <name>PC5</name>
+              <description>GPIOC_5 Data</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PC4</name>
+              <description>GPIOC_4 Data</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PC3</name>
+              <description>GPIOC_3 Data</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PC2</name>
+              <description>GPIOC_2 Data</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PC1</name>
+              <description>GPIOC_1 Data</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>PC0</name>
+              <description>GPIOC_0 Data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+
         <register>
           <name>INT_SYNC</name>
           <description>Is level-sensitive interrupt being sync with PCLK</description>
