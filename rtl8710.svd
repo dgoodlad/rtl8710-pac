@@ -4606,7 +4606,7 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>RXDMA_EN</name>
+              <name>TXDMA_EN</name>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -4936,7 +4936,7 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>RXDMA_EN</name>
+              <name>TXDMA_EN</name>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>
@@ -5193,7 +5193,7 @@
               <bitWidth>1</bitWidth>
             </field>
             <field>
-              <name>RXDMA_EN</name>
+              <name>TXDMA_EN</name>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
             </field>

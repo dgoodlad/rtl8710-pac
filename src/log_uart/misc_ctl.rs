@@ -86,10 +86,10 @@ impl RXDMA_ENR {
     }
 }
 #[doc = r" Value of the field"]
-pub struct RXDMA_ENR {
+pub struct TXDMA_ENR {
     bits: bool,
 }
-impl RXDMA_ENR {
+impl TXDMA_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -160,10 +160,10 @@ impl<'a> _RXDMA_ENW<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _RXDMA_ENW<'a> {
+pub struct _TXDMA_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _RXDMA_ENW<'a> {
+impl<'a> _TXDMA_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -220,13 +220,13 @@ impl R {
     }
     #[doc = "Bit 1"]
     #[inline]
-    pub fn rxdma_en(&self) -> RXDMA_ENR {
+    pub fn txdma_en(&self) -> TXDMA_ENR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        RXDMA_ENR { bits }
+        TXDMA_ENR { bits }
     }
 }
 impl W {
@@ -258,7 +258,7 @@ impl W {
     }
     #[doc = "Bit 1"]
     #[inline]
-    pub fn rxdma_en(&mut self) -> _RXDMA_ENW {
-        _RXDMA_ENW { w: self }
+    pub fn txdma_en(&mut self) -> _TXDMA_ENW {
+        _TXDMA_ENW { w: self }
     }
 }
