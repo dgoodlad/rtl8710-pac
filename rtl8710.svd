@@ -4253,6 +4253,107 @@
         <size>0x1000</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>TIMER0</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER1</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>TIMER2_7</name>
+        <value>5</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>TIMER_LOAD_COUNT</name>
+          <addressOffset>0x0000</addressOffset>
+        </register>
+        <register>
+          <name>TIMER_CURRENT_VAL</name>
+          <addressOffset>0x0004</addressOffset>
+        </register>
+        <register>
+          <name>TIMER_CTL_REG</name>
+          <addressOffset>0x0008</addressOffset>
+          <fields>
+            <field>
+              <name>TIMER_PWM</name>
+              <description>Select between PWM (1) and Timer (0) mode</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMER_INTERRUPT_MASK</name>
+              <description>Timer Interrupt Mask</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMER_MODE</name>
+              <description>Select between free running (0) and count (1) mode</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+            <field>
+              <name>TIMER_ENABLE</name>
+              <description>Enable flag</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMER_EOI</name>
+          <description>Reading from this register returns b0, and clears the interrupt from PWM/Timer</description>
+          <addressOffset>0x000c</addressOffset>
+          <fields>
+            <field>
+              <name>EOI</name>
+              <description>End of Interrupt</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMER_INT_STATUS</name>
+          <addressOffset>0x0010</addressOffset>
+          <fields>
+            <field>
+              <name>INT_STATUS</name>
+              <description>Post-masking interrupt status of PWM/Timer</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TIMER</name>
+          <addressOffset>0x0014</addressOffset>
+        </register>
+        <register>
+          <name>TIMERS_INT_STATUS</name>
+          <addressOffset>0x00a0</addressOffset>
+        </register>
+        <register>
+          <name>TIMERS_EOI</name>
+          <addressOffset>0x00a4</addressOffset>
+        </register>
+        <register>
+          <name>TIMERS_RAW_INT_STATUS</name>
+          <addressOffset>0x00a8</addressOffset>
+        </register>
+        <register>
+          <name>TIMERS_COMP_VER</name>
+          <description>ASCII string representing the version number of the timers logic</description>
+          <addressOffset>0x00ac</addressOffset>
+          <access>read-only</access>
+        </register>
+      </registers>
     </peripheral>
 
     <peripheral>
