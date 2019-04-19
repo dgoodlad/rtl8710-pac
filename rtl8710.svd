@@ -3715,6 +3715,10 @@
         <size>0x0400</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>GPIO</name>
+        <value>7</value>
+      </interrupt>
       <registers>
         <register>
           <name>GPIOA_DR</name>
@@ -4213,6 +4217,10 @@
         <size>0x0400</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>I2C3</name>
+        <value>4</value>
+      </interrupt>
     </peripheral>
 
     <!-- No SDRAM on 8710...
@@ -4259,6 +4267,10 @@
         <size>0x0400</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>UART0</name>
+        <value>8</value>
+      </interrupt>
     </peripheral>
 
     <peripheral>
@@ -4273,7 +4285,7 @@
     </peripheral>
 
     <peripheral>
-      <name>SPI_0</name>
+      <name>SPI0</name>
       <description>SPI 0</description>
       <baseAddress>0x40040000</baseAddress>
       <addressBlock>
@@ -4281,6 +4293,10 @@
         <size>0x0400</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>SPI0</name>
+        <value>6</value>
+      </interrupt>
     </peripheral>
 
     <peripheral>

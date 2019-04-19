@@ -13,7 +13,12 @@ use core::ops::Deref;
 #[doc = r" Number available in the NVIC for configuring priority"]
 pub const NVIC_PRIO_BITS: u8 = 4;
 #[cfg(feature = "rt")]
-extern "C" {}
+extern "C" {
+    fn I2C3();
+    fn SPI0();
+    fn GPIO();
+    fn UART0();
+}
 #[doc(hidden)]
 pub union Vector {
     _handler: unsafe extern "C" fn(),
@@ -23,13 +28,37 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 0] = [];
+pub static __INTERRUPTS: [Vector; 9] = [
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: I2C3 },
+    Vector { _reserved: 0 },
+    Vector { _handler: SPI0 },
+    Vector { _handler: GPIO },
+    Vector { _handler: UART0 },
+];
 #[doc = r" Enumeration of all the interrupts"]
-pub enum Interrupt {}
+pub enum Interrupt {
+    #[doc = "4 - I2C3"]
+    I2C3,
+    #[doc = "6 - SPI0"]
+    SPI0,
+    #[doc = "7 - GPIO"]
+    GPIO,
+    #[doc = "8 - UART0"]
+    UART0,
+}
 unsafe impl ::bare_metal::Nr for Interrupt {
     #[inline]
     fn nr(&self) -> u8 {
-        match *self {}
+        match *self {
+            Interrupt::I2C3 => 4,
+            Interrupt::SPI0 => 6,
+            Interrupt::GPIO => 7,
+            Interrupt::UART0 => 8,
+        }
     }
 }
 #[cfg(feature = "rt")]
