@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::MISC_CTL {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,32 @@ impl super::INT_STATUS {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA5R {
+pub struct RXDMA_BURSTSIZER {
+    bits: u8,
+}
+impl RXDMA_BURSTSIZER {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct TXDMA_BURSTSIZER {
+    bits: u8,
+}
+impl TXDMA_BURSTSIZER {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bits(&self) -> u8 {
+        self.bits
+    }
+}
+#[doc = r" Value of the field"]
+pub struct RXDMA_ENR {
     bits: bool,
 }
-impl PA5R {
+impl RXDMA_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,31 +86,10 @@ impl PA5R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA4R {
+pub struct RXDMA_ENR {
     bits: bool,
 }
-impl PA4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PA0R {
-    bits: bool,
-}
-impl PA0R {
+impl RXDMA_ENR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,56 +107,40 @@ impl PA0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA5W<'a> {
+pub struct _RXDMA_BURSTSIZEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA5W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _RXDMA_BURSTSIZEW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 31;
+        const OFFSET: u8 = 8;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA4W<'a> {
+pub struct _TXDMA_BURSTSIZEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _TXDMA_BURSTSIZEW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 31;
+        const OFFSET: u8 = 3;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA0W<'a> {
+pub struct _RXDMA_ENW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA0W<'a> {
+impl<'a> _RXDMA_ENW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -168,7 +153,30 @@ impl<'a> _PA0W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 2;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _RXDMA_ENW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _RXDMA_ENW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -180,35 +188,45 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bits 8:12"]
     #[inline]
-    pub fn pa5(&self) -> PA5R {
+    pub fn rxdma_burstsize(&self) -> RXDMA_BURSTSIZER {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u8 = 31;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        PA5R { bits }
+        RXDMA_BURSTSIZER { bits }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bits 3:7"]
     #[inline]
-    pub fn pa4(&self) -> PA4R {
+    pub fn txdma_burstsize(&self) -> TXDMA_BURSTSIZER {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u8 = 31;
+            const OFFSET: u8 = 3;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        PA4R { bits }
+        TXDMA_BURSTSIZER { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 2"]
     #[inline]
-    pub fn pa0(&self) -> PA0R {
+    pub fn rxdma_en(&self) -> RXDMA_ENR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA0R { bits }
+        RXDMA_ENR { bits }
+    }
+    #[doc = "Bit 1"]
+    #[inline]
+    pub fn rxdma_en(&self) -> RXDMA_ENR {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        RXDMA_ENR { bits }
     }
 }
 impl W {
@@ -223,19 +241,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bits 8:12"]
     #[inline]
-    pub fn pa5(&mut self) -> _PA5W {
-        _PA5W { w: self }
+    pub fn rxdma_burstsize(&mut self) -> _RXDMA_BURSTSIZEW {
+        _RXDMA_BURSTSIZEW { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bits 3:7"]
     #[inline]
-    pub fn pa4(&mut self) -> _PA4W {
-        _PA4W { w: self }
+    pub fn txdma_burstsize(&mut self) -> _TXDMA_BURSTSIZEW {
+        _TXDMA_BURSTSIZEW { w: self }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 2"]
     #[inline]
-    pub fn pa0(&mut self) -> _PA0W {
-        _PA0W { w: self }
+    pub fn rxdma_en(&mut self) -> _RXDMA_ENW {
+        _RXDMA_ENW { w: self }
+    }
+    #[doc = "Bit 1"]
+    #[inline]
+    pub fn rxdma_en(&mut self) -> _RXDMA_ENW {
+        _RXDMA_ENW { w: self }
     }
 }

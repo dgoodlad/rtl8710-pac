@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::TIMER_CTL_REG {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::INT_STATUS {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA5R {
+pub struct TIMER_PWMR {
     bits: bool,
 }
-impl PA5R {
+impl TIMER_PWMR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl PA5R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA4R {
+pub struct TIMER_INTERRUPT_MASKR {
     bits: bool,
 }
-impl PA4R {
+impl TIMER_INTERRUPT_MASKR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,31 @@ impl PA4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA0R {
+pub struct TIMER_MODER {
     bits: bool,
 }
-impl PA0R {
+impl TIMER_MODER {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct TIMER_ENABLER {
+    bits: bool,
+}
+impl TIMER_ENABLER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +127,10 @@ impl PA0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA5W<'a> {
+pub struct _TIMER_PWMW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA5W<'a> {
+impl<'a> _TIMER_PWMW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -122,17 +143,17 @@ impl<'a> _PA5W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 5;
+        const OFFSET: u8 = 3;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA4W<'a> {
+pub struct _TIMER_INTERRUPT_MASKW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA4W<'a> {
+impl<'a> _TIMER_INTERRUPT_MASKW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -145,17 +166,40 @@ impl<'a> _PA4W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 4;
+        const OFFSET: u8 = 2;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA0W<'a> {
+pub struct _TIMER_MODEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA0W<'a> {
+impl<'a> _TIMER_MODEW<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _TIMER_ENABLEW<'a> {
+    w: &'a mut W,
+}
+impl<'a> _TIMER_ENABLEW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -180,35 +224,45 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 3 - Select between PWM (1) and Timer (0) mode"]
     #[inline]
-    pub fn pa5(&self) -> PA5R {
+    pub fn timer_pwm(&self) -> TIMER_PWMR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 5;
+            const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA5R { bits }
+        TIMER_PWMR { bits }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 2 - Timer Interrupt Mask"]
     #[inline]
-    pub fn pa4(&self) -> PA4R {
+    pub fn timer_interrupt_mask(&self) -> TIMER_INTERRUPT_MASKR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 4;
+            const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA4R { bits }
+        TIMER_INTERRUPT_MASKR { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 1 - Select between free running (0) and count (1) mode"]
     #[inline]
-    pub fn pa0(&self) -> PA0R {
+    pub fn timer_mode(&self) -> TIMER_MODER {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        TIMER_MODER { bits }
+    }
+    #[doc = "Bit 0 - Enable flag"]
+    #[inline]
+    pub fn timer_enable(&self) -> TIMER_ENABLER {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA0R { bits }
+        TIMER_ENABLER { bits }
     }
 }
 impl W {
@@ -223,19 +277,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 3 - Select between PWM (1) and Timer (0) mode"]
     #[inline]
-    pub fn pa5(&mut self) -> _PA5W {
-        _PA5W { w: self }
+    pub fn timer_pwm(&mut self) -> _TIMER_PWMW {
+        _TIMER_PWMW { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 2 - Timer Interrupt Mask"]
     #[inline]
-    pub fn pa4(&mut self) -> _PA4W {
-        _PA4W { w: self }
+    pub fn timer_interrupt_mask(&mut self) -> _TIMER_INTERRUPT_MASKW {
+        _TIMER_INTERRUPT_MASKW { w: self }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 1 - Select between free running (0) and count (1) mode"]
     #[inline]
-    pub fn pa0(&mut self) -> _PA0W {
-        _PA0W { w: self }
+    pub fn timer_mode(&mut self) -> _TIMER_MODEW {
+        _TIMER_MODEW { w: self }
+    }
+    #[doc = "Bit 0 - Enable flag"]
+    #[inline]
+    pub fn timer_enable(&mut self) -> _TIMER_ENABLEW {
+        _TIMER_ENABLEW { w: self }
     }
 }

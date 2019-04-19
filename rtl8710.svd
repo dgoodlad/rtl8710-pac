@@ -4268,14 +4268,17 @@
       <registers>
         <register>
           <name>TIMER_LOAD_COUNT</name>
+          <description>Timer Load Count</description>
           <addressOffset>0x0000</addressOffset>
         </register>
         <register>
           <name>TIMER_CURRENT_VAL</name>
+          <description>Current Value</description>
           <addressOffset>0x0004</addressOffset>
         </register>
         <register>
           <name>TIMER_CTL_REG</name>
+          <description>Timer Control</description>
           <addressOffset>0x0008</addressOffset>
           <fields>
             <field>
@@ -4320,11 +4323,11 @@
         </register>
         <register>
           <name>TIMER_INT_STATUS</name>
+          <description>Post-masking interrupt status of PWM/Timer</description>
           <addressOffset>0x0010</addressOffset>
           <fields>
             <field>
               <name>INT_STATUS</name>
-              <description>Post-masking interrupt status of PWM/Timer</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-only</access>
@@ -4332,19 +4335,23 @@
           </fields>
         </register>
         <register>
-          <name>TIMER</name>
+          <name>TIMER_INTERVAL</name>
+          <description>Timer Interval</description>
           <addressOffset>0x0014</addressOffset>
         </register>
         <register>
           <name>TIMERS_INT_STATUS</name>
+          <description>Timers Interrupt Status</description>
           <addressOffset>0x00a0</addressOffset>
         </register>
         <register>
           <name>TIMERS_EOI</name>
+          <description>Timers End of Interrupt</description>
           <addressOffset>0x00a4</addressOffset>
         </register>
         <register>
           <name>TIMERS_RAW_INT_STATUS</name>
+          <description>Timers raw interrupt status</description>
           <addressOffset>0x00a8</addressOffset>
         </register>
         <register>
@@ -4372,10 +4379,12 @@
       <registers>
         <register>
           <name>DLL</name>
+          <description>Divisor Latch Low</description>
           <addressOffset>0x00</addressOffset>
         </register>
         <register>
           <name>IER_DLH</name>
+          <description>Interrupt Enable / Divisor Latch High</description>
           <addressOffset>0x04</addressOffset>
           <fields>
             <field>
@@ -4387,6 +4396,7 @@
         </register>
         <register>
           <name>IIR_FCR</name>
+          <description>Interrupt Identification / FIFO Control</description>
           <addressOffset>0x08</addressOffset>
           <fields>
             <field>
@@ -4398,6 +4408,7 @@
         </register>
         <register>
           <name>LCR</name>
+          <description>Line Control Register</description>
           <addressOffset>0x0c</addressOffset>
           <fields>
             <field>
@@ -4553,6 +4564,7 @@
         </register>
         <register>
           <name>STS</name>
+          <description>STS</description>
           <addressOffset>0x20</addressOffset>
           <fields>
             <field>
@@ -4570,10 +4582,12 @@
         </register>
         <register>
           <name>RECV_BUF_TRAN_HOLD</name>
+          <description>Receive Buffer / Transmission Hold</description>
           <addressOffset>0x24</addressOffset>
         </register>
         <register>
           <name>MISC_CTL</name>
+          <description>Misc Control</description>
           <addressOffset>0x28</addressOffset>
           <fields>
             <field>
@@ -4600,7 +4614,8 @@
         </register>
         <register>
           <name>DEBUG</name>
-          <addressOffset>0x28</addressOffset>
+          <description>UART Debug</description>
+          <addressOffset>0x3c</addressOffset>
         </register>
       </registers>
     </peripheral>
@@ -4694,10 +4709,12 @@
       <registers>
         <register>
           <name>DLL</name>
+          <description>Divisor Latch Low</description>
           <addressOffset>0x00</addressOffset>
         </register>
         <register>
           <name>IER_DLH</name>
+          <description>Interrupt Enable / Divisor Latch High</description>
           <addressOffset>0x04</addressOffset>
           <fields>
             <field>
@@ -4709,6 +4726,7 @@
         </register>
         <register>
           <name>IIR_FCR</name>
+          <description>Interrupt Identification / FIFO Control</description>
           <addressOffset>0x08</addressOffset>
           <fields>
             <field>
@@ -4720,6 +4738,7 @@
         </register>
         <register>
           <name>LCR</name>
+          <description>Line Control Register</description>
           <addressOffset>0x0c</addressOffset>
           <fields>
             <field>
@@ -4875,6 +4894,7 @@
         </register>
         <register>
           <name>STS</name>
+          <description>STS</description>
           <addressOffset>0x20</addressOffset>
           <fields>
             <field>
@@ -4892,10 +4912,12 @@
         </register>
         <register>
           <name>RECV_BUF_TRAN_HOLD</name>
+          <description>Receive Buffer / Transmission Hold</description>
           <addressOffset>0x24</addressOffset>
         </register>
         <register>
           <name>MISC_CTL</name>
+          <description>Misc Control</description>
           <addressOffset>0x28</addressOffset>
           <fields>
             <field>
@@ -4922,7 +4944,8 @@
         </register>
         <register>
           <name>DEBUG</name>
-          <addressOffset>0x28</addressOffset>
+          <description>UART Debug</description>
+          <addressOffset>0x3c</addressOffset>
         </register>
       </registers>
     </peripheral>
@@ -4943,10 +4966,12 @@
       <registers>
         <register>
           <name>DLL</name>
+          <description>Divisor Latch Low</description>
           <addressOffset>0x00</addressOffset>
         </register>
         <register>
           <name>IER_DLH</name>
+          <description>Interrupt Enable / Divisor Latch High</description>
           <addressOffset>0x04</addressOffset>
           <fields>
             <field>
@@ -4958,6 +4983,7 @@
         </register>
         <register>
           <name>IIR_FCR</name>
+          <description>Interrupt Identification / FIFO Control</description>
           <addressOffset>0x08</addressOffset>
           <fields>
             <field>
@@ -4969,6 +4995,7 @@
         </register>
         <register>
           <name>LCR</name>
+          <description>Line Control Register</description>
           <addressOffset>0x0c</addressOffset>
           <fields>
             <field>
@@ -5124,6 +5151,7 @@
         </register>
         <register>
           <name>STS</name>
+          <description>STS</description>
           <addressOffset>0x20</addressOffset>
           <fields>
             <field>
@@ -5141,10 +5169,12 @@
         </register>
         <register>
           <name>RECV_BUF_TRAN_HOLD</name>
+          <description>Receive Buffer / Transmission Hold</description>
           <addressOffset>0x24</addressOffset>
         </register>
         <register>
           <name>MISC_CTL</name>
+          <description>Misc Control</description>
           <addressOffset>0x28</addressOffset>
           <fields>
             <field>
@@ -5171,7 +5201,8 @@
         </register>
         <register>
           <name>DEBUG</name>
-          <addressOffset>0x28</addressOffset>
+          <description>UART Debug</description>
+          <addressOffset>0x3c</addressOffset>
         </register>
       </registers>
     </peripheral>

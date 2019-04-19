@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::MCR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::INT_STATUS {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA5R {
+pub struct AFCER {
     bits: bool,
 }
-impl PA5R {
+impl AFCER {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl PA5R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA4R {
+pub struct RTSR {
     bits: bool,
 }
-impl PA4R {
+impl RTSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,10 @@ impl PA4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA0R {
+pub struct DTRR {
     bits: bool,
 }
-impl PA0R {
+impl DTRR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +106,10 @@ impl PA0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA5W<'a> {
+pub struct _AFCEW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA5W<'a> {
+impl<'a> _AFCEW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -129,10 +129,10 @@ impl<'a> _PA5W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA4W<'a> {
+pub struct _RTSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA4W<'a> {
+impl<'a> _RTSW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -145,17 +145,17 @@ impl<'a> _PA4W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 4;
+        const OFFSET: u8 = 1;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA0W<'a> {
+pub struct _DTRW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA0W<'a> {
+impl<'a> _DTRW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -180,35 +180,35 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 5 - Auto Flow Control Enable"]
     #[inline]
-    pub fn pa5(&self) -> PA5R {
+    pub fn afce(&self) -> AFCER {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 5;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA5R { bits }
+        AFCER { bits }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 1"]
     #[inline]
-    pub fn pa4(&self) -> PA4R {
+    pub fn rts(&self) -> RTSR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 4;
+            const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA4R { bits }
+        RTSR { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 0"]
     #[inline]
-    pub fn pa0(&self) -> PA0R {
+    pub fn dtr(&self) -> DTRR {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA0R { bits }
+        DTRR { bits }
     }
 }
 impl W {
@@ -223,19 +223,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 5 - Auto Flow Control Enable"]
     #[inline]
-    pub fn pa5(&mut self) -> _PA5W {
-        _PA5W { w: self }
+    pub fn afce(&mut self) -> _AFCEW {
+        _AFCEW { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 1"]
     #[inline]
-    pub fn pa4(&mut self) -> _PA4W {
-        _PA4W { w: self }
+    pub fn rts(&mut self) -> _RTSW {
+        _RTSW { w: self }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 0"]
     #[inline]
-    pub fn pa0(&mut self) -> _PA0W {
-        _PA0W { w: self }
+    pub fn dtr(&mut self) -> _DTRW {
+        _DTRW { w: self }
     }
 }

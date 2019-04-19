@@ -1,19 +1,25 @@
 #[doc = r" Register block"]
 #[repr(C)]
 pub struct RegisterBlock {
-    #[doc = "0x00 - GPIOA Data Register"]
-    pub gpioa_dr: GPIOA_DR,
-    #[doc = "0x04 - GPIOA Data Direction Register"]
-    pub gpioa_ddr: GPIOA_DDR,
-    #[doc = "0x08 - GPIOA Control Register"]
-    pub gpioa_ctrl: GPIOA_CTRL,
-    #[doc = "0x0c - GPIOA Data Register"]
-    pub gpiob_dr: GPIOB_DR,
-    #[doc = "0x10 - GPIOB Data Direction Register"]
-    pub gpiob_ddr: GPIOB_DDR,
-    #[doc = "0x14 - GPIOB Control Register"]
-    pub gpiob_ctrl: GPIOB_CTRL,
-    _reserved0: [u8; 24usize],
+    #[doc = "0x00 - GPIO Port A Data Register"]
+    pub gpio_porta_dr: GPIO_PORTA_DR,
+    #[doc = "0x04 - GPIO Port A Data Direction Register"]
+    pub gpio_porta_ddr: GPIO_PORTA_DDR,
+    #[doc = "0x08 - GPIO Port A Data Source Control"]
+    pub gpio_porta_ctrl: GPIO_PORTA_CTRL,
+    #[doc = "0x0c - GPIO Port B Data Register"]
+    pub gpio_portb_dr: GPIO_PORTB_DR,
+    #[doc = "0x10 - GPIO Port B Data Direction Register"]
+    pub gpio_portb_ddr: GPIO_PORTB_DDR,
+    #[doc = "0x14 - GPIO Port B Data Source Control"]
+    pub gpio_portb_ctrl: GPIO_PORTB_CTRL,
+    #[doc = "0x18 - GPIO Port C Data Register"]
+    pub gpio_portc_dr: GPIO_PORTC_DR,
+    #[doc = "0x1c - GPIO Port C Data Direction Register"]
+    pub gpio_portc_ddr: GPIO_PORTC_DDR,
+    #[doc = "0x20 - GPIO Port C Data Source Control"]
+    pub gpio_portc_ctrl: GPIO_PORTC_CTRL,
+    _reserved0: [u8; 12usize],
     #[doc = "0x30 - Interrupt Enable"]
     pub int_en: INT_EN,
     #[doc = "0x34 - Interrupt Mask"]
@@ -30,48 +36,70 @@ pub struct RegisterBlock {
     pub int_debounce: INT_DEBOUNCE,
     #[doc = "0x4c - Interrupt Clear"]
     pub int_clear: INT_CLEAR,
-    #[doc = "0x50 - GPIO IN read or OUT read back"]
-    pub ext: EXT,
-    _reserved1: [u8; 12usize],
+    #[doc = "0x50 - GPIO Port A External Data"]
+    pub gpio_porta_ext: GPIO_PORTA_EXT,
+    #[doc = "0x54 - GPIO Port B External Data"]
+    pub gpio_portb_ext: GPIO_PORTB_EXT,
+    #[doc = "0x58 - GPIO Port C External Data"]
+    pub gpio_portc_ext: GPIO_PORTC_EXT,
+    _reserved1: [u8; 4usize],
     #[doc = "0x60 - Is level-sensitive interrupt being sync with PCLK"]
     pub int_sync: INT_SYNC,
 }
-#[doc = "GPIOA Data Register"]
-pub struct GPIOA_DR {
+#[doc = "GPIO Port A Data Register"]
+pub struct GPIO_PORTA_DR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIOA Data Register"]
-pub mod gpioa_dr;
-#[doc = "GPIOA Data Direction Register"]
-pub struct GPIOA_DDR {
+#[doc = "GPIO Port A Data Register"]
+pub mod gpio_porta_dr;
+#[doc = "GPIO Port A Data Direction Register"]
+pub struct GPIO_PORTA_DDR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIOA Data Direction Register"]
-pub mod gpioa_ddr;
-#[doc = "GPIOB Data Direction Register"]
-pub struct GPIOB_DDR {
+#[doc = "GPIO Port A Data Direction Register"]
+pub mod gpio_porta_ddr;
+#[doc = "GPIO Port A Data Source Control"]
+pub struct GPIO_PORTA_CTRL {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIOB Data Direction Register"]
-pub mod gpiob_ddr;
-#[doc = "GPIOA Control Register"]
-pub struct GPIOA_CTRL {
+#[doc = "GPIO Port A Data Source Control"]
+pub mod gpio_porta_ctrl;
+#[doc = "GPIO Port B Data Register"]
+pub struct GPIO_PORTB_DR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIOA Control Register"]
-pub mod gpioa_ctrl;
-#[doc = "GPIOB Control Register"]
-pub struct GPIOB_CTRL {
+#[doc = "GPIO Port B Data Register"]
+pub mod gpio_portb_dr;
+#[doc = "GPIO Port B Data Direction Register"]
+pub struct GPIO_PORTB_DDR {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIOB Control Register"]
-pub mod gpiob_ctrl;
-#[doc = "GPIOA Data Register"]
-pub struct GPIOB_DR {
+#[doc = "GPIO Port B Data Direction Register"]
+pub mod gpio_portb_ddr;
+#[doc = "GPIO Port B Data Source Control"]
+pub struct GPIO_PORTB_CTRL {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIOA Data Register"]
-pub mod gpiob_dr;
+#[doc = "GPIO Port B Data Source Control"]
+pub mod gpio_portb_ctrl;
+#[doc = "GPIO Port C Data Register"]
+pub struct GPIO_PORTC_DR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIO Port C Data Register"]
+pub mod gpio_portc_dr;
+#[doc = "GPIO Port C Data Direction Register"]
+pub struct GPIO_PORTC_DDR {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIO Port C Data Direction Register"]
+pub mod gpio_portc_ddr;
+#[doc = "GPIO Port C Data Source Control"]
+pub struct GPIO_PORTC_CTRL {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIO Port C Data Source Control"]
+pub mod gpio_portc_ctrl;
 #[doc = "Interrupt Enable"]
 pub struct INT_EN {
     register: ::vcell::VolatileCell<u32>,
@@ -120,12 +148,24 @@ pub struct INT_CLEAR {
 }
 #[doc = "Interrupt Clear"]
 pub mod int_clear;
-#[doc = "GPIO IN read or OUT read back"]
-pub struct EXT {
+#[doc = "GPIO Port A External Data"]
+pub struct GPIO_PORTA_EXT {
     register: ::vcell::VolatileCell<u32>,
 }
-#[doc = "GPIO IN read or OUT read back"]
-pub mod ext;
+#[doc = "GPIO Port A External Data"]
+pub mod gpio_porta_ext;
+#[doc = "GPIO Port B External Data"]
+pub struct GPIO_PORTB_EXT {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIO Port B External Data"]
+pub mod gpio_portb_ext;
+#[doc = "GPIO Port C External Data"]
+pub struct GPIO_PORTC_EXT {
+    register: ::vcell::VolatileCell<u32>,
+}
+#[doc = "GPIO Port C External Data"]
+pub mod gpio_portc_ext;
 #[doc = "Is level-sensitive interrupt being sync with PCLK"]
 pub struct INT_SYNC {
     register: ::vcell::VolatileCell<u32>,

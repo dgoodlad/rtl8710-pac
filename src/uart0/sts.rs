@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::STS {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,52 +43,21 @@ impl super::INT_STATUS {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA5R {
-    bits: bool,
+pub struct XFACTORR {
+    bits: u8,
 }
-impl PA5R {
+impl XFACTORR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA4R {
+pub struct RESET_RCVR {
     bits: bool,
 }
-impl PA4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PA0R {
-    bits: bool,
-}
-impl PA0R {
+impl RESET_RCVR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,45 +75,14 @@ impl PA0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA5W<'a> {
+pub struct _XFACTORW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA5W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _XFACTORW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
-        self.w
-    }
-}
-#[doc = r" Proxy"]
-pub struct _PA4W<'a> {
-    w: &'a mut W,
-}
-impl<'a> _PA4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
         const OFFSET: u8 = 4;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
@@ -152,10 +90,10 @@ impl<'a> _PA4W<'a> {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA0W<'a> {
+pub struct _RESET_RCVW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA0W<'a> {
+impl<'a> _RESET_RCVW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -168,7 +106,7 @@ impl<'a> _PA0W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 3;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -180,35 +118,25 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bits 4:7"]
     #[inline]
-    pub fn pa5(&self) -> PA5R {
+    pub fn xfactor(&self) -> XFACTORR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PA5R { bits }
-    }
-    #[doc = "Bit 4 - GPIOA_4"]
-    #[inline]
-    pub fn pa4(&self) -> PA4R {
-        let bits = {
-            const MASK: bool = true;
+            const MASK: u8 = 15;
             const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        PA4R { bits }
+        XFACTORR { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 3 - Reset Uart Receiver"]
     #[inline]
-    pub fn pa0(&self) -> PA0R {
+    pub fn reset_rcv(&self) -> RESET_RCVR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA0R { bits }
+        RESET_RCVR { bits }
     }
 }
 impl W {
@@ -223,19 +151,14 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bits 4:7"]
     #[inline]
-    pub fn pa5(&mut self) -> _PA5W {
-        _PA5W { w: self }
+    pub fn xfactor(&mut self) -> _XFACTORW {
+        _XFACTORW { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 3 - Reset Uart Receiver"]
     #[inline]
-    pub fn pa4(&mut self) -> _PA4W {
-        _PA4W { w: self }
-    }
-    #[doc = "Bit 0 - GPIOA_0"]
-    #[inline]
-    pub fn pa0(&mut self) -> _PA0W {
-        _PA0W { w: self }
+    pub fn reset_rcv(&mut self) -> _RESET_RCVW {
+        _RESET_RCVW { w: self }
     }
 }

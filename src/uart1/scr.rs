@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::SCR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,52 +43,32 @@ impl super::INT_STATUS {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA5R {
-    bits: bool,
+pub struct XFACTOR_ADJR {
+    bits: u16,
 }
-impl PA5R {
+impl XFACTOR_ADJR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u16 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA4R {
-    bits: bool,
+pub struct DBG_SELR {
+    bits: u8,
 }
-impl PA4R {
+impl DBG_SELR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
-    pub fn bit(&self) -> bool {
+    pub fn bits(&self) -> u8 {
         self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA0R {
+pub struct RXBREAK_INT_STATUSR {
     bits: bool,
 }
-impl PA0R {
+impl RXBREAK_INT_STATUSR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,56 +86,40 @@ impl PA0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA5W<'a> {
+pub struct _XFACTOR_ADJW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA5W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _XFACTOR_ADJW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 5;
+    pub unsafe fn bits(self, value: u16) -> &'a mut W {
+        const MASK: u16 = 2047;
+        const OFFSET: u8 = 16;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA4W<'a> {
+pub struct _DBG_SELW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA4W<'a> {
-    #[doc = r" Sets the field bit"]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r" Clears the field bit"]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
+impl<'a> _DBG_SELW<'a> {
     #[doc = r" Writes raw bits to the field"]
     #[inline]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 4;
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        const MASK: u8 = 15;
+        const OFFSET: u8 = 8;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA0W<'a> {
+pub struct _RXBREAK_INT_STATUSW<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA0W<'a> {
+impl<'a> _RXBREAK_INT_STATUSW<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -168,7 +132,7 @@ impl<'a> _PA0W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 0;
+        const OFFSET: u8 = 7;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
@@ -180,35 +144,35 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bits 16:26"]
     #[inline]
-    pub fn pa5(&self) -> PA5R {
+    pub fn xfactor_adj(&self) -> XFACTOR_ADJR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 5;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u16 = 2047;
+            const OFFSET: u8 = 16;
+            ((self.bits >> OFFSET) & MASK as u32) as u16
         };
-        PA5R { bits }
+        XFACTOR_ADJR { bits }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bits 8:11 - Debug port selection"]
     #[inline]
-    pub fn pa4(&self) -> PA4R {
+    pub fn dbg_sel(&self) -> DBG_SELR {
         let bits = {
-            const MASK: bool = true;
-            const OFFSET: u8 = 4;
-            ((self.bits >> OFFSET) & MASK as u32) != 0
+            const MASK: u8 = 15;
+            const OFFSET: u8 = 8;
+            ((self.bits >> OFFSET) & MASK as u32) as u8
         };
-        PA4R { bits }
+        DBG_SELR { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 7 - Write 1 to clear"]
     #[inline]
-    pub fn pa0(&self) -> PA0R {
+    pub fn rxbreak_int_status(&self) -> RXBREAK_INT_STATUSR {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 0;
+            const OFFSET: u8 = 7;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA0R { bits }
+        RXBREAK_INT_STATUSR { bits }
     }
 }
 impl W {
@@ -223,19 +187,19 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bits 16:26"]
     #[inline]
-    pub fn pa5(&mut self) -> _PA5W {
-        _PA5W { w: self }
+    pub fn xfactor_adj(&mut self) -> _XFACTOR_ADJW {
+        _XFACTOR_ADJW { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bits 8:11 - Debug port selection"]
     #[inline]
-    pub fn pa4(&mut self) -> _PA4W {
-        _PA4W { w: self }
+    pub fn dbg_sel(&mut self) -> _DBG_SELW {
+        _DBG_SELW { w: self }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 7 - Write 1 to clear"]
     #[inline]
-    pub fn pa0(&mut self) -> _PA0W {
-        _PA0W { w: self }
+    pub fn rxbreak_int_status(&mut self) -> _RXBREAK_INT_STATUSW {
+        _RXBREAK_INT_STATUSW { w: self }
     }
 }

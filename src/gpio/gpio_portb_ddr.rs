@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::GPIO_PORTB_DDR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -43,10 +43,10 @@ impl super::INT_STATUS {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA5R {
+pub struct PB3R {
     bits: bool,
 }
-impl PA5R {
+impl PB3R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -64,10 +64,10 @@ impl PA5R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA4R {
+pub struct PB2R {
     bits: bool,
 }
-impl PA4R {
+impl PB2R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -85,10 +85,31 @@ impl PA4R {
     }
 }
 #[doc = r" Value of the field"]
-pub struct PA0R {
+pub struct PB1R {
     bits: bool,
 }
-impl PA0R {
+impl PB1R {
+    #[doc = r" Value of the field as raw bits"]
+    #[inline]
+    pub fn bit(&self) -> bool {
+        self.bits
+    }
+    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[inline]
+    pub fn bit_is_clear(&self) -> bool {
+        !self.bit()
+    }
+    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[inline]
+    pub fn bit_is_set(&self) -> bool {
+        self.bit()
+    }
+}
+#[doc = r" Value of the field"]
+pub struct PB0R {
+    bits: bool,
+}
+impl PB0R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
@@ -106,10 +127,10 @@ impl PA0R {
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA5W<'a> {
+pub struct _PB3W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA5W<'a> {
+impl<'a> _PB3W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -122,17 +143,17 @@ impl<'a> _PA5W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 5;
+        const OFFSET: u8 = 3;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA4W<'a> {
+pub struct _PB2W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA4W<'a> {
+impl<'a> _PB2W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -145,17 +166,40 @@ impl<'a> _PA4W<'a> {
     #[inline]
     pub fn bit(self, value: bool) -> &'a mut W {
         const MASK: bool = true;
-        const OFFSET: u8 = 4;
+        const OFFSET: u8 = 2;
         self.w.bits &= !((MASK as u32) << OFFSET);
         self.w.bits |= ((value & MASK) as u32) << OFFSET;
         self.w
     }
 }
 #[doc = r" Proxy"]
-pub struct _PA0W<'a> {
+pub struct _PB1W<'a> {
     w: &'a mut W,
 }
-impl<'a> _PA0W<'a> {
+impl<'a> _PB1W<'a> {
+    #[doc = r" Sets the field bit"]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r" Clears the field bit"]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r" Writes raw bits to the field"]
+    #[inline]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        const MASK: bool = true;
+        const OFFSET: u8 = 1;
+        self.w.bits &= !((MASK as u32) << OFFSET);
+        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w
+    }
+}
+#[doc = r" Proxy"]
+pub struct _PB0W<'a> {
+    w: &'a mut W,
+}
+impl<'a> _PB0W<'a> {
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -180,35 +224,45 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 3 - GPIOB_3 Data Direction"]
     #[inline]
-    pub fn pa5(&self) -> PA5R {
+    pub fn pb3(&self) -> PB3R {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 5;
+            const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA5R { bits }
+        PB3R { bits }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 2 - GPIOB_2 Data Direction"]
     #[inline]
-    pub fn pa4(&self) -> PA4R {
+    pub fn pb2(&self) -> PB2R {
         let bits = {
             const MASK: bool = true;
-            const OFFSET: u8 = 4;
+            const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA4R { bits }
+        PB2R { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 1 - GPIOB_1 Data Direction"]
     #[inline]
-    pub fn pa0(&self) -> PA0R {
+    pub fn pb1(&self) -> PB1R {
+        let bits = {
+            const MASK: bool = true;
+            const OFFSET: u8 = 1;
+            ((self.bits >> OFFSET) & MASK as u32) != 0
+        };
+        PB1R { bits }
+    }
+    #[doc = "Bit 0 - GPIOB_0 Data Direction"]
+    #[inline]
+    pub fn pb0(&self) -> PB0R {
         let bits = {
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
         };
-        PA0R { bits }
+        PB0R { bits }
     }
 }
 impl W {
@@ -223,19 +277,24 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 3 - GPIOB_3 Data Direction"]
     #[inline]
-    pub fn pa5(&mut self) -> _PA5W {
-        _PA5W { w: self }
+    pub fn pb3(&mut self) -> _PB3W {
+        _PB3W { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 2 - GPIOB_2 Data Direction"]
     #[inline]
-    pub fn pa4(&mut self) -> _PA4W {
-        _PA4W { w: self }
+    pub fn pb2(&mut self) -> _PB2W {
+        _PB2W { w: self }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 1 - GPIOB_1 Data Direction"]
     #[inline]
-    pub fn pa0(&mut self) -> _PA0W {
-        _PA0W { w: self }
+    pub fn pb1(&mut self) -> _PB1W {
+        _PB1W { w: self }
+    }
+    #[doc = "Bit 0 - GPIOB_0 Data Direction"]
+    #[inline]
+    pub fn pb0(&mut self) -> _PB0W {
+        _PB0W { w: self }
     }
 }

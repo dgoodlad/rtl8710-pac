@@ -6,7 +6,7 @@ pub struct R {
 pub struct W {
     bits: u32,
 }
-impl super::INT_STATUS {
+impl super::GPIO_PORTA_DR {
     #[doc = r" Modifies the contents of the register"]
     #[inline]
     pub fn modify<F>(&self, f: F)
@@ -180,7 +180,7 @@ impl R {
     pub fn bits(&self) -> u32 {
         self.bits
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 5 - GPIOA_5 Data"]
     #[inline]
     pub fn pa5(&self) -> PA5R {
         let bits = {
@@ -190,7 +190,7 @@ impl R {
         };
         PA5R { bits }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 4 - GPIOA_4 Data"]
     #[inline]
     pub fn pa4(&self) -> PA4R {
         let bits = {
@@ -200,7 +200,7 @@ impl R {
         };
         PA4R { bits }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 0 - GPIOA_0 Data"]
     #[inline]
     pub fn pa0(&self) -> PA0R {
         let bits = {
@@ -223,17 +223,17 @@ impl W {
         self.bits = bits;
         self
     }
-    #[doc = "Bit 5 - GPIOA_5"]
+    #[doc = "Bit 5 - GPIOA_5 Data"]
     #[inline]
     pub fn pa5(&mut self) -> _PA5W {
         _PA5W { w: self }
     }
-    #[doc = "Bit 4 - GPIOA_4"]
+    #[doc = "Bit 4 - GPIOA_4 Data"]
     #[inline]
     pub fn pa4(&mut self) -> _PA4W {
         _PA4W { w: self }
     }
-    #[doc = "Bit 0 - GPIOA_0"]
+    #[doc = "Bit 0 - GPIOA_0 Data"]
     #[inline]
     pub fn pa0(&mut self) -> _PA0W {
         _PA0W { w: self }
