@@ -42,16 +42,15 @@ impl super::GPIO_PORTA_DR {
         self.write(|w| w)
     }
 }
-#[doc = r" Value of the field"]
-pub struct PA5R {
-    bits: bool,
+#[doc = "Possible values of the field `PA5`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum PA5R {
+    #[doc = "Low value"]
+    LOW,
+    #[doc = "High value"]
+    HIGH,
 }
 impl PA5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
     #[doc = r" Returns `true` if the bit is clear (0)"]
     #[inline]
     pub fn bit_is_clear(&self) -> bool {
@@ -62,47 +61,54 @@ impl PA5R {
     pub fn bit_is_set(&self) -> bool {
         self.bit()
     }
-}
-#[doc = r" Value of the field"]
-pub struct PA4R {
-    bits: bool,
-}
-impl PA4R {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bit(&self) -> bool {
-        self.bits
+        match *self {
+            PA5R::LOW => false,
+            PA5R::HIGH => true,
+        }
     }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
+    #[allow(missing_docs)]
+    #[doc(hidden)]
     #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
+    pub fn _from(value: bool) -> PA5R {
+        match value {
+            false => PA5R::LOW,
+            true => PA5R::HIGH,
+        }
     }
-    #[doc = r" Returns `true` if the bit is set (1)"]
+    #[doc = "Checks if the value of the field is `LOW`"]
     #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
+    pub fn is_low(&self) -> bool {
+        *self == PA5R::LOW
+    }
+    #[doc = "Checks if the value of the field is `HIGH`"]
+    #[inline]
+    pub fn is_high(&self) -> bool {
+        *self == PA5R::HIGH
     }
 }
-#[doc = r" Value of the field"]
-pub struct PA0R {
-    bits: bool,
+#[doc = "Possible values of the field `PA4`"]
+pub type PA4R = ::gpio::gpio_porta_dr::PA5R;
+#[doc = "Possible values of the field `PA0`"]
+pub type PA0R = ::gpio::gpio_porta_dr::PA5R;
+#[doc = "Values that can be written to the field `PA5`"]
+pub enum PA5W {
+    #[doc = "Low value"]
+    LOW,
+    #[doc = "High value"]
+    HIGH,
 }
-impl PA0R {
-    #[doc = r" Value of the field as raw bits"]
+impl PA5W {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
     #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
+    pub fn _bits(&self) -> bool {
+        match *self {
+            PA5W::LOW => false,
+            PA5W::HIGH => true,
+        }
     }
 }
 #[doc = r" Proxy"]
@@ -110,6 +116,23 @@ pub struct _PA5W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PA5W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PA5W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Low value"]
+    #[inline]
+    pub fn low(self) -> &'a mut W {
+        self.variant(PA5W::LOW)
+    }
+    #[doc = "High value"]
+    #[inline]
+    pub fn high(self) -> &'a mut W {
+        self.variant(PA5W::HIGH)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -128,11 +151,30 @@ impl<'a> _PA5W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PA4`"]
+pub type PA4W = ::gpio::gpio_porta_dr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PA4W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PA4W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PA4W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Low value"]
+    #[inline]
+    pub fn low(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_dr::PA5W::LOW)
+    }
+    #[doc = "High value"]
+    #[inline]
+    pub fn high(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_dr::PA5W::HIGH)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -151,11 +193,30 @@ impl<'a> _PA4W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PA0`"]
+pub type PA0W = ::gpio::gpio_porta_dr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PA0W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PA0W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PA0W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Low value"]
+    #[inline]
+    pub fn low(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_dr::PA5W::LOW)
+    }
+    #[doc = "High value"]
+    #[inline]
+    pub fn high(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_dr::PA5W::HIGH)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -183,32 +244,29 @@ impl R {
     #[doc = "Bit 5 - GPIOA_5 Data"]
     #[inline]
     pub fn pa5(&self) -> PA5R {
-        let bits = {
+        PA5R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 5;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PA5R { bits }
+        })
     }
     #[doc = "Bit 4 - GPIOA_4 Data"]
     #[inline]
     pub fn pa4(&self) -> PA4R {
-        let bits = {
+        PA4R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PA4R { bits }
+        })
     }
     #[doc = "Bit 0 - GPIOA_0 Data"]
     #[inline]
     pub fn pa0(&self) -> PA0R {
-        let bits = {
+        PA0R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PA0R { bits }
+        })
     }
 }
 impl W {

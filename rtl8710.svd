@@ -3730,18 +3730,34 @@
               <description>GPIOA_5 Data</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>Data</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>Low</name>
+                  <description>Low value</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>High</name>
+                  <description>High value</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA4</name>
               <description>GPIOA_4 Data</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PA0</name>
               <description>GPIOA_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
           </fields>
         </register>
@@ -3755,18 +3771,34 @@
               <description>GPIOA_5 Data Direction</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>Direction</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Input</name>
+                  <description>Configure the pin as an input</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Output</name>
+                  <description>Configure the pin as an output</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA4</name>
               <description>GPIOA_4 Data Direction</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PA0</name>
               <description>GPIOA_0 Data Direction</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
           </fields>
         </register>
@@ -3785,24 +3817,28 @@
               <description>GPIOB_3 Data</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PB2</name>
               <description>GPIOB_2 Data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PB1</name>
               <description>GPIOB_1 Data</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PB0</name>
               <description>GPIOB_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
           </fields>
         </register>
@@ -3816,24 +3852,28 @@
               <description>GPIOB_3 Data Direction</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PB2</name>
               <description>GPIOB_2 Data Direction</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PB1</name>
               <description>GPIOB_1 Data Direction</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PB0</name>
               <description>GPIOB_0 Data Direction</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
           </fields>
         </register>
@@ -3852,36 +3892,42 @@
               <description>GPIOC_5 Data</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PC4</name>
               <description>GPIOC_4 Data</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PC3</name>
               <description>GPIOC_3 Data</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PC2</name>
               <description>GPIOC_2 Data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PC1</name>
               <description>GPIOC_1 Data</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
             <field>
               <name>PC0</name>
               <description>GPIOC_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DR.PA5.Data" />
             </field>
           </fields>
         </register>
@@ -3895,36 +3941,42 @@
               <description>GPIOC_5 Data Direction</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PC4</name>
               <description>GPIOC_4 Data Direction</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PC3</name>
               <description>GPIOC_3 Data Direction</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PC2</name>
               <description>GPIOC_2 Data Direction</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PC1</name>
               <description>GPIOC_1 Data Direction</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
             <field>
               <name>PC0</name>
               <description>GPIOC_0 Data Direction</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_DDR.PA5.Direction" />
             </field>
           </fields>
         </register>
@@ -4144,18 +4196,34 @@
               <description>GPIOA_5 Data</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues>
+                <name>Data</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>Low</name>
+                  <description>Low</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>High</name>
+                  <description>High</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>PA4</name>
               <description>GPIOA_4 Data</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PA0</name>
               <description>GPIOA_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
           </fields>
         </register>
@@ -4170,24 +4238,28 @@
               <description>GPIOB_3 Data</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PB2</name>
               <description>GPIOB_2 Data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PB1</name>
               <description>GPIOB_1 Data</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PB0</name>
               <description>GPIOB_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
           </fields>
         </register>
@@ -4202,36 +4274,42 @@
               <description>GPIOC_5 Data</description>
               <bitOffset>5</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PC4</name>
               <description>GPIOC_4 Data</description>
               <bitOffset>4</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PC3</name>
               <description>GPIOC_3 Data</description>
               <bitOffset>3</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PC2</name>
               <description>GPIOC_2 Data</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PC1</name>
               <description>GPIOC_1 Data</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
             <field>
               <name>PC0</name>
               <description>GPIOC_0 Data</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
+              <enumeratedValues derivedFrom="GPIO.GPIO_PORTA_EXT.PA5.Data" />
             </field>
           </fields>
         </register>

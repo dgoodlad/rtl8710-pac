@@ -42,137 +42,42 @@ impl super::GPIO_PORTC_DDR {
         self.write(|w| w)
     }
 }
-#[doc = r" Value of the field"]
-pub struct PC5R {
-    bits: bool,
-}
-impl PC5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC4R {
-    bits: bool,
-}
-impl PC4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC3R {
-    bits: bool,
-}
-impl PC3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC2R {
-    bits: bool,
-}
-impl PC2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC1R {
-    bits: bool,
-}
-impl PC1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC0R {
-    bits: bool,
-}
-impl PC0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Possible values of the field `PC5`"]
+pub type PC5R = ::gpio::gpio_porta_ddr::PA5R;
+#[doc = "Possible values of the field `PC4`"]
+pub type PC4R = ::gpio::gpio_porta_ddr::PA5R;
+#[doc = "Possible values of the field `PC3`"]
+pub type PC3R = ::gpio::gpio_porta_ddr::PA5R;
+#[doc = "Possible values of the field `PC2`"]
+pub type PC2R = ::gpio::gpio_porta_ddr::PA5R;
+#[doc = "Possible values of the field `PC1`"]
+pub type PC1R = ::gpio::gpio_porta_ddr::PA5R;
+#[doc = "Possible values of the field `PC0`"]
+pub type PC0R = ::gpio::gpio_porta_ddr::PA5R;
+#[doc = "Values that can be written to the field `PC5`"]
+pub type PC5W = ::gpio::gpio_porta_ddr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PC5W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PC5W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PC5W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Configure the pin as an input"]
+    #[inline]
+    pub fn input(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::INPUT)
+    }
+    #[doc = "Configure the pin as an output"]
+    #[inline]
+    pub fn output(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::OUTPUT)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -191,11 +96,30 @@ impl<'a> _PC5W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PC4`"]
+pub type PC4W = ::gpio::gpio_porta_ddr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PC4W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PC4W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PC4W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Configure the pin as an input"]
+    #[inline]
+    pub fn input(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::INPUT)
+    }
+    #[doc = "Configure the pin as an output"]
+    #[inline]
+    pub fn output(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::OUTPUT)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -214,11 +138,30 @@ impl<'a> _PC4W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PC3`"]
+pub type PC3W = ::gpio::gpio_porta_ddr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PC3W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PC3W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PC3W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Configure the pin as an input"]
+    #[inline]
+    pub fn input(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::INPUT)
+    }
+    #[doc = "Configure the pin as an output"]
+    #[inline]
+    pub fn output(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::OUTPUT)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -237,11 +180,30 @@ impl<'a> _PC3W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PC2`"]
+pub type PC2W = ::gpio::gpio_porta_ddr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PC2W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PC2W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PC2W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Configure the pin as an input"]
+    #[inline]
+    pub fn input(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::INPUT)
+    }
+    #[doc = "Configure the pin as an output"]
+    #[inline]
+    pub fn output(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::OUTPUT)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -260,11 +222,30 @@ impl<'a> _PC2W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PC1`"]
+pub type PC1W = ::gpio::gpio_porta_ddr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PC1W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PC1W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PC1W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Configure the pin as an input"]
+    #[inline]
+    pub fn input(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::INPUT)
+    }
+    #[doc = "Configure the pin as an output"]
+    #[inline]
+    pub fn output(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::OUTPUT)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -283,11 +264,30 @@ impl<'a> _PC1W<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `PC0`"]
+pub type PC0W = ::gpio::gpio_porta_ddr::PA5W;
 #[doc = r" Proxy"]
 pub struct _PC0W<'a> {
     w: &'a mut W,
 }
 impl<'a> _PC0W<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: PC0W) -> &'a mut W {
+        {
+            self.bit(variant._bits())
+        }
+    }
+    #[doc = "Configure the pin as an input"]
+    #[inline]
+    pub fn input(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::INPUT)
+    }
+    #[doc = "Configure the pin as an output"]
+    #[inline]
+    pub fn output(self) -> &'a mut W {
+        self.variant(::gpio::gpio_porta_ddr::PA5W::OUTPUT)
+    }
     #[doc = r" Sets the field bit"]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
@@ -315,62 +315,56 @@ impl R {
     #[doc = "Bit 5 - GPIOC_5 Data Direction"]
     #[inline]
     pub fn pc5(&self) -> PC5R {
-        let bits = {
+        PC5R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 5;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC5R { bits }
+        })
     }
     #[doc = "Bit 4 - GPIOC_4 Data Direction"]
     #[inline]
     pub fn pc4(&self) -> PC4R {
-        let bits = {
+        PC4R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC4R { bits }
+        })
     }
     #[doc = "Bit 3 - GPIOC_3 Data Direction"]
     #[inline]
     pub fn pc3(&self) -> PC3R {
-        let bits = {
+        PC3R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC3R { bits }
+        })
     }
     #[doc = "Bit 2 - GPIOC_2 Data Direction"]
     #[inline]
     pub fn pc2(&self) -> PC2R {
-        let bits = {
+        PC2R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC2R { bits }
+        })
     }
     #[doc = "Bit 1 - GPIOC_1 Data Direction"]
     #[inline]
     pub fn pc1(&self) -> PC1R {
-        let bits = {
+        PC1R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC1R { bits }
+        })
     }
     #[doc = "Bit 0 - GPIOC_0 Data Direction"]
     #[inline]
     pub fn pc0(&self) -> PC0R {
-        let bits = {
+        PC0R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC0R { bits }
+        })
     }
 }
 impl W {
