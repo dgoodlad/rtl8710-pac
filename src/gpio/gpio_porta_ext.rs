@@ -60,27 +60,8 @@ impl PA5R {
 }
 #[doc = "Possible values of the field `PA4`"]
 pub type PA4R = ::gpio::gpio_porta_ext::PA5R;
-#[doc = r" Value of the field"]
-pub struct PA0R {
-    bits: bool,
-}
-impl PA0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Possible values of the field `PA0`"]
+pub type PA0R = ::gpio::gpio_porta_ext::PA5R;
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -108,11 +89,10 @@ impl R {
     #[doc = "Bit 0 - GPIOA_0 Data"]
     #[inline]
     pub fn pa0(&self) -> PA0R {
-        let bits = {
+        PA0R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PA0R { bits }
+        })
     }
 }

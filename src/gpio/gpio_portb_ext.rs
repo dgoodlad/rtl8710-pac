@@ -11,90 +11,14 @@ impl super::GPIO_PORTB_EXT {
         }
     }
 }
-#[doc = r" Value of the field"]
-pub struct PB3R {
-    bits: bool,
-}
-impl PB3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PB2R {
-    bits: bool,
-}
-impl PB2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PB1R {
-    bits: bool,
-}
-impl PB1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PB0R {
-    bits: bool,
-}
-impl PB0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Possible values of the field `PB3`"]
+pub type PB3R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PB2`"]
+pub type PB2R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PB1`"]
+pub type PB1R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PB0`"]
+pub type PB0R = ::gpio::gpio_porta_ext::PA5R;
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -104,41 +28,37 @@ impl R {
     #[doc = "Bit 3 - GPIOB_3 Data"]
     #[inline]
     pub fn pb3(&self) -> PB3R {
-        let bits = {
+        PB3R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PB3R { bits }
+        })
     }
     #[doc = "Bit 2 - GPIOB_2 Data"]
     #[inline]
     pub fn pb2(&self) -> PB2R {
-        let bits = {
+        PB2R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PB2R { bits }
+        })
     }
     #[doc = "Bit 1 - GPIOB_1 Data"]
     #[inline]
     pub fn pb1(&self) -> PB1R {
-        let bits = {
+        PB1R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PB1R { bits }
+        })
     }
     #[doc = "Bit 0 - GPIOB_0 Data"]
     #[inline]
     pub fn pb0(&self) -> PB0R {
-        let bits = {
+        PB0R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PB0R { bits }
+        })
     }
 }

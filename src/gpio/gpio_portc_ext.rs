@@ -11,132 +11,18 @@ impl super::GPIO_PORTC_EXT {
         }
     }
 }
-#[doc = r" Value of the field"]
-pub struct PC5R {
-    bits: bool,
-}
-impl PC5R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC4R {
-    bits: bool,
-}
-impl PC4R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC3R {
-    bits: bool,
-}
-impl PC3R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC2R {
-    bits: bool,
-}
-impl PC2R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC1R {
-    bits: bool,
-}
-impl PC1R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
-#[doc = r" Value of the field"]
-pub struct PC0R {
-    bits: bool,
-}
-impl PC0R {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bit(&self) -> bool {
-        self.bits
-    }
-    #[doc = r" Returns `true` if the bit is clear (0)"]
-    #[inline]
-    pub fn bit_is_clear(&self) -> bool {
-        !self.bit()
-    }
-    #[doc = r" Returns `true` if the bit is set (1)"]
-    #[inline]
-    pub fn bit_is_set(&self) -> bool {
-        self.bit()
-    }
-}
+#[doc = "Possible values of the field `PC5`"]
+pub type PC5R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PC4`"]
+pub type PC4R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PC3`"]
+pub type PC3R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PC2`"]
+pub type PC2R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PC1`"]
+pub type PC1R = ::gpio::gpio_porta_ext::PA5R;
+#[doc = "Possible values of the field `PC0`"]
+pub type PC0R = ::gpio::gpio_porta_ext::PA5R;
 impl R {
     #[doc = r" Value of the register as raw bits"]
     #[inline]
@@ -146,61 +32,55 @@ impl R {
     #[doc = "Bit 5 - GPIOC_5 Data"]
     #[inline]
     pub fn pc5(&self) -> PC5R {
-        let bits = {
+        PC5R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 5;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC5R { bits }
+        })
     }
     #[doc = "Bit 4 - GPIOC_4 Data"]
     #[inline]
     pub fn pc4(&self) -> PC4R {
-        let bits = {
+        PC4R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC4R { bits }
+        })
     }
     #[doc = "Bit 3 - GPIOC_3 Data"]
     #[inline]
     pub fn pc3(&self) -> PC3R {
-        let bits = {
+        PC3R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 3;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC3R { bits }
+        })
     }
     #[doc = "Bit 2 - GPIOC_2 Data"]
     #[inline]
     pub fn pc2(&self) -> PC2R {
-        let bits = {
+        PC2R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC2R { bits }
+        })
     }
     #[doc = "Bit 1 - GPIOC_1 Data"]
     #[inline]
     pub fn pc1(&self) -> PC1R {
-        let bits = {
+        PC1R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 1;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC1R { bits }
+        })
     }
     #[doc = "Bit 0 - GPIOC_0 Data"]
     #[inline]
     pub fn pc0(&self) -> PC0R {
-        let bits = {
+        PC0R::_from({
             const MASK: bool = true;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) != 0
-        };
-        PC0R { bits }
+        })
     }
 }

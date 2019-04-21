@@ -42,180 +42,105 @@ impl super::GPIO_PULL_CTRL0 {
         self.write(|w| w)
     }
 }
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB7_PULL_CTRLR {
-    bits: u8,
+#[doc = "Possible values of the field `GPIO_GPB7_PULL_CTRL`"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum GPIO_GPB7_PULL_CTRLR {
+    #[doc = "High-impedence (floating)"]
+    HIGHZ,
+    #[doc = "Pulled low"]
+    PULL_LOW,
+    #[doc = "Pulled high"]
+    PULL_HIGH,
+    #[doc = r" Reserved"]
+    _Reserved(u8),
 }
 impl GPIO_GPB7_PULL_CTRLR {
     #[doc = r" Value of the field as raw bits"]
     #[inline]
     pub fn bits(&self) -> u8 {
-        self.bits
+        match *self {
+            GPIO_GPB7_PULL_CTRLR::HIGHZ => 0,
+            GPIO_GPB7_PULL_CTRLR::PULL_LOW => 1,
+            GPIO_GPB7_PULL_CTRLR::PULL_HIGH => 2,
+            GPIO_GPB7_PULL_CTRLR::_Reserved(bits) => bits,
+        }
+    }
+    #[allow(missing_docs)]
+    #[doc(hidden)]
+    #[inline]
+    pub fn _from(value: u8) -> GPIO_GPB7_PULL_CTRLR {
+        match value {
+            0 => GPIO_GPB7_PULL_CTRLR::HIGHZ,
+            1 => GPIO_GPB7_PULL_CTRLR::PULL_LOW,
+            2 => GPIO_GPB7_PULL_CTRLR::PULL_HIGH,
+            i => GPIO_GPB7_PULL_CTRLR::_Reserved(i),
+        }
+    }
+    #[doc = "Checks if the value of the field is `HIGHZ`"]
+    #[inline]
+    pub fn is_highz(&self) -> bool {
+        *self == GPIO_GPB7_PULL_CTRLR::HIGHZ
+    }
+    #[doc = "Checks if the value of the field is `PULL_LOW`"]
+    #[inline]
+    pub fn is_pull_low(&self) -> bool {
+        *self == GPIO_GPB7_PULL_CTRLR::PULL_LOW
+    }
+    #[doc = "Checks if the value of the field is `PULL_HIGH`"]
+    #[inline]
+    pub fn is_pull_high(&self) -> bool {
+        *self == GPIO_GPB7_PULL_CTRLR::PULL_HIGH
     }
 }
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB6_PULL_CTRLR {
-    bits: u8,
+#[doc = "Possible values of the field `GPIO_GPB6_PULL_CTRL`"]
+pub type GPIO_GPB6_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPB5_PULL_CTRL`"]
+pub type GPIO_GPB5_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPB4_PULL_CTRL`"]
+pub type GPIO_GPB4_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPB3_PULL_CTRL`"]
+pub type GPIO_GPB3_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPB2_PULL_CTRL`"]
+pub type GPIO_GPB2_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPB1_PULL_CTRL`"]
+pub type GPIO_GPB1_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPB0_PULL_CTRL`"]
+pub type GPIO_GPB0_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA7_PULL_CTRL`"]
+pub type GPIO_GPA7_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA6_PULL_CTRL`"]
+pub type GPIO_GPA6_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA5_PULL_CTRL`"]
+pub type GPIO_GPA5_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA4_PULL_CTRL`"]
+pub type GPIO_GPA4_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA3_PULL_CTRL`"]
+pub type GPIO_GPA3_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA2_PULL_CTRL`"]
+pub type GPIO_GPA2_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA1_PULL_CTRL`"]
+pub type GPIO_GPA1_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Possible values of the field `GPIO_GPA0_PULL_CTRL`"]
+pub type GPIO_GPA0_PULL_CTRLR = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLR;
+#[doc = "Values that can be written to the field `GPIO_GPB7_PULL_CTRL`"]
+pub enum GPIO_GPB7_PULL_CTRLW {
+    #[doc = "High-impedence (floating)"]
+    HIGHZ,
+    #[doc = "Pulled low"]
+    PULL_LOW,
+    #[doc = "Pulled high"]
+    PULL_HIGH,
 }
-impl GPIO_GPB6_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
+impl GPIO_GPB7_PULL_CTRLW {
+    #[allow(missing_docs)]
+    #[doc(hidden)]
     #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB5_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPB5_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB4_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPB4_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB3_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPB3_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB2_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPB2_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB1_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPB1_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPB0_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPB0_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA7_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA7_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA6_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA6_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA5_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA5_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA4_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA4_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA3_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA3_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA2_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA2_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA1_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA1_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
-    }
-}
-#[doc = r" Value of the field"]
-pub struct GPIO_GPA0_PULL_CTRLR {
-    bits: u8,
-}
-impl GPIO_GPA0_PULL_CTRLR {
-    #[doc = r" Value of the field as raw bits"]
-    #[inline]
-    pub fn bits(&self) -> u8 {
-        self.bits
+    pub fn _bits(&self) -> u8 {
+        match *self {
+            GPIO_GPB7_PULL_CTRLW::HIGHZ => 0,
+            GPIO_GPB7_PULL_CTRLW::PULL_LOW => 1,
+            GPIO_GPB7_PULL_CTRLW::PULL_HIGH => 2,
+        }
     }
 }
 #[doc = r" Proxy"]
@@ -223,6 +148,26 @@ pub struct _GPIO_GPB7_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB7_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB7_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -233,11 +178,33 @@ impl<'a> _GPIO_GPB7_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB6_PULL_CTRL`"]
+pub type GPIO_GPB6_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB6_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB6_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB6_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -248,11 +215,33 @@ impl<'a> _GPIO_GPB6_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB5_PULL_CTRL`"]
+pub type GPIO_GPB5_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB5_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB5_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB5_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -263,11 +252,33 @@ impl<'a> _GPIO_GPB5_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB4_PULL_CTRL`"]
+pub type GPIO_GPB4_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB4_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB4_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB4_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -278,11 +289,33 @@ impl<'a> _GPIO_GPB4_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB3_PULL_CTRL`"]
+pub type GPIO_GPB3_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB3_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB3_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB3_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -293,11 +326,33 @@ impl<'a> _GPIO_GPB3_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB2_PULL_CTRL`"]
+pub type GPIO_GPB2_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB2_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB2_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB2_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -308,11 +363,33 @@ impl<'a> _GPIO_GPB2_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB1_PULL_CTRL`"]
+pub type GPIO_GPB1_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB1_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB1_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB1_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -323,11 +400,33 @@ impl<'a> _GPIO_GPB1_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPB0_PULL_CTRL`"]
+pub type GPIO_GPB0_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPB0_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPB0_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPB0_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -338,11 +437,33 @@ impl<'a> _GPIO_GPB0_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA7_PULL_CTRL`"]
+pub type GPIO_GPA7_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA7_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA7_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA7_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -353,11 +474,33 @@ impl<'a> _GPIO_GPA7_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA6_PULL_CTRL`"]
+pub type GPIO_GPA6_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA6_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA6_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA6_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -368,11 +511,33 @@ impl<'a> _GPIO_GPA6_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA5_PULL_CTRL`"]
+pub type GPIO_GPA5_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA5_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA5_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA5_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -383,11 +548,33 @@ impl<'a> _GPIO_GPA5_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA4_PULL_CTRL`"]
+pub type GPIO_GPA4_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA4_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA4_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA4_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -398,11 +585,33 @@ impl<'a> _GPIO_GPA4_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA3_PULL_CTRL`"]
+pub type GPIO_GPA3_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA3_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA3_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA3_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -413,11 +622,33 @@ impl<'a> _GPIO_GPA3_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA2_PULL_CTRL`"]
+pub type GPIO_GPA2_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA2_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA2_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA2_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -428,11 +659,33 @@ impl<'a> _GPIO_GPA2_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA1_PULL_CTRL`"]
+pub type GPIO_GPA1_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA1_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA1_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA1_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -443,11 +696,33 @@ impl<'a> _GPIO_GPA1_PULL_CTRLW<'a> {
         self.w
     }
 }
+#[doc = "Values that can be written to the field `GPIO_GPA0_PULL_CTRL`"]
+pub type GPIO_GPA0_PULL_CTRLW = ::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW;
 #[doc = r" Proxy"]
 pub struct _GPIO_GPA0_PULL_CTRLW<'a> {
     w: &'a mut W,
 }
 impl<'a> _GPIO_GPA0_PULL_CTRLW<'a> {
+    #[doc = r" Writes `variant` to the field"]
+    #[inline]
+    pub fn variant(self, variant: GPIO_GPA0_PULL_CTRLW) -> &'a mut W {
+        unsafe { self.bits(variant._bits()) }
+    }
+    #[doc = "High-impedence (floating)"]
+    #[inline]
+    pub fn highz(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::HIGHZ)
+    }
+    #[doc = "Pulled low"]
+    #[inline]
+    pub fn pull_low(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_LOW)
+    }
+    #[doc = "Pulled high"]
+    #[inline]
+    pub fn pull_high(self) -> &'a mut W {
+        self.variant(::syscon::gpio_pull_ctrl0::GPIO_GPB7_PULL_CTRLW::PULL_HIGH)
+    }
     #[doc = r" Writes raw bits to the field"]
     #[inline]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
@@ -467,162 +742,146 @@ impl R {
     #[doc = "Bits 30:31"]
     #[inline]
     pub fn gpio_gpb7_pull_ctrl(&self) -> GPIO_GPB7_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB7_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 30;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB7_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 28:29"]
     #[inline]
     pub fn gpio_gpb6_pull_ctrl(&self) -> GPIO_GPB6_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB6_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 28;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB6_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 26:27"]
     #[inline]
     pub fn gpio_gpb5_pull_ctrl(&self) -> GPIO_GPB5_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB5_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 26;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB5_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 24:25"]
     #[inline]
     pub fn gpio_gpb4_pull_ctrl(&self) -> GPIO_GPB4_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB4_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 24;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB4_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 22:23"]
     #[inline]
     pub fn gpio_gpb3_pull_ctrl(&self) -> GPIO_GPB3_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB3_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 22;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB3_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 20:21"]
     #[inline]
     pub fn gpio_gpb2_pull_ctrl(&self) -> GPIO_GPB2_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB2_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 20;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB2_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 18:19"]
     #[inline]
     pub fn gpio_gpb1_pull_ctrl(&self) -> GPIO_GPB1_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB1_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 18;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB1_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 16:17"]
     #[inline]
     pub fn gpio_gpb0_pull_ctrl(&self) -> GPIO_GPB0_PULL_CTRLR {
-        let bits = {
+        GPIO_GPB0_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 16;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPB0_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 14:15"]
     #[inline]
     pub fn gpio_gpa7_pull_ctrl(&self) -> GPIO_GPA7_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA7_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 14;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA7_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 12:13"]
     #[inline]
     pub fn gpio_gpa6_pull_ctrl(&self) -> GPIO_GPA6_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA6_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 12;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA6_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 10:11"]
     #[inline]
     pub fn gpio_gpa5_pull_ctrl(&self) -> GPIO_GPA5_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA5_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 10;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA5_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 8:9"]
     #[inline]
     pub fn gpio_gpa4_pull_ctrl(&self) -> GPIO_GPA4_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA4_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 8;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA4_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 6:7"]
     #[inline]
     pub fn gpio_gpa3_pull_ctrl(&self) -> GPIO_GPA3_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA3_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 6;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA3_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 4:5"]
     #[inline]
     pub fn gpio_gpa2_pull_ctrl(&self) -> GPIO_GPA2_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA2_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 4;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA2_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 2:3"]
     #[inline]
     pub fn gpio_gpa1_pull_ctrl(&self) -> GPIO_GPA1_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA1_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 2;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA1_PULL_CTRLR { bits }
+        })
     }
     #[doc = "Bits 0:1"]
     #[inline]
     pub fn gpio_gpa0_pull_ctrl(&self) -> GPIO_GPA0_PULL_CTRLR {
-        let bits = {
+        GPIO_GPA0_PULL_CTRLR::_from({
             const MASK: u8 = 3;
             const OFFSET: u8 = 0;
             ((self.bits >> OFFSET) & MASK as u32) as u8
-        };
-        GPIO_GPA0_PULL_CTRLR { bits }
+        })
     }
 }
 impl W {

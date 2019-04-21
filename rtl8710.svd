@@ -2946,81 +2946,115 @@
               <name>GPIO_GPB7_PULL_CTRL</name>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues>
+                <name>PullCtrl</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>HIGHZ</name>
+                  <description>High-impedence (floating)</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PULL_LOW</name>
+                  <description>Pulled low</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PULL_HIGH</name>
+                  <description>Pulled high</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>GPIO_GPB6_PULL_CTRL</name>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPB5_PULL_CTRL</name>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPB4_PULL_CTRL</name>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPB3_PULL_CTRL</name>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPB2_PULL_CTRL</name>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPB1_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPB0_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA7_PULL_CTRL</name>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA6_PULL_CTRL</name>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA5_PULL_CTRL</name>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA4_PULL_CTRL</name>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA3_PULL_CTRL</name>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA2_PULL_CTRL</name>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA1_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPA0_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
@@ -3034,81 +3068,97 @@
               <name>GPIO_GPD7_PULL_CTRL</name>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD6_PULL_CTRL</name>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD5_PULL_CTRL</name>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD4_PULL_CTRL</name>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD3_PULL_CTRL</name>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD2_PULL_CTRL</name>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD1_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD0_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC7_PULL_CTRL</name>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC6_PULL_CTRL</name>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC5_PULL_CTRL</name>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC4_PULL_CTRL</name>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC3_PULL_CTRL</name>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC2_PULL_CTRL</name>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC1_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC0_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
@@ -3123,81 +3173,97 @@
               <name>GPIO_GPF7_PULL_CTRL</name>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF6_PULL_CTRL</name>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF5_PULL_CTRL</name>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF4_PULL_CTRL</name>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF3_PULL_CTRL</name>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF2_PULL_CTRL</name>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF1_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPF0_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE7_PULL_CTRL</name>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE6_PULL_CTRL</name>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE5_PULL_CTRL</name>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE4_PULL_CTRL</name>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE3_PULL_CTRL</name>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE2_PULL_CTRL</name>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE1_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE0_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
@@ -3212,81 +3278,97 @@
               <name>GPIO_GPH7_PULL_CTRL</name>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH6_PULL_CTRL</name>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH5_PULL_CTRL</name>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH4_PULL_CTRL</name>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH3_PULL_CTRL</name>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH2_PULL_CTRL</name>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH1_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPH0_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG7_PULL_CTRL</name>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG6_PULL_CTRL</name>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG5_PULL_CTRL</name>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG4_PULL_CTRL</name>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG3_PULL_CTRL</name>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG2_PULL_CTRL</name>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG1_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPG0_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
@@ -3301,81 +3383,97 @@
               <name>GPIO_GPJ7_PULL_CTRL</name>
               <bitOffset>30</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ6_PULL_CTRL</name>
               <bitOffset>28</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ5_PULL_CTRL</name>
               <bitOffset>26</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ4_PULL_CTRL</name>
               <bitOffset>24</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ3_PULL_CTRL</name>
               <bitOffset>22</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ2_PULL_CTRL</name>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ1_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPJ0_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI7_PULL_CTRL</name>
               <bitOffset>14</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI6_PULL_CTRL</name>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI5_PULL_CTRL</name>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI4_PULL_CTRL</name>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI3_PULL_CTRL</name>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI2_PULL_CTRL</name>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI1_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPI0_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
@@ -3390,51 +3488,61 @@
               <name>GPIO_GPEA_PULL_CTRL</name>
               <bitOffset>20</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE9_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPE8_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK7_PULL_CTRL</name>
               <bitOffset>12</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK5_PULL_CTRL</name>
               <bitOffset>10</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK4_PULL_CTRL</name>
               <bitOffset>8</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK3_PULL_CTRL</name>
               <bitOffset>6</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK2_PULL_CTRL</name>
               <bitOffset>4</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK1_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPK0_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
@@ -3449,21 +3557,25 @@
               <name>GPIO_GPD9_PULL_CTRL</name>
               <bitOffset>18</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPD8_PULL_CTRL</name>
               <bitOffset>16</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC9_PULL_CTRL</name>
               <bitOffset>2</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
             <field>
               <name>GPIO_GPC8_PULL_CTRL</name>
               <bitOffset>0</bitOffset>
               <bitWidth>2</bitWidth>
+              <enumeratedValues derivedFrom="SYSCON.GPIO_PULL_CTRL0.GPIO_GPB7_PULL_CTRL.PullCtrl" />
             </field>
           </fields>
         </register>
